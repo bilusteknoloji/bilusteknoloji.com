@@ -1,0 +1,27 @@
+a {
+  color: #d72323 !important;
+  font-weight: 800; }
+  a:hover {
+    color: #d72323 !important; }
+
+.splash {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #d72323; }
+  .splash h1, .splash h2, .splash p, .splash strong {
+    color: white; }
+
+.footer {
+  background-color: #d72323;
+  color: white; }
+  .footer span, .footer a {
+    margin-left: 2em;
+    margin-right: 2em; }
+  .footer a {
+    color: inherit !important;
+    font-weight: 400; }
+
+.welcome {
+  color: #7f1515; }
+  .welcome strong {
+    color: #d72323; }
