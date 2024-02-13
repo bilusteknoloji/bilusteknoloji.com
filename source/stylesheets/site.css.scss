@@ -1,0 +1,41 @@
+$bilus-color: #d72323;
+
+a {
+  color: $bilus-color !important;
+  font-weight: 800;
+  &:hover {
+    color: $bilus-color !important;
+  }
+}
+
+.splash {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: $bilus-color;
+  
+  h1, h2, p, strong {
+    color: white;
+  }
+}
+
+.footer {
+  background-color: $bilus-color;
+  color: white;
+//  color: #999 !important;
+
+  span, a {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  a {
+    color: inherit !important;
+    font-weight: 400;
+  }
+}
+
+.welcome {
+  color: darken($bilus-color, 20);
+  strong {
+    color: $bilus-color;
+  }
+}
