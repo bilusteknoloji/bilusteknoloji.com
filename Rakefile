@@ -6,3 +6,11 @@ task :run_server do
     bin/middleman server
   }
 end
+
+
+desc "build site"
+task :build do
+  system %{
+    bin/middleman build --clean --verbose
+  }
+end
