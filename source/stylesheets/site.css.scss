@@ -1,4 +1,13 @@
-$bilus-color: #d72323;
+// $bilus-color: #d72323;
+$bilus-color: #5900BD;
+
+#bilus-navbar {
+//  background: #eeeeee;
+  
+  #bilus-logo {
+    max-height: 4rem;
+  }
+}
 
 a {
   color: $bilus-color !important;
@@ -19,7 +28,7 @@ a {
 }
 
 .footer {
-  background-color: $bilus-color;
+  background-color: darken($bilus-color, 10);
   color: white;
 //  color: #999 !important;
 
