@@ -1,18 +1,21 @@
+#bilus-navbar #bilus-logo {
+  max-height: 4rem; }
+
 a {
-  color: #d72323 !important;
+  color: #5900BD !important;
   font-weight: 800; }
   a:hover {
-    color: #d72323 !important; }
+    color: #5900BD !important; }
 
 .splash {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #d72323; }
+  background-color: #5900BD; }
   .splash h1, .splash h2, .splash p, .splash strong {
     color: white; }
 
 .footer {
-  background-color: #d72323;
+  background-color: #41008a;
   color: white; }
   .footer span, .footer a {
     margin-left: 2em;
@@ -22,6 +25,6 @@ a {
     font-weight: 400; }
 
 .welcome {
-  color: #7f1515; }
+  color: #290057; }
   .welcome strong {
-    color: #d72323; }
+    color: #5900BD; }
