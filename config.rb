@@ -44,3 +44,9 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript, compressor: Terser.new
 # end
+
+activate :external_pipeline,
+  name: :tailwind,
+  command: "npx tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/stylesheets/site.css -m #{"--watch" unless build?}",
+  latency: 2,
+  source: "./dist/"
