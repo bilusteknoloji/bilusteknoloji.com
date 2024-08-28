@@ -27,7 +27,8 @@ task :deploy do
     git add . &&
     git commit -m "release #{now}" &&
     git push &&
-    cd ../
+    cd ../ &&
+    git pull
   }
   puts "deployed..."
 end
