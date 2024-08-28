@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div.article u {
+    @apply
+    underline underline-offset-8 decoration-2
+    text-bilus-450
+    ;
+}

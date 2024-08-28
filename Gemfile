@@ -11,4 +11,4 @@ gem 'mutex_m', require: 'mutex_m'
 gem 'base64'
 gem 'csv'
 gem "rexml", ">= 3.3.6"
-
+gem 'redcarpet', '~> 3.6'
