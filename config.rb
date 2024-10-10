@@ -18,6 +18,12 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+
+# proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
+
+proxy "/en/apps/trivia-wars/support/index.html", "/pages/en/apps/trivia-wars/support/index.html", ignore: true
+proxy "/tr/uygulamalar/yengec/destek/index.html", "/pages/tr/uygulamalar/yengec/destek/index.html", ignore: true
+
 activate :external_pipeline,
   name: :tailwind,
   command: "npx tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/stylesheets/site.css -m #{"--watch" unless build?}",
