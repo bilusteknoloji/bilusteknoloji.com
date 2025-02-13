@@ -1,34 +1,44 @@
 ---
-title: home
+title: Software Solutions Shaping the Future
 ---
 
 <section class="text-bilus-500 p-4 sm:p-8">
     <div class="container mx-auto">
 
-        <div class="flex flex-col items-center gap-y-2 sm:gap-y-4">
+        <header class="flex flex-col items-center gap-y-2 sm:gap-y-4">
             <%= image_tag "bilus-logo.png", id: "bilus-logo", class: "h-8 sm:h-16" %>
             <h1 class="font-bold text-lg sm:text-2xl">Bilus Teknoloji</h1>
-        </div>
+            <p class="text-lg">Software Solutions Shaping the Future</p>
+        </header>
 
     </div>
 </section>
 
 <section class="bg-bilus-700 text-white text-center p-4 md:p-20">
-    <h2 class="mb-2 mx-auto max-w-xs sm:max-w-none sm:mb-4 font-extrabold sm:[text-shadow:_2px_2px_20px_rgb(167_184_214)] sm:text-2xl lg:text-5xl lg:tracking-tight">Crafting the Future with Expertise in Software</h2>
-    <h3 class="mx-auto max-w-xs sm:max-w-none sm:mb-4 lg:mb-12 font-semibold sm:text-xl lg:text-4xl lg:tracking-tight">Engineering Excellence in Software Solutions</h3>
-    <p class="hidden sm:block mx-auto sm:max-w-xl lg:max-w-3xl lg:text-2xl/relaxed">
-        At our core, we are innovators in the realm offset
-        <strong class="font-semibold">software technology</strong>, harnessing the
-        power of modern software methodologies to craft
-        <strong class="font-semibold">tailored software</strong> solutions.
+    <h2 class="mb-2 mx-auto max-w-xs sm:max-w-none sm:mb-4 font-extrabold sm:[text-shadow:_2px_2px_20px_rgb(167_184_214)] sm:text-2xl lg:text-5xl lg:tracking-tight">
+        Innovative & Sustainable Software Solutions
+    </h2>
+    <p class="mx-auto sm:max-w-xl lg:max-w-3xl lg:text-3xl/snug">
+        Bilus Teknoloji provides innovative and sustainable solutions to meet 
+        businesses&rsquo; software needs. 
     </p>
+    <p class="mx-auto max-w-3xl p-4 lg:text-xl/relaxed">
+        With our expertise in open-source technologies, micro-services architectures, 
+        and distributed systems, we develop web, mobile, and desktop applications 
+        at the highest standards. 
+    </p>
+    
 </section>
 
-<section class="p-8 md:p-20">
-    <div class="bg-white p-4 xl:p-8 mx-auto max-w-2xl prose prose-strong:font-medium prose-strong:text-bilus-550 2xl:prose-xl article">
+<section class="py-4 md:pt-20">
+    <div class="bg-white p-4 mx-auto max-w-3xl prose prose-strong:font-medium prose-strong:text-bilus-550 prose-h2:text-bilus-450 2xl:prose-xl article">
+        <%= partial "partials/index-services" %>
+    </div>
+</section>
 
-        <%= partial "partials/index" %>
-
+<section class="md:pb-20">
+    <div class="bg-white p-4 mx-auto max-w-3xl prose prose-strong:font-medium prose-strong:text-bilus-550 prose-h2:text-bilus-450 2xl:prose-xl article">
+        <%= partial "partials/index-why" %>
     </div>
 </section>
 
