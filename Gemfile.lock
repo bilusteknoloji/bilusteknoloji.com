@@ -26,7 +26,7 @@ GEM
       http_parser.rb (~> 0)
     erubis (2.7.0)
     eventmachine (1.2.7)
-    execjs (2.9.1)
+    execjs (2.10.0)
     fast_blank (1.0.1)
     fastimage (2.3.1)
     ffi (1.17.0)
@@ -120,7 +120,7 @@ GEM
     servolux (0.13.0)
     strscan (3.1.0)
     temple (0.10.3)
-    terser (1.2.3)
+    terser (1.2.5)
       execjs (>= 0.3.0, < 3)
     thor (1.2.2)
     tilt (2.0.11)
@@ -155,7 +155,7 @@ DEPENDENCIES
   mutex_m
   redcarpet (~> 3.6)
   rexml (>= 3.3.6)
-  terser (~> 1.1)
+  terser (~> 1.2)
   tzinfo-data
   wdm (~> 0.1)
 
