@@ -67,7 +67,7 @@
     
     .rounded-box p {
         @apply
-        2xl:text-lg 2xl:leading-relaxed 2xl:m-6
+        2xl:text-base 2xl:leading-relaxed 2xl:m-6
         ;
     }
     
