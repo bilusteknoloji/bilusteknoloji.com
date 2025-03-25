@@ -1,3 +1,8 @@
+require 'i18n'
+I18n.config.available_locales = :en
+I18n.config.enforce_available_locales = true
+I18n.fallbacks = [I18n.default_locale]
+
 set :markdown_engine, :redcarpet
 set :markdown, {
   fenced_code_blocks: true,
