@@ -4,42 +4,7 @@
 
 @layer base {
     body { @apply antialiased; }
-
     strong { @apply text-bilus-700; }
-
-    h1 {
-        @apply
-        text-bilus-500
-        text-2xl
-        font-medium
-        mb-5
-
-        2xl:text-5xl
-        2xl:font-bold
-        2xl:leading-none
-        ;
-    }
-
-    h2 {
-        @apply
-        text-xl mb-5
-        2xl:text-3xl 2xl:leading-snug
-        ;
-    }
-
-    h3 {
-        @apply
-        font-semibold
-        text-xl mb-5 text-bilus-600
-        2xl:text-3xl 2xl:leading-snug
-        ;
-    }
-    
-    section {
-        @apply pt-6 2xl:pt-12
-        ;
-    }
-
 }
 
 .debug { 
@@ -64,69 +29,5 @@
 }
 
 @layer components {
-    .rounded-box {
-        @apply
-        bg-white border border-bilus-100 rounded-xl 
-        2xl:p-6 2xl:shadow-md
-        ;
-    }
-    
-    .rounded-box h4 {
-        @apply
-        text-bilus-600 
 
-        2xl:mb-6 
-        2xl:font-semibold 
-        2xl:text-2xl
-        2xl:text-center
-        ;
-    }
-    
-    .rounded-box svg {
-        @apply 2xl:mx-auto;
-    }
-    
-    .rounded-box p {
-        @apply
-        2xl:text-base 2xl:leading-relaxed 2xl:m-6
-        ;
-    }
-    
-    .logo-company-name {
-        @apply
-        text-center text-bilus-500 font-bold
-        ;
-    }
-    
-    .lead {
-        @apply
-        2xl:text-2xl 
-        2xl:leading-relaxed
-        ;
-    }
-    
-    .width-narrow {
-        @apply
-        mx-auto
-        sm:text-center
-        2xl:max-w-xl
-        ;
-    }
-    
-    .wrapper {
-        @apply
-        mx-auto
-        px-6 
-        sm:max-w-md sm:text-center
-        2xl:max-w-4xl 2xl:px-12
-        ;
-    }
-    
-    .wrapper p {
-        @apply
-        mx-auto
-        2xl:max-w-2xl
-        ;
-        
-    }
 }
