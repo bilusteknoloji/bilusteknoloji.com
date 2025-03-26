@@ -27,6 +27,7 @@
     <meta name="twitter:image" content="https://bilusteknoloji.com/images/opengraph.png">
 </head>
 <body class="bg-[url('/images/ccchaos.svg')]">
+    <% if development? %><span class="debug"></span><% end %>
     <%= yield %>
 </body>
 </html>

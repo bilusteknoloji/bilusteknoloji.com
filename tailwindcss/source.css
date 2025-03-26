@@ -42,6 +42,27 @@
 
 }
 
+.debug { 
+    @apply
+    after:content-['...']
+    sm:after:content-['sm']
+    md:after:content-['md']
+    lg:after:content-['lg']
+    xl:after:content-['xl']
+    2xl:after:content-['2xl']
+    3xl:after:content-['3xl']
+    full-hd:after:content-['full-hd']
+    4xl:after:content-['4xl']
+    5xl:after:content-['5xl']
+    6xl:after:content-['6xl']
+    fixed right-0 bottom-0
+    font-bold
+    bg-slate-200 text-black border-2 border-slate-500
+    py-2 px-4 
+    z-50
+    ;
+}
+
 @layer components {
     .rounded-box {
         @apply
