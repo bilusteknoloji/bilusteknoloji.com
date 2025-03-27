@@ -29,5 +29,19 @@
 }
 
 @layer components {
-
+    a.active {
+        @apply underline underline-offset-6 decoration-2;
+    }
+    
+    .hover-underline {
+      @apply hover:underline hover:underline-offset-6 hover:decoration-2;
+    }
+    
+    .nav-links {
+        @apply text-bilus-500 font-semibold;
+    }
+    
+    .submenu-links {
+        @apply block p-2 hover:bg-bilus-400 hover:text-white nav-links;
+    }
 }
