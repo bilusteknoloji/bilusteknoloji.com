@@ -44,4 +44,16 @@
     .submenu-links {
         @apply block p-2 hover:bg-bilus-400 hover:text-white nav-links;
     }
+
+    .heading-2-base {
+        @apply font-extrabold mb-8 2xl:text-4xl;
+    }
+    
+    .heading-2 {
+        @apply text-bilus-700 heading-2-base;
+    }
+
+    .heading-2-rev {
+        @apply text-white heading-2-base;
+    }
 }
