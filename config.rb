@@ -15,6 +15,7 @@ set :markdown, {
 }
 
 activate :livereload
+activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -22,15 +23,23 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/sitemap.xml", layout: false
 
+
+page '/en/services/*', layout: 'page'
+proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting/index.html', ignore: true
 
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
 
-proxy "/en/apps/trivia-wars/support/index.html", "/pages/en/apps/trivia-wars/support/index.html", ignore: true
+# page '/en/services/*', layout: 'page'
+# proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting.html'
 
-proxy "/tr/uygulamalar/yengec/index.html", "/pages/tr/uygulamalar/yengec/index.html", ignore: true
-proxy "/tr/uygulamalar/yengec/destek/index.html", "/pages/tr/uygulamalar/yengec/destek/index.html", ignore: true
-proxy "/tr/uygulamalar/yengec/gizlilik/index.html", "/pages/tr/uygulamalar/yengec/gizlilik/index.html", ignore: true
+
+# proxy "/en/apps/trivia-wars/support/index.html", "/pages/en/apps/trivia-wars/support/index.html", ignore: true
+#
+# proxy "/tr/uygulamalar/yengec/index.html", "/pages/tr/uygulamalar/yengec/index.html", ignore: true
+# proxy "/tr/uygulamalar/yengec/destek/index.html", "/pages/tr/uygulamalar/yengec/destek/index.html", ignore: true
+# proxy "/tr/uygulamalar/yengec/gizlilik/index.html", "/pages/tr/uygulamalar/yengec/gizlilik/index.html", ignore: true
 
 activate :external_pipeline,
   name: :tailwind,

@@ -1,30 +1,45 @@
+<%
+html_title = 'Bilus Teknoloji'
+html_title += ' | ' + current_page.data.title if current_page.data.title.present?
+
+html_description = 'Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.'
+html_description = current_page.data.description if current_page.data.description.present?
+
+html_keywords = 'Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps'
+html_keywords = current_page.data.keywords if current_page.data.keywords.present?
+
+%>
 <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilus Teknoloji<% if current_page.data.title.present? %> | <%= current_page.data.title %><% end %></title>
+    <title><%= html_title %></title>
 
-    <meta name="title" content="Bilus Teknoloji | Software Solutions Shaping the Future">
-    <meta name="description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
-    <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
+    <meta name="title" content="<%= html_title %>">
+    <meta name="description" content="<%= html_description %>">
+    <meta name="keywords" content="<%= html_keywords %>">
     <meta name="author" content="Bilus Teknoloji">
+    <meta name="build-date" content="<%= html_title %>">
+    <meta name="color-scheme" content="light" />
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <%= stylesheet_link_tag "site" %>
     
     <meta property="og:url" content="https://bilusteknoloji.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bilus Teknoloji | Software Solutions Shaping the Future">
-    <meta property="og:description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
+    <meta property="og:title" content="<%= html_title %>">
+    <meta property="og:description" content="<%= html_description %>">
     <meta property="og:image" content="https://bilusteknoloji.com/images/opengraph.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="bilusteknoloji.com">
     <meta property="twitter:url" content="https://bilusteknoloji.com/">
-    <meta name="twitter:title" content="Bilus Teknoloji | Software Solutions Shaping the Future">
-    <meta name="twitter:description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
+    <meta name="twitter:title" content="<%= html_title %>">
+    <meta name="twitter:description" content="<%= html_description %>">
     <meta name="twitter:image" content="https://bilusteknoloji.com/images/opengraph.png">
+
+    <meta name="robots" content="index, follow">
 </head>
 <body class="sm:bg-[url('/images/ccchaos.svg')]">
     <% if development? %><span class="debug"></span><% end %>

@@ -56,4 +56,13 @@
     .heading-2-rev {
         @apply text-white heading-2-base;
     }
+    
+    .article-style {
+        @apply
+        prose-h1:text-bilus-600 
+        prose-h2:text-bilus-500
+        prose-h3:text-bilus-400
+        prose-strong:text-bilus-700
+        ;
+    }
 }

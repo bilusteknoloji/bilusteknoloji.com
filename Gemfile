@@ -12,3 +12,5 @@ gem 'base64'
 gem 'csv'
 gem "rexml", ">= 3.3.6"
 gem 'redcarpet', '~> 3.6'
+
+gem "builder", "~> 3.3"

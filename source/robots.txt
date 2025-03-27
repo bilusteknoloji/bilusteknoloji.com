@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bilusteknoloji.com/sitemap.xml
