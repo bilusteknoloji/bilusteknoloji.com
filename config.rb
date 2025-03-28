@@ -3,6 +3,8 @@ I18n.config.available_locales = :en
 I18n.config.enforce_available_locales = true
 I18n.fallbacks = [I18n.default_locale]
 
+activate :i18n
+
 set :markdown_engine, :redcarpet
 set :markdown, {
   fenced_code_blocks: true,
@@ -27,7 +29,20 @@ page "/sitemap.xml", layout: false
 
 
 page '/en/services/*', layout: 'page'
-proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting/index.html', ignore: true
+
+services_en = %w[
+  technical-consulting
+  software-development-management
+]
+
+set :services_en, services_en
+
+services_en.each do |foldername|
+  proxy "/en/services/#{foldername}/index.html", "/pages/en/services/#{foldername}/index.html", ignore: true
+end
+
+# proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting/index.html', ignore: true
+# proxy '/en/services/software-development-management/index.html', '/pages/en/services/software-development-management/index.html', ignore: true
 
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
 
