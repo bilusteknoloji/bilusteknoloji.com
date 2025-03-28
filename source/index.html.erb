@@ -1,6 +1,8 @@
 ---
 title: Software Solutions Shaping the Future
+blog: en
 ---
+<% I18n.locale = :en %>
 <%= partial "partials/header" %>
 
 <section class="2xl:pb-24 pt-20">
@@ -276,6 +278,8 @@ title: Software Solutions Shaping the Future
 <section class="2xl:py-24">
     <div class="container mx-auto">
         <div class="text-center">
+            <%= inspect blog.articles %>
+            <%= inspect page_articles %>
             <h2 class="heading-2">
                 Stay Ahead of the Curve
                 <small class="block mt-2 text-bilus-500">Insights on IT World</small>

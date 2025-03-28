@@ -12,10 +12,32 @@ set :markdown, {
 }
 
 activate :livereload
-activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+
+activate :blog do |blog|
+  blog.name              = 'en'
+  blog.prefix            = 'blog/en/'
+  blog.permalink         = '{year}/{month}/{day}/{title}/index.html'
+  blog.sources           = '{year}/{year}-{month}-{day}-{title}.html'
+  blog.taglink           = 'tag/{tag}/index.html'
+  blog.year_link         = 'year/{year}/index.html'
+  blog.paginate          = true
+  blog.per_page          = 10
+  blog.page_link         = 'page/{num}'
+  blog.summary_separator = /READ_MORE/
+  blog.summary_length    = nil
+  blog.layout            = 'blog-detail'
+  # blog.tag_template      = 'templates/blog-tag.html'
+  # blog.calendar_template = 'templates/blog-calendar.html'
+end
+
+activate :directory_indexes
+
+
+# page "/tr/blog/feed.xml", layout: false
+# page "/en/blog/feed.xml", layout: false
 
 page '/*.xml', layout: false
 page '/*.json', layout: false

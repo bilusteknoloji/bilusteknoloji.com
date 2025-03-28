@@ -1,11 +1,9 @@
 module CustomHelpers
   def inspect(*objs)
     out = []
-    out << '<pre class="overflow-auto whitespace-pre-line border p-5 mb-5">'
-    objs.each do |obj|
-      out << escape_html(obj)
-    end
-    out << '</pre>'
+    out << '<div class="debug-inspect">'
+    out << objs.map{|obj| escape_html(obj) }
+    out << '</div>'
     out.join("\n")
   end
 
