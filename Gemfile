@@ -14,3 +14,5 @@ gem "rexml", ">= 3.3.6"
 gem 'redcarpet', '~> 3.6'
 
 gem "builder", "~> 3.3"
+
+gem "stringex", "~> 2.8"

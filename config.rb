@@ -1,8 +1,3 @@
-require 'i18n'
-I18n.config.available_locales = :en
-I18n.config.enforce_available_locales = true
-I18n.fallbacks = [I18n.default_locale]
-
 activate :i18n
 
 set :markdown_engine, :redcarpet
@@ -28,18 +23,41 @@ page '/*.txt', layout: false
 page "/sitemap.xml", layout: false
 
 
+
+proxy_map = {
+  en: {
+    pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service'],
+    services: [
+      'technical-consulting',
+      'software-development-management',
+      'technical-assessment-and-risk-management',
+      'data-management-and-analytics-solutions',
+      'software-and-architecture-training',
+      'digital-transformation-and-innovation',
+    ]
+  },
+}
+set :proxy_map, proxy_map
+
+# -----------------------------------------------------------------------------
 page '/en/services/*', layout: 'page'
-
-services_en = %w[
-  technical-consulting
-  software-development-management
-]
-
-set :services_en, services_en
-
-services_en.each do |foldername|
-  proxy "/en/services/#{foldername}/index.html", "/pages/en/services/#{foldername}/index.html", ignore: true
+proxy_map[:en][:services].each do |service_folder_name|
+  proxy "/en/services/#{service_folder_name}/index.html", 
+        "/pages/en/services/#{service_folder_name}/index.html", 
+        ignore: true,
+        locals: { lang: :en }
 end
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+proxy_map[:en][:pages].each do |folder_name|
+  page "/en/#{folder_name}/*", layout: 'page'
+  proxy "/en/#{folder_name}/index.html", 
+        "/pages/en/#{folder_name}/index.html", 
+        ignore: true,
+        locals: { lang: :en }
+end
+# -----------------------------------------------------------------------------
 
 # proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting/index.html', ignore: true
 # proxy '/en/services/software-development-management/index.html', '/pages/en/services/software-development-management/index.html', ignore: true

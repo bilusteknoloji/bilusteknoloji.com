@@ -118,6 +118,7 @@ GEM
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
+    stringex (2.8.6)
     temple (0.10.3)
     terser (1.2.5)
       execjs (>= 0.3.0, < 3)
@@ -155,6 +156,7 @@ DEPENDENCIES
   mutex_m
   redcarpet (~> 3.6)
   rexml (>= 3.3.6)
+  stringex (~> 2.8)
   terser (~> 1.2)
   tzinfo-data
   wdm (~> 0.1)
