@@ -4,9 +4,30 @@ description: Explore Bilus Teknoloji Blog for in-depth articles on technology tr
 ---
 
 <section class="2xl:py-24 article-style">
-    <div class="container mx-auto bg-white/75">
-        <div class="mx-auto prose xl:prose-xl">
-            <h1><%= current_page.data.title %></h1>
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="prose prose-a:no-underline xl:prose-xl border-r pr-5">
+                <h1>
+                    Explore our latest articles
+                    <small class="text-bilus-300">about tech industries</small>
+                </h1>
+                <p>
+                    Explore our <strong>latest</strong> articles, white-papers, and thought
+                    leadership content, unlocking valuable insights and best
+                    practices to fortify your digital assets.
+                </p>
+                
+                <ul>
+                <% page_articles.sort_by{ |a| a.date }.reverse.each do |post| %>
+                    <li>
+                        <a title="<%= I18n.t('click_to_read', title: post.title) %>" class="text-bilus-500 hover-underline" href="<%= post.url %>"><%= post.title %></a>
+                        <small class="block"><%= I18n.l post.date, :format => config.date_format_long[I18n.locale] %></small>
+                    </li>
+                <% end %>
+                </ul>
+                
+            </div>
+            <%= partial "partials/blog_sidebar" %>
         </div>
     </div>
 </section>

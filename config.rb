@@ -11,6 +11,15 @@ set :markdown, {
   highlight: true,
 }
 
+set :date_format_long, {
+  tr: "%d %B %Y, %A %H:%M",
+  en: "%A, %B %-d, %Y, %-I:%M %p",
+}
+set :date_format_short, {
+  tr: "%d %B %Y, %A",
+  en: "%A, %B %-d, %Y",
+}
+
 config[:js_dir]     = 'public/js'
 config[:css_dir]    = 'public/css'
 config[:images_dir] = 'public/images'
