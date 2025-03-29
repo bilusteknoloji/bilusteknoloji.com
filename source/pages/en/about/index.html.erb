@@ -40,75 +40,37 @@ description: Explore Bilus Teknoloji&rsquo;s journey and vision. We are dedicate
                 </div>
 
                 <div class="grid grid-cols-1 gap-8 2xl:grid-cols-2">
-                    <div class="not-prose bg-bilus-800 text-white [&_strong]:text-white 2xl:p-10 rounded-xl">
-                        <h3 class="font-semibold mb-8 2xl:text-3xl">Why Choose Bilus Teknoloji?</h3>
-                        <p class="leading-normal text-bilus-100 mb-5">
-                            We are passionate about transforming businesses
-                            through technology. Here&rsquo;s why you should choose
-                            us for your software and digital transformation
-                            needs
-                        </p>
-                        
-                        <div class="flex flex-col gap-y-4">
-                            <h4 class="font-extrabold">Pioneering Solutions</h4>
-                            <p class="leading-snug text-bilus-100 2xl:text-base">
-                                As a leader in technology innovation, we are
-                                at the forefront of developing <strong>cutting-edge</strong>
-                                solutions that help businesses thrive in an
-                                ever-evolving digital world. Our technical
-                                consulting services ensure that your systems
-                                are <strong>optimized</strong>, <strong>scalable</strong>, and <strong>future-proof</strong>.
+                    <div class="not-prose">
+                        <div class="2xl:p-10 bg-bilus-800 text-white [&_strong]:text-white rounded-xl shadow-lg">
+                            <h3 class="font-semibold mb-8 2xl:text-3xl">Why Choose Bilus Teknoloji?</h3>
+                            <p class="leading-normal text-bilus-100 mb-16">
+                                We are passionate about transforming businesses
+                                through technology. Here&rsquo;s why you should choose
+                                us for your software and digital transformation
+                                needs
                             </p>
-                        </div>
-                        <hr class="my-10 border-t border-bilus-400"/>
-
-                        <div class="flex flex-col gap-y-4">
-                            <h4 class="font-extrabold">Collaborative Culture</h4>
-                            <p class="leading-snug text-bilus-100 2xl:text-base">
-                                We foster a <strong>collaborative</strong> and <strong>inclusive</strong>
-                                culture where diverse perspectives are valued
-                                and encouraged. By working <strong>closely</strong> with your
-                                team, we ensure <strong>tailored</strong> solutions that meet
-                                your specific <strong>business</strong> needs, driving <strong>success</strong>
-                                at every stage of your transformation journey.
-                            </p>
-                        </div>
-                        <hr class="my-10 border-t border-bilus-400"/>
-
-                        <div class="flex flex-col gap-y-4">
-                            <h4 class="font-extrabold">Professional Growth</h4>
-                            <p class="leading-snug text-bilus-100 2xl:text-base">
-                                At <strong>Bilus Teknoloji</strong>, we prioritize the
-                                professional development of our employees.
-                                Through <strong>continuous</strong> training opportunities,
-                                <strong>mentorship</strong> programs, and exposure to the
-                                <strong>latest</strong> technologies and <strong>methodologies</strong>, we help
-                                our team stay ahead in the rapidly evolving
-                                technology landscape.
-                            </p>
-                        </div>
-                        <hr class="my-10 border-t border-bilus-400"/>
-
-                        <div class="flex flex-col gap-y-4">
-                            <h4 class="font-extrabold">Meaningful Impact</h4>
-                            <p class="leading-snug text-bilus-100 2xl:text-base">
-                                Your contributions at <strong>Bilus Teknoloji</strong> will
-                                have a direct and meaningful impact on
-                                <strong>optimizing</strong> your business processes, enhancing
-                                <strong>data management</strong>, and improving overall system
-                                <strong>efficiency</strong>. We work <strong>with you</strong> to drive
-                                innovation and <strong>deliver</strong> lasting results in the
-                                digital age.
-                            </p>
+                            
+                            <% 
+                               whychoose = data.items.whychoose[lang]
+                               whychoose.each_with_index do |item,i|
+                            %>
+                            <div class="flex flex-col gap-y-4">
+                                <h4 class="font-extrabold"><%= item.title %></h4>
+                                <div class="leading-snug text-bilus-100 2xl:text-base">
+                                    <%= markdown(item.summary) %>
+                                </div>
+                                <% if i < whychoose.size - 1 %><hr class="my-10 border-t border-bilus-400"/><% end %>
+                            </div>
+                            <% end %>
                         </div>
                     </div>
 
                     <div>
-                        <div class="not-prose border rounded-xl">
+                        <div class="not-prose border rounded-xl h-full">
                             <div class="text-center 2xl:p-10">
                                 <h2 class="mb-8 2xl:text-3xl">Frequently Asked Questions</h2>
                                 <p class="text-sm sm:text-base">
-                                    This FAQ section covers common questions
+                                    This <strong>FAQ</strong> section covers common questions
                                     that potential clients considering working
                                     with <strong>Bilus Teknoloji</strong> may have.
                                 </p>    
@@ -116,11 +78,9 @@ description: Explore Bilus Teknoloji&rsquo;s journey and vision. We are dedicate
                             
                             <div class="not-prose space-y-4 px-4 pb-4">
                                 <% data.items.faq[lang].each_with_index do |item,i| %>
-                                <% is_open = '{ open: false }' %>
-                                <% is_open = '{ open: true }' if i == 0 %>
-                                <div x-data="<%= is_open %>" class="bg-white border border-bilus-100 rounded-lg p-4">
+                                <div x-data="{ open: false }" class="hover:bg-[#FAFAFD] bg-white border border-bilus-100 rounded-lg p-4">
                                     <button type="button" @click="open = !open" class="cursor-pointer w-full flex justify-between gap-x-2 items-center text-left text-bilus-500">
-                                        <div class="bg-bilus-400 text-white size-6 flex justify-center items-center rounded-full text-xs font-bold"><p><%= i+1 %></p></div>
+                                        <div class="bg-bilus-400 text-white size-6 flex justify-center items-center rounded-full text-xs font-bold tracking-tighter"><p><%= i+1 %></p></div>
                                         <div class="grow text-base font-semibold leading-none"><%= item.question %></div>
                                         <svg :class="open ? 'rotate-90' : 'rotate-0'" class="w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -128,7 +88,9 @@ description: Explore Bilus Teknoloji&rsquo;s journey and vision. We are dedicate
                                     </button>
                                     
                                     <div x-show="open" x-transition:enter="transition-all duration-300 ease-out" x-transition:enter-start="opacity-0 max-h-0" x-transition:enter-end="opacity-100 max-h-40" x-transition:leave="transition-all duration-200 ease-in" x-transition:leave-start="opacity-100 max-h-40" x-transition:leave-end="opacity-0 max-h-0" class="overflow-hidden mt-2 text-gray-600 leading-relaxed" x-cloak>
-                                        <p class="text-base p-2 leading-normal text-bilus-600"><%= markdownify_text_only(item.answer) %></p>
+                                        <div class="text-bilus-600 [&_p]:text-base [&_p]:p-2 [&_p]:leading-normal">
+                                            <%= markdown(item.answer) %>
+                                        </div>
                                     </div>
                                     
                                 </div>

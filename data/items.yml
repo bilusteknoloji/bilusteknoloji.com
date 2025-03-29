@@ -3,7 +3,9 @@ faq:
     - question: What is IT Consulting?
       answer: |
         IT consulting refers to the process of **advising businesses** on how to best utilize 
-        technology to meet their goals. It can cover various areas such as **software development**, 
+        technology to meet their goals. 
+        
+        It can cover various areas such as **software development**, 
         **system architecture**, cyber security, data management, and **digital transformation**. 
     - question: How can IT consulting benefit my business?
       answer: |
@@ -14,3 +16,99 @@ faq:
       answer: |
         We offer **custom software development**, mobile (iOS) app development, **web applications**, 
         and **enterprise software solutions** tailored to your specific business needs.
+    - question: How do you approach cybersecurity and IT infrastructure?
+      answer: |
+        We perform comprehensive **risk assessments**, implement proactive security measures, 
+        and optimize your IT infrastructure for performance, scalability, and resilience.
+    - question: What is Digital Transformation and how can it help my company?
+      answer: |
+        Digital transformation involves integrating **digital technologies** into all 
+        aspects of your business to improve processes, **customer experience**, and 
+        **value** creation. 
+        
+        It helps businesses stay competitive in the **modern market**.
+    - question: What is Risk Management in IT?
+      answer: |
+        Risk management in IT involves **identifying**, assessing, and prioritizing 
+        **potential** risks to your technology **infrastructure** and **data**, and 
+        implementing strategies to minimize or **mitigate** these risks.
+    - question: What is the role of data analytics in business?
+      answer: |
+        Data analytics helps businesses make informed decisions by analyzing 
+        **large sets of data** to uncover patterns, trends, and **insights** that drive 
+        **growth** and innovation.
+    - question: What are the benefits of cloud computing?
+      answer: |
+        Cloud computing provides **scalable** resources, **reduces** IT costs, 
+        enhances data accessibility, and improves **collaboration** within your 
+        organization, making it ideal for businesses of all sizes.
+    - question: How do you handle IT project management?
+      answer: |
+        Our team manages IT projects using **agile methodologies** to ensure 
+        timely delivery, quality, and alignment with your business goals. 
+        
+        We also manage **risks** and ensure effective communication throughout 
+        the project.
+    - question: Do you provide IT support after the project is completed?
+      answer: |
+        Yes, we offer ongoing IT **support** and **maintenance** to ensure your systems 
+        run smoothly, including troubleshooting, updates, and **optimization** 
+        services.
+    - question: What technologies do you specialize in?
+      answer: |
+        We specialize in a wide range of technologies, including **cloud computing**, 
+        **artificial intelligence**, **big data analytics**, **blockchain**, and 
+        cybersecurity solutions. 
+        
+        **Open Source Software** is in our DNA!
+    - question: What kind of tech stacks do you like working with?
+      answer: |
+        To be honest, we usually support whatever tech stack our consulting clients 
+        are using. 
+        
+        If we’re building something from scratch and have the freedom to choose 
+        the stack ourselves, we really enjoy working with modern languages like 
+        **Golang**, **Python**, **Ruby**, and **Rust**. 
+        
+        We also keep a wide range of open-source tools in our arsenal.
+    - question: How do you ensure data privacy and security?
+      answer: |
+        We implement strict data security measures, such as **encryption**, 
+        **secure data storage**, and compliance with industry standards like 
+        **GDPR** to protect your sensitive data.
+
+
+whychoose:
+  en:
+    - title: Pioneering Solutions
+      summary: |
+        As a leader in technology innovation, we are at the forefront of developing 
+        **cutting-edge** solutions that help businesses thrive in an ever-evolving 
+        digital world. 
+        
+        Our technical consulting services ensure that your systems are **optimized**, 
+        **scalable**, and **future-proof**.
+    - title: Collaborative Culture
+      summary: |
+        We foster a **collaborative** and inclusive culture where diverse perspectives 
+        are valued and encouraged. 
+        
+        By working **closely** with your team, we ensure **tailored** solutions 
+        that meet your specific **business** needs, driving **success** at every 
+        stage of your transformation journey.
+    - title: Professional Growth
+      summary: |
+        At **Bilus Teknoloji**, we prioritize the professional development of our 
+        employees. 
+        
+        Through **continuous training** opportunities, **mentorship** programs, and 
+        exposure to the **latest technologies** and **methodologies**, we help our 
+        team stay ahead in the rapidly evolving technology landscape.
+    - title: Meaningful Impact
+      summary: |
+        Your contributions at **Bilus Teknoloji** will have a direct and meaningful 
+        impact on **optimizing** your business processes, enhancing **data management**, 
+        and improving overall **system efficiency**. 
+        
+        We work with you to drive innovation and deliver lasting results 
+        in the **digital age**.
