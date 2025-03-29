@@ -6,10 +6,41 @@ description: Explore Bilus Teknoloji&rsquo;s journey and vision. We are dedicate
 <section class="2xl:py-24 article-style">
     <div class="container mx-auto">
         <div class="flex justify-between">
-            <div class="prose xl:prose-xl border-r pr-5">
-                <h1><%= current_page.data.title %></h1>
+            <div class="prose max-w-none xl:prose-xl">
+                <h1>
+                    About Us
+                    <small class="block text-bilus-300">Bilus Teknoloji</small>
+                </h1>
+                
+                <p class="not-prose 2xl:text-3xl 2xl:leading-relaxed">
+                    At <strong>Bilus Teknoloji</strong>, we are dedicated to helping businesses
+                    navigate the complexities of digital transformation with
+                    cutting-edge software solutions. Our goal is to <strong>empower</strong>
+                    companies to <strong>innovate</strong>, streamline processes, and <strong>unlock</strong>
+                    new <strong>growth</strong> opportunities
+                </p>
+                
+                <figure>
+                    <%= image_tag "bilus-office.webp", alt: t('bilus_office_alt'), class: "" %>
+                </figure>
+                
+                <div class="not-prose grid grid-cols-3 gap-12">
+                    <div class="border border-bilus-100 rounded-lg p-8 opacity-0 translate-y-4 transition-all duration-700 ease-out delay-100 animate-fade-in-up-1">
+                        <h3 class="font-bold text-4xl text-center">2024</h3>
+                        <p class="text-center text-light">FOUNDED IN</p>
+                    </div>
+                    <div class="border border-bilus-100 rounded-lg p-8 opacity-0 translate-y-4 transition-all duration-700 ease-out delay-500 animate-fade-in-up-2">
+                        <h3 class="font-bold text-4xl text-center">23+ Company</h3>
+                        <p class="text-center text-light">PORFOLIO</p>
+                    </div>
+                    <div class="border border-bilus-100 rounded-lg p-8 opacity-0 translate-y-4 transition-all duration-700 ease-out delay-1000 animate-fade-in-up-3">
+                        <h3 class="font-bold text-4xl text-center">Kadıköy Valley</h3>
+                        <p class="text-center text-light">HEADQUARTER</p>
+                    </div>
+                </div>
             </div>
-            <%= partial "partials/services_sidebar" %>
+
+<%#            partial "partials/services_sidebar"#%>
         </div>
     </div>
 </section>

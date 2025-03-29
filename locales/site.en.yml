@@ -2,6 +2,7 @@
 en:
   home: 'Home'
   bilus_logo_alt: Logo of Bilus Teknoloji
+  bilus_office_alt: Office photo of Bilus Teknoloji
   click_to_view: 'Click to view %{title} page'
   click_to_read: 'Click to read %{title} article'
   blog_cover_image_article: 'Blog cover image of %{title} article'
