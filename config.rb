@@ -11,6 +11,10 @@ set :markdown, {
   highlight: true,
 }
 
+config[:js_dir]     = 'public/js'
+config[:css_dir]    = 'public/css'
+config[:images_dir] = 'public/images'
+
 activate :livereload
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -27,8 +31,8 @@ activate :blog do |blog|
   blog.per_page          = 10
   blog.page_link         = 'page/{num}'
   blog.summary_separator = /READ_MORE/
-  blog.summary_length    = nil
-  blog.layout            = 'blog-detail'
+  # blog.summary_length    = nil
+  blog.layout            = 'blog_detail'
   # blog.tag_template      = 'templates/blog-tag.html'
   # blog.calendar_template = 'templates/blog-calendar.html'
 end
@@ -48,7 +52,7 @@ page "/sitemap.xml", layout: false
 
 proxy_map = {
   en: {
-    pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service'],
+    pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service', 'blog'],
     services: [
       'technical-consulting',
       'software-development-management',
@@ -98,6 +102,6 @@ end
 
 activate :external_pipeline,
   name: :tailwind,
-  command: "npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/stylesheets/site.css -m #{"--watch" unless build?}",
+  command: "npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
   latency: 2,
   source: "./dist/"

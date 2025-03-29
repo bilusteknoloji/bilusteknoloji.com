@@ -278,8 +278,6 @@ blog: en
 <section class="2xl:py-24">
     <div class="container mx-auto">
         <div class="text-center">
-            <%= inspect blog.articles %>
-            <%= inspect page_articles %>
             <h2 class="heading-2">
                 Stay Ahead of the Curve
                 <small class="block mt-2 text-bilus-500">Insights on IT World</small>
@@ -290,50 +288,22 @@ blog: en
         </div>
         
         <div class="mb-5 grid grid-cols-1 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+            <% page_articles.sort_by{ |a| a.date }.reverse.first(3).each do |post| %>
             <div class="bg-white border rounded-xl p-6">
-                <a href="#" title="Click to read: Why IT Consultancy is Essential for Business Growth" class="group flex flex-col gap-5">
+                <a href="<%= post.url %>" title="<%= I18n.t('click_to_read', title: post.data.title) %>" class="group flex flex-col gap-5">
                     <div class="overflow-hidden rounded-lg">
-                        <%= image_tag 'blog/0001-why-it-consultancy-is-essential-for-business-growth.webp', alt: 'Blog cover of Why IT Consultancy is Essential for Business Growth article', class: "transition duration-300 group-hover:scale-110 rounded-inherit" %>
+                        <%= image_tag "blog/#{post.data.cover}", alt: I18n.t('blog_cover_image_article', title: post.data.title), class: "transition duration-300 group-hover:scale-110 rounded-inherit" %>
                     </div>
-                    <h3 class="text-bilus-500 font-semibold text-xl">Why IT Consultancy is Essential for Business Growth</h3>
-                    <p class="leading-relaxed">
-                        In the digital age, <strong>technology</strong> plays a crucial role in the success of 
-                        businesses. However, many companies <strong>struggle</strong> to keep up with the 
-                        <strong>rapid pace</strong> of technological advancements.
-                    </p>
+                    <h3 class="text-bilus-500 font-semibold text-xl"><%= post.data.title %></h3>
+                    <div class="leading-relaxed"><%= post.summary %></div>
                 </a>
             </div>
-
-            <div class="bg-white border rounded-xl p-6">
-                <a href="#" title="Click to read: The Importance of IT Consultancy for Modern Businesses" class="group flex flex-col gap-5">
-                    <div class="overflow-hidden rounded-lg">
-                        <%= image_tag 'blog/0002-the-importance-of-it-consultancy-for-modern-businesses.webp', alt: 'Blog cover of The Importance of IT Consultancy for Modern Businesses article', class: "transition duration-300 group-hover:scale-110 rounded-inherit" %>
-                    </div>
-                    <h3 class="text-bilus-500 font-semibold text-xl">The Importance of IT Consultancy for Modern Businesses</h3>
-                    <p class="leading-relaxed">
-                        In today&rsquo;s fast-paced digital world, businesses of all sizes rely heavily on 
-                        <strong>technology</strong> to operate efficiently and stay <strong>competitive</strong>.
-                    </p>
-                </a>
-            </div>
-
-            <div class="bg-white border rounded-xl p-6">
-                <a href="#" title="Click to read: How IT Consultancy Drives Innovation and Business Success" class="group flex flex-col gap-5">
-                    <div class="overflow-hidden rounded-lg">
-                        <%= image_tag 'blog/0003-how-it-consultancy-drives-innovation-and-business-success.webp', alt: 'Blog cover of How IT Consultancy Drives Innovation and Business Success article', class: "transition duration-300 group-hover:scale-110 rounded-inherit" %>
-                    </div>
-                    <h3 class="text-bilus-500 font-semibold text-xl">How IT Consultancy Drives Innovation and Business Success</h3>
-                    <p class="leading-relaxed">
-                        In an era where technology drives business success, staying ahead of the curve 
-                        can be <strong>challenging</strong>. While <strong>technology</strong> offers immense opportunities, 
-                        managing IT systems effectively is often a <strong>complex</strong> task.
-                    </p>
-                </a>
-            </div>
+            <% end %>
         </div>
         
         <div class="text-center">
-            <a href="#" class="inline-block bg-bilus-400 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Read All Articles</a>
+            <% _, link = get_page_title_and_link 'blog' %>
+            <a href="<%= link %>" class="inline-block bg-bilus-400 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out"><%= t('read_all_articles') %></a>
         </div>
     </div>
 </section>
