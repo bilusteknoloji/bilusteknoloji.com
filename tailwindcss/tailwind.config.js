@@ -16,10 +16,11 @@ module.exports = {
             6: '6px',
         },
         animation: {
-            'fade-in-start': 'fadeIn 0.7s ease-out 0.3s forwards',
             'fade-in-up-1': 'fadeIn 0.6s ease-out 0.2s forwards',
             'fade-in-up-2': 'fadeIn 0.6s ease-out 0.4s forwards',
             'fade-in-up-3': 'fadeIn 0.6s ease-out 0.6s forwards',
+            'fade-in-up-4': 'fadeIn 0.6s ease-out 0.8s forwards',
+            'fade-in-up-5': 'fadeIn 0.6s ease-out 1s forwards',
         },
         keyframes: {
             fadeIn: {

@@ -1,3 +1,5 @@
+require 'bundler/setup'
+
 activate :i18n
 
 set :markdown_engine, :redcarpet

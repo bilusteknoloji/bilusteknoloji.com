@@ -1,0 +1,16 @@
+faq:
+  en:
+    - question: What is IT Consulting?
+      answer: |
+        IT consulting refers to the process of **advising businesses** on how to best utilize 
+        technology to meet their goals. It can cover various areas such as **software development**, 
+        **system architecture**, cyber security, data management, and **digital transformation**. 
+    - question: How can IT consulting benefit my business?
+      answer: |
+        IT consulting can improve efficiency, **reduce costs**, enhance security, and drive 
+        innovation within your business by leveraging the **latest technologies** and **best** 
+        practices.
+    - question: What types of software development services do you offer?
+      answer: |
+        We offer **custom software development**, mobile (iOS) app development, **web applications**, 
+        and **enterprise software solutions** tailored to your specific business needs.

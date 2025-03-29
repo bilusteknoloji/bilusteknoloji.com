@@ -21,4 +21,14 @@ module CustomHelpers
     return [title, link]
   end
 
+  def markdown(input)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, config[:markdown])
+    markdown.render(input)
+  end
+
+  def markdownify_text_only(text, **options)
+    allowed_tags = options[:allowed_tags] || ['em', 'strong', 'a', 'code', 'kbd']
+    attributes = options[:attributes] || {'a' => ['href']}
+    Sanitize.fragment(markdown(text), elements: allowed_tags, attributes: attributes)
+  end
 end
