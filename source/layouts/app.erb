@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bilus teknoloji - <%= current_page.data.title %></title>
+    <title><%= current_page.data.title %></title>
+
+    <meta name="title" content="<%= current_page.data.title %>">
     <meta name="description" content="<%= current_page.data.description %>">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="<%= current_page.data.keywords %>">
+    <meta name="author" content="Bilus Teknoloji">
+    <meta name="build-date" content="<%= Time.now %>">
+    <meta name="color-scheme" content="light" />
+
+    <link rel="icon" type="image/png" href="/public/images/apps/<%= current_page.data.app_dirname %>/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/apps/<%= current_page.data.app_dirname %>/favicon.svg" />
+    <link rel="shortcut icon" href="/public/images/apps/<%= current_page.data.app_dirname %>/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apps/<%= current_page.data.app_dirname %>/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="<%= current_page.data.mobile_web_app_title %>" />
+    <link rel="manifest" href="/public/images/apps/<%= current_page.data.app_dirname %>/site.webmanifest" />
+
     <%= stylesheet_link_tag "site" %>
+    
+    <meta property="og:url" content="https://bilusteknoloji.com/<%= current_page.data.og_url %>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= current_page.data.og_title || current_page.data.title %>">
+    <meta property="og:description" content="<%= current_page.data.og_description || current_page.data.description %>">
+    <meta property="og:image" content="https://bilusteknoloji.com/public/images/apps/<%= current_page.data.app_dirname %>/<%= current_page.data.og_image %>">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bilusteknoloji.com">
+    <meta property="twitter:url" content="https://bilusteknoloji.com/<%= current_page.data.og_url %>">
+    <meta name="twitter:title" content="<%= current_page.data.title %>">
+    <meta name="twitter:description" content="<%= current_page.data.description %>">
+    <meta name="twitter:image" content="https://bilusteknoloji.com/public/images/apps/<%= current_page.data.app_dirname %>/<%= current_page.data.og_image %>">
+
+    <meta name="robots" content="index, follow">
 </head>
-<body class="<%= current_page.data.bg || '' %>">
+<body class="<%= current_page.data.bg_class || '' %>">
+    <% if development? %><span class="debug"></span><% end %>
     <%= yield %>
 </body>
 </html>

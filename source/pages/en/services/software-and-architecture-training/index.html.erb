@@ -1,0 +1,18 @@
+---
+title: Software &amp; Architecture Training
+description: Bilus Teknoloji provides expert training and consultancy on distributed systems, cloud-native architectures, Go programming, Unix, Docker, Kubernetes, relational databases, and modern web frameworks like Django, FastAPI, and Flask. We help teams migrate to modern tech stacks with hands-on, real-world expertise.
+---
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="prose prose-links xl:prose-xl">
+                <%= markdown File.read("content/#{lang}/services/software-and-architecture-training.md") %>
+
+                <% _, link = get_page_title_and_link 'services' %>
+                <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>
+            </div>
+            <%= partial "partials/services_sidebar" %>
+        </div>
+    </div>
+</section>

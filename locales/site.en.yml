@@ -1,0 +1,18 @@
+---
+en:
+  home: 'Home'
+  bilus_logo_alt: Logo of Bilus Teknoloji
+  bilus_office_alt: Office photo of Bilus Teknoloji
+  click_to_view: 'Click to view %{title} page'
+  click_to_read: 'Click to read %{title} article'
+  click_to_read_all_articles: 'Click to read all articles'
+  click_to_learn_more: 'Click to learn more about %{title}'
+  learn_more: 'Learn More'
+  blog_cover_image_article: 'Blog cover image of %{title} article'
+  see_in_google_maps: 'See in Google Maps'
+  follow_us_on_x: 'Follow us on X!'
+  follow_us_on_github: 'Follow us on GitHub!'
+  follow_us_on_linkedin: 'Follow us on LinkedIn!'
+  read_all_articles: 'Read All Articles'
+  latests_articles: 'Latest Articles'
+  get_started_now: 'Let’s get started, get in touch!'

@@ -1,0 +1,18 @@
+<% data.items.services[lang].each do |item| %>
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
+    <%= image_tag item.icon, class: 'size-6 2xl:size-16' %>
+    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl"><%= escape_html(item.title) %></h4>
+    <p class="2xl:leading-relaxed"><%= markdownify_text_only(item.summary) %></p>
+    <p class="mt-auto">
+        <%
+        sitemap_obj = sitemap.find_resource_by_path("#{lang}/services/#{item.folder}/index.html")
+        %>
+        <a title="<%= I18n.t('click_to_learn_more', title: item.title) %>" href="<%= sitemap_obj.url %>" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
+            <%= t('learn_more') %>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+    </p>
+</div>
+<% end %>

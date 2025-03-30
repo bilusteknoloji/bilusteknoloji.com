@@ -1,0 +1,18 @@
+---
+title: Data Management &amp; Analytics Solutions
+description: Bilus Teknoloji offers cutting-edge data management and analytics solutions. Unlock the potential of your data and drive your business forward today.
+---
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="prose prose-links xl:prose-xl">
+                <%= markdown File.read("content/#{lang}/services/data-management-and-analytics-solutions.md") %>
+
+                <% _, link = get_page_title_and_link 'services' %>
+                <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>
+            </div>
+            <%= partial "partials/services_sidebar" %>
+        </div>
+    </div>
+</section>

@@ -1,52 +1,170 @@
 ---
 title: Software Solutions Shaping the Future
+blog: en
 ---
+<% I18n.locale = :en %>
+<%= partial "partials/header" %>
 
-<section class="text-bilus-500 p-4 sm:p-8">
+<section class="2xl:pb-24 pt-20">
     <div class="container mx-auto">
-
-        <header class="flex flex-col items-center gap-y-2 sm:gap-y-4">
-            <%= image_tag "bilus-logo.png", id: "bilus-logo", class: "h-8 sm:h-16" %>
-            <h1 class="font-bold text-lg sm:text-2xl">Bilus Teknoloji</h1>
-            <p class="text-lg">Software Solutions Shaping the Future</p>
-        </header>
-
+        <div class="flex w-full">
+            <div class="2xl:w-4/6">
+                <h1 class="text-bilus-500 mb-5 2xl:text-5xl 2xl:font-bold 2xl:leading-none">
+                    Data-Oriented Technology Management for Scalable Growth
+                </h1>
+                <h2 class="mb-5 2xl:text-3xl 2xl:leading-snug 2xl:max-w-3xl">
+                    We transform chaotic tech teams into <strong>high-performance</strong> engines — 
+                    driven by <strong>data</strong>, guided by <strong>strategy</strong>.
+                </h2>
+                <p class="mb-5 2xl:text-2xl 2xl:leading-relaxed">
+                    In today’s <strong>digital</strong> world, effective technology management is 
+                    <strong>crucial</strong> for business success. By offering <strong>data-driven</strong> 
+                    solutions, we <strong>optimize</strong> your digital infrastructure, <strong>enhance</strong> 
+                    operational <strong>efficiency</strong>, and secure <strong>long-term</strong> success.
+                </p>
+                <h3 class="mb-10 text-bilus-600 font-semibold 2xl:text-3xl 2xl:leading-snug 2xl:max-w-2xl">
+                    Unleash your potential with our <strong>tailored solutions</strong> 
+                    for your every tech needs!
+                </h3>
+                
+                <% _, link = get_page_title_and_link 'contact' %>
+                <a title="<%= t('get_started_now') %>" href="<%= link %>" class="inline-block bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Get Started Now!</a>
+            </div>
+            <div class="2xl:w-2/6">
+                <div class="w-fit shadow-lg ml-auto">
+                    <%= image_tag "clipart.jpg", class: "mx-auto size-80 border border-bilus-100 rounded-xl" %>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="bg-bilus-700 text-white text-center p-4 md:p-20">
-    <h2 class="mb-2 mx-auto max-w-xs sm:max-w-none sm:mb-4 font-extrabold sm:[text-shadow:_2px_2px_20px_rgb(167_184_214)] sm:text-2xl lg:text-5xl lg:tracking-tight">
-        Innovative & Sustainable Software Solutions
-    </h2>
-
-    <p class="mx-auto sm:max-w-xl lg:max-w-3xl lg:text-3xl/snug">
-        Bilus Teknoloji provides innovative and sustainable solutions to meet 
-        businesses&rsquo; software needs. 
-    </p>
-
-    <p class="mx-auto max-w-3xl p-4 lg:text-xl/relaxed">
-        With our expertise in open-source technologies, micro-services architectures, 
-        and distributed systems, we develop web, mobile, and desktop applications 
-        at the highest standards. 
-    </p>
-
-    <p class="mx-auto max-w-3xl p-4 lg:text-lg/relaxed">
-        Our technical consulting services accelerate your projects, enhance efficiency, 
-        and help you implement the best practices.
-    </p>
-    
-</section>
-
-<section class="py-4 md:pt-20">
-    <div class="bg-white p-4 mx-auto max-w-3xl prose prose-strong:font-medium prose-strong:text-bilus-550 prose-h2:text-bilus-450 2xl:prose-xl article">
-        <%= partial "partials/index-services" %>
+<section class="2xl:pt-0 2xl:pb-24">
+    <div class="mx-auto grid grid-cols-1 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+        <%= partial 'partials/services_list' %>
     </div>
 </section>
 
-<section class="md:pb-20">
-    <div class="bg-white p-4 mx-auto max-w-3xl prose prose-strong:font-medium prose-strong:text-bilus-550 prose-h2:text-bilus-450 2xl:prose-xl article">
-        <%= partial "partials/index-why" %>
+
+<section class="bg-bilus-800 2xl:py-24">
+    <div class="container mx-auto text-center 2xl:mb-12">
+        <h2 class="heading-2-rev">Trusted by Industry Leaders</h2>
+        <p class="mx-auto mt-5 text-bilus-100 2xl:max-w-3xl 2xl:text-2xl 2xl:leading-normal">
+            See what our clients have to say about our IT solutions. We
+            prioritize integrity and collaboration to enhance the efficiency
+            and security of your digital infrastructure.
+        </p>
+    </div>
+
+    <div class="container mx-auto text-bilus-100 grid grid-cols-1 2xl:gap-8 2xl:grid-cols-3">
+        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
+            
+            <p>
+                I&rsquo;ve been working with your company for years, and I have always 
+                admired your professionalism. Especially with your deep knowledge in digital 
+                transformation processes and strategic outlook, our projects have always been successful. 
+            </p>
+            <p>
+                Your team&rsquo;s expertise in technology and the solutions you provide to clients 
+                are truly impressive. I wish you continued success in your work!
+            </p>
+            <div class="flex items-center space-x-4 w-fit">
+                <img src="https://i.pravatar.cc/150?img=69" alt="Robert Benavides" class="border border-bilus-300 size-16 rounded-full object-cover" />
+                <div>
+                    <h3 class="text-lg font-semibold text-bilus-100">Robert Benavides</h3>
+                    <h4 class="text-sm text-bilus-300">Eng. Manager, NetTech Solutions</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
+
+            <p>
+                You&rsquo;ve played a pivotal role in digitizing our business
+                processes and strengthening our technology infrastructure.
+            </p>
+            <p>
+                Every piece of work you do incorporates the best industry practices and 
+                innovative solutions. 
+            </p>
+            
+            <p>It&rsquo;s been a privilege working with you, and we highly value your partnership.</p>
+
+            <div class="flex items-center space-x-4 w-fit">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Sarah Williams" class="border border-bilus-300 size-16 rounded-full object-cover" />
+                <div>
+                    <h3 class="text-lg font-semibold text-bilus-100">Sarah Williams</h3>
+                    <h4 class="text-sm text-bilus-300">CIO, Innovatech Global</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
+
+            <p>Your company has provided us with immense strategic value. </p>
+            <p>
+                Our long-standing partnership has played a key role in integrating new 
+                technologies and improving our operational efficiency. 
+            </p>
+            <p>
+                Projects are always delivered on time and with results exceeding 
+                our expectations. 
+            </p>
+            <p>You truly deserve to be a leader in the IT consulting space!</p>
+
+            <div class="flex items-center space-x-4 w-fit">
+                <img src="https://i.pravatar.cc/150?img=18" alt="Charles Richards" class="border border-bilus-300 size-16 rounded-full object-cover" />
+                <div>
+                    <h3 class="text-lg font-semibold text-bilus-100">Charles Richards</h3>
+                    <h4 class="text-sm text-bilus-300">IT Director, GlobalSoft</h4>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<section class="2xl:py-24">
+    <div class="container mx-auto">
+        <div class="text-center">
+            <h2 class="heading-2">
+                Stay Ahead of the Curve
+                <small class="block mt-2 text-bilus-500">Insights on IT World</small>
+            </h2>
+            <p class="2xl:text-xl 2xl:mb-12">
+                Explore our latest articles, white papers, and thought leadership content.
+            </p>
+        </div>
+        
+        <div class="mb-5 grid grid-cols-1 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+            <% page_articles.sort_by{ |a| a.date }.reverse.first(3).each do |post| %>
+            <div class="bg-white border rounded-xl p-6">
+                <a href="<%= post.url %>" title="<%= I18n.t('click_to_read', title: post.data.title) %>" class="group flex flex-col gap-5">
+                    <div class="overflow-hidden rounded-lg">
+                        <%= image_tag "blog/#{post.data.cover}", alt: I18n.t('blog_cover_image_article', title: post.data.title), class: "transition duration-300 group-hover:scale-110 rounded-inherit" %>
+                    </div>
+                    <h3 class="text-bilus-500 font-semibold text-xl"><%= post.data.title %></h3>
+                    <div class="leading-relaxed"><%= post.summary %></div>
+                </a>
+            </div>
+            <% end %>
+        </div>
+        
+        <div class="text-center">
+            <% _, link = get_page_title_and_link 'blog' %>
+            <a title="<%= t('click_to_read_all_articles') %>" href="<%= link %>" class="inline-block bg-bilus-400 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out"><%= t('read_all_articles') %></a>
+        </div>
+    </div>
+</section>
+
+
+<%= partial "partials/optimize_transform" %>
 <%= partial "partials/footer" %>

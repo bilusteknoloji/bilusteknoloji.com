@@ -1,0 +1,50 @@
+<section class="bg-white pt-16 pb-4 sticky top-0 z-30 border-b">
+    <div class="container mx-auto">
+        <nav>
+            <ul class="flex justify-start items-center gap-x-12">
+                <li>
+                    <a class="nav-links hover-underline flex items-center gap-x-2" href="/">
+                        <%= image_tag "bilus-logo.png", alt: t('bilus_logo_alt'), class: "size-4" %>
+
+                        Bilus Teknoloji
+                    </a>
+                </li>
+                
+                <li class="relative group">
+                    <%
+                    title, link = get_page_title_and_link 'services'
+                    %>
+                    <a title="<%= I18n.t('click_to_view', title: title) %>" class="inline-flex items-center gap-1 nav-links" href="<%= link %>">
+                        <%= title %>
+                        <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <ul class="absolute left-0 top-full mt-2 w-80 first:*:pt-4 last:*:pb-4 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-40">
+                    <% 
+                    config[:proxy_map][lang][:services].each do |folder_name|
+                        sitemap_obj = sitemap.find_resource_by_path("#{lang}/services/#{folder_name}/index.html")
+                        %>
+                        <li class="px-4 pt-4"><a title="<%= I18n.t('click_to_view', title: sitemap_obj.metadata[:page][:title]) %>" href="<%= sitemap_obj.url %>" class="submenu-links"><%= sitemap_obj.metadata[:page][:title] %></a></li>
+                        <%
+                    end
+                    %>
+                    </ul>
+                </li>
+                
+                <% title, link = get_page_title_and_link 'blog' %>
+                <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+
+                <% title, link = get_page_title_and_link 'about' %>
+                <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+
+                <li class="flex-grow"></li>
+
+                <% title, link = get_page_title_and_link 'contact' %>
+                <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+
+            </ul>
+        </nav>
+    </div>
+</section>

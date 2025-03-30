@@ -1,0 +1,10 @@
+<div class="hidden md:block md:pl-5 md:max-w-96">
+    <div class="p-8 border border-bilus-100 rounded-xl shadow-md">
+        <h4 class="text-bilus-500 font-semibold mb-5 2xl:text-2xl"><%= t('latests_articles') %></h4>
+        <ul class="*:my-4 last:*:mb-0">
+        <% page_articles.sort_by{ |a| a.date }.reverse.first(3).each do |post| %>
+            <li><a title="<%= I18n.t('click_to_read', title: post.title) %>" class="text-bilus-500 hover-underline" href="<%= post.url %>"><%= post.title %></a></li>
+        <% end %>
+        </ul>
+    </div>
+</div>

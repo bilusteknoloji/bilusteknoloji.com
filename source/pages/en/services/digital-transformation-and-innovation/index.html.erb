@@ -1,0 +1,18 @@
+---
+title: Digital Transformation &amp; Innovation
+description: Bilus Teknoloji specializes in digital transformation and innovation. Unlock your business's potential with our expert solutions and strategies today.
+---
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="prose prose-links xl:prose-xl">
+                <%= markdown File.read("content/#{lang}/services/digital-transformation-and-innovation.md") %>
+
+                <% _, link = get_page_title_and_link 'services' %>
+                <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>
+            </div>
+            <%= partial "partials/services_sidebar" %>
+        </div>
+    </div>
+</section>
