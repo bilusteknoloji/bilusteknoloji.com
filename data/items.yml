@@ -112,3 +112,47 @@ whychoose:
         
         We work with you to drive innovation and deliver lasting results 
         in the **digital age**.
+
+services:
+  en:
+    - icon: "icons/puzzle.svg"
+      folder: "technical-consulting"
+      title: "Technical Consulting"
+      summary: |
+        We help businesses **optimize** their organizational structure and processes, 
+        **aligning** technology with strategic goals to improve **efficiency** and 
+        team **performance**.
+    - icon: "icons/cog.svg"
+      folder: "software-development-management"
+      title: "Software Development & Management"
+      summary: |
+        From **custom** software development to project management, we ensure 
+        seamless execution through the software development lifecycle (**SDLC**), 
+        delivering **scalable** and **reliable** solutions.
+    - icon: "icons/pie.svg"
+      folder: "technical-assessment-and-risk-management"
+      title: "Technical Assessment & Risk Management"
+      summary: |
+        We provide comprehensive software evaluations, identifying **risks** and 
+        improving **quality** through code **reviews** and **due diligence**, 
+        enabling informed decision-making.
+    - icon: "icons/bars.svg"
+      folder: "data-management-and-analytics-solutions"
+      title: "Data Management & Analytics Solutions"
+      summary: |
+        Our **data solutions** help businesses leverage **big data**, 
+        enhance data security, and optimize **data management** for actionable 
+        **insights** and strategic **decision-making**.
+    - icon: "icons/terminal.svg"
+      folder: "software-and-architecture-training"
+      title: "Software & Architecture Training"
+      summary: |
+        Our training programs provide **hands-on**, **real-world** learning in 
+        secure **coding**, clean **architecture**, version control, databases, 
+        and **cloud-native technologies**.
+    - icon: "icons/cube.svg"
+      folder: "digital-transformation-and-innovation"
+      title: "Digital Transformation & Innovation"
+      summary: |
+        We guide businesses through **digital transformation**, adopting 
+        innovative technologies to **optimize processes** and drive growth.

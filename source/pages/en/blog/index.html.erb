@@ -6,7 +6,7 @@ description: Explore Bilus Teknoloji Blog for in-depth articles on technology tr
 <section class="2xl:py-24 article-style">
     <div class="container mx-auto">
         <div class="flex justify-between">
-            <div class="prose prose-a:no-underline xl:prose-xl border-r pr-5">
+            <div class="prose prose-links xl:prose-xl border-r pr-5">
                 <h1>
                     Explore our latest articles
                     <small class="block text-bilus-300">about tech industries</small>
@@ -20,7 +20,7 @@ description: Explore Bilus Teknoloji Blog for in-depth articles on technology tr
                 <ul>
                 <% page_articles.sort_by{ |a| a.date }.reverse.each do |post| %>
                     <li>
-                        <a title="<%= I18n.t('click_to_read', title: post.title) %>" class="text-bilus-500 hover-underline" href="<%= post.url %>"><%= post.title %></a>
+                        <a title="<%= I18n.t('click_to_read', title: post.title) %>" href="<%= post.url %>"><%= post.title %></a>
                         <small class="block"><%= I18n.l post.date, :format => config.date_format_long[I18n.locale] %></small>
                     </li>
                 <% end %>

@@ -79,4 +79,8 @@
         prose-strong:text-bilus-700
         ;
     }
+    
+    .prose-links {
+        @apply prose-a:text-bilus-500 prose-a:underline-offset-6 hover:prose-a:no-underline;
+    }
 }

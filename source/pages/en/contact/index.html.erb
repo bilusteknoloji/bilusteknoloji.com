@@ -7,10 +7,10 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
     <div class="container mx-auto">
 
         <div class="flex justify-between">
-            <div class="prose xl:prose-xl xl:w-full border-r pr-5">
+            <div class="prose xl:prose-xl xl:w-full">
                 <h1>Contact Us</h1>
                 
-                <form class="space-y-6" novalidate>
+                <form class="space-y-6" method="POST" action="#">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <label for="full_name" class="block font-bold mb-2 text-sm">Full Name</label>
@@ -31,7 +31,21 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
                         <label for="message" class="block font-bold mb-2 text-sm">Message</label>
                         <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" class="w-full rounded-md border px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-bilus-200 invalid:border-red-500 invalid:focus:ring-red-500" placeholder="Type your message"></textarea>
                     </div>
-
+                    
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="consent" name="consent" required class="mt-0.5 accent-bilus-500 focus:ring-2 focus:ring-bilus-200" />
+                        <label for="consent" class="text-sm leading-tight">
+                            I give my consent to be contacted via the information I provided. My data will not be used for marketing purposes.
+                        </label>
+                    </div>
+                    
+                    
+                    <p class="text-gray-500 [&>strong]:text-gray-600">
+                        Your contact details will <strong>only be used</strong> to get in touch
+                        with you. We respect <strong>your privacy</strong> and never send spam
+                        or promotional content.
+                    </p>
+                    
                     <button type="submit" class="bg-bilus-700 text-white px-12 py-1 font-bold rounded-full hover:bg-gray-800 transition disabled:opacity-50">Send Message</button>
                 </form>
                 
