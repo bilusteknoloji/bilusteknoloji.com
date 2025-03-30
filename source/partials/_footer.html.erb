@@ -53,8 +53,10 @@
                             <%
                         end
                         %>
-
-                        <li><a href="#">Blog</a></li>
+                        
+                        <% title, link = get_page_title_and_link 'blog' %>
+                        
+                        <li><a title="<%= I18n.t('click_to_view', title: title) %>" href="<%= link %>"><%= title %></a></li>
                     </ul>
                 </div>
                 <div>
