@@ -27,6 +27,7 @@ config[:css_dir]    = 'public/css'
 config[:images_dir] = 'public/images'
 
 activate :livereload
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end

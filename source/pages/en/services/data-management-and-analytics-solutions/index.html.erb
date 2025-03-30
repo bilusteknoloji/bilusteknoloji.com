@@ -7,7 +7,7 @@ description: Bilus Teknoloji offers cutting-edge data management and analytics s
     <div class="container mx-auto">
         <div class="flex justify-between">
             <div class="prose prose-links xl:prose-xl">
-                <h1><%= current_page.data.title %></h1>
+                <%= markdown File.read("content/#{lang}/services/data-management-and-analytics-solutions.md") %>
 
                 <% _, link = get_page_title_and_link 'services' %>
                 <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>

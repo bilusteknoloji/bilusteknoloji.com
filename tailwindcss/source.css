@@ -76,6 +76,7 @@
         prose-h1:text-bilus-600 
         prose-h2:text-bilus-500
         prose-h3:text-bilus-400
+        prose-h4:text-bilus-700 prose-h4:underline prose-h4:underline-offset-6
         prose-strong:text-bilus-700
         ;
     }

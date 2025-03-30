@@ -7,8 +7,8 @@ description: Bilus Teknoloji specializes in software development and management,
     <div class="container mx-auto">
         <div class="flex justify-between">
             <div class="prose prose-links xl:prose-xl">
-                <h1><%= current_page.data.title %></h1>
-
+                <%= markdown File.read("content/#{lang}/services/software-development-management.md") %>
+                
                 <% _, link = get_page_title_and_link 'services' %>
                 <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>
             </div>

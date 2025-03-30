@@ -22,8 +22,8 @@ module CustomHelpers
   end
 
   def markdown(input)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, config[:markdown])
-    markdown.render(input)
+    mdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, config[:markdown])
+    mdown.render(input)
   end
 
   def markdownify_text_only(text, **options)
