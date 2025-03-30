@@ -97,23 +97,46 @@ proxy_map[:en][:pages].each do |folder_name|
 end
 # -----------------------------------------------------------------------------
 
-# proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting/index.html', ignore: true
-# proxy '/en/services/software-development-management/index.html', '/pages/en/services/software-development-management/index.html', ignore: true
+# -----------------------------------------------------------------------------
+apps_folder_name = {
+  tr: 'uygulamalar',
+  en: 'apps',
+}
+
+# https://bilusteknoloji.com/en/apps/trivia-wars/support/
+
+proxy_map_apps = {
+  en: {
+    'trivia-wars': ['support'],
+  },
+  tr: {
+    'yengec': ['', 'destek', 'gizlilik'],
+  },
+}
+
+proxy_map_apps.each do |lang, app_folders|
+  app_folders.each do |app_name, folders|
+    folders.each do |folder_name|
+      proxy_web_url = "/#{lang}/#{apps_folder_name[lang]}/#{app_name}/#{folder_name}/index.html"
+      proxy_web_url = "/#{lang}/#{apps_folder_name[lang]}/#{app_name}/index.html" if folder_name == ''
+      
+      proxy_render_url = "/pages/#{lang}/#{apps_folder_name[lang]}/#{app_name}/#{folder_name}/index.html"
+      proxy_render_url = "/pages/#{lang}/#{apps_folder_name[lang]}/#{app_name}/index.html" if folder_name == ''
+      # puts "#{proxy_web_url}, #{proxy_render_url}"
+      proxy proxy_web_url, proxy_render_url, ignore: true
+    end
+  end
+end
+# -----------------------------------------------------------------------------
 
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
 
-# page '/en/services/*', layout: 'page'
-# proxy '/en/services/technical-consulting/index.html', '/pages/en/services/technical-consulting.html'
-
-
-# proxy "/en/apps/trivia-wars/support/index.html", "/pages/en/apps/trivia-wars/support/index.html", ignore: true
-#
 # proxy "/tr/uygulamalar/yengec/index.html", "/pages/tr/uygulamalar/yengec/index.html", ignore: true
 # proxy "/tr/uygulamalar/yengec/destek/index.html", "/pages/tr/uygulamalar/yengec/destek/index.html", ignore: true
 # proxy "/tr/uygulamalar/yengec/gizlilik/index.html", "/pages/tr/uygulamalar/yengec/gizlilik/index.html", ignore: true
 
 activate :external_pipeline,
   name: :tailwind,
-  command: "npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
+  command: "BROWSERSLIST_IGNORE_OLD_DATA=true npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
   latency: 2,
   source: "./dist/"
