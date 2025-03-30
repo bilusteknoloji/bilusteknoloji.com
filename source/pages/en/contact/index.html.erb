@@ -10,7 +10,7 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
             <div class="prose xl:prose-xl xl:w-full">
                 <h1>Contact Us</h1>
                 
-                <form class="space-y-6" method="POST" action="#">
+                <form class="space-y-6" id="contactForm">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <label for="full_name" class="block font-bold mb-2 text-sm">Full Name</label>
@@ -60,3 +60,50 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
 
     </div>
 </section>
+
+<% content_for :extra_js do %>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('contact loaded');
+
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            console.log('contact form submited');
+            e.preventDefault();
+
+            const form = e.target;
+            const data = {
+                full_name: form.full_name.value,
+                mobile_phone: form.mobile_phone.value,
+                company_name: form.company_name.value,
+                email: form.email.value,
+                message: form.message.value,
+            };
+
+            const text = `
+            📩 *New Contact Form Submission*
+            *Name:* ${data.full_name}
+            *Phone:* ${data.mobile_phone || '-'}
+            *Company:* ${data.company_name || '-'}
+            *Email:* ${data.email}
+            *Message:* ${data.message}
+            `;
+
+            const response = await fetch('https://form-to-slack-vercel-8yto.vercel.app/api/slack', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text })
+            });
+
+            if (response.ok) {
+                alert('Thanks! Your message has been sent.');
+                form.reset();
+            } else {
+                alert('Error sending message. Please try again later.');
+            }
+        });
+        
+    });
+</script>
+<% end %>

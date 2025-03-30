@@ -48,6 +48,7 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     <meta name="robots" content="index, follow">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <%= javascript_include_tag "site" %>
+    <%= yield_content :extra_js %>
 </head>
 <body class="sm:bg-[url('/public/images/ccchaos.svg')]">
     <% if development? %><span class="debug"></span><% end %>
