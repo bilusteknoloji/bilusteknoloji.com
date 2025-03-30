@@ -23,7 +23,7 @@ purposes without **your explicit consent**.
 
 ### Data Security
 
-**Sentinel Security** employs industry-standard security measures, including
+**Bilus Teknoloji** employs industry-standard security measures, including
 **encryption**, **access controls**, and **regular security audits**, to
 protect **your personal information** from unauthorized access, disclosure, or
 misuse.
@@ -54,7 +54,7 @@ We may periodically update this **Privacy Policy** to reflect changes in our
 modifications will be prominently **announced**, and we encourage you to
 **review** this policy regularly for the **latest information**.
 
-At **Sentinel Security**, we are committed to upholding the **highest**
+At **Bilus Teknoloji**, we are committed to upholding the **highest**
 standards of **data privacy** and **security**.
 
 If you have **any questions** or concerns regarding our **Privacy Policy** or
