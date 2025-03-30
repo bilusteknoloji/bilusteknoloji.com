@@ -7,7 +7,7 @@ description: At Bilus Teknoloji, we prioritize your privacy. Learn about our rob
     <div class="container mx-auto">
         <div class="flex justify-between">
             <div class="prose prose-links xl:prose-xl">
-                <h1><%= current_page.data.title %></h1>
+                <%= markdown File.read("content/#{lang}/pages/privacy-policy.md") %>
             </div>
             <%= partial "partials/services_sidebar" %>
         </div>

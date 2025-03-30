@@ -1,4 +1,4 @@
-faq:
+about_faq:
   en:
     - question: What is IT Consulting?
       answer: |
@@ -156,3 +156,87 @@ services:
       summary: |
         We guide businesses through **digital transformation**, adopting 
         innovative technologies to **optimize processes** and drive growth.
+
+general_faq:
+  en:
+    - question: What services does Bilus Teknoloji offer?
+      answer: |
+        Bilus Teknoloji provides **consulting**, **training**, **development**, 
+        and **data solutions** that help companies **scale**, **modernize**, and 
+        **optimize** their technology.
+
+    - question: Who can benefit from your software & architecture training?
+      answer: |
+        Our training is designed for **developers** and **IT professionals** at all 
+        levels—from **beginners** to **advanced** engineers—looking to build practical, 
+        production-ready skills.
+
+    - question: What technologies do you teach in your training programs?
+      answer: |
+        We cover `Go`, `Python`, `Ruby`, `Rust`, `Node`, `Bash`, cloud platforms, 
+        **Docker**, **Kubernetes**, **API gateways**, and **Linux** fundamentals—all with 
+        a **real-world**, hands-on approach.
+
+    - question: Do you offer team-specific or custom training sessions?
+      answer: |
+        Yes. We tailor our training programs based on **your team’s tech stack**, 
+        **skill level**, and **business goals**.
+
+    - question: What does your technical consulting cover?
+      answer: |
+        We help businesses align **technology** with strategy by **optimizing teams**, 
+        improving **workflows**, and creating **scalable technology roadmaps**.
+
+    - question: How do you support risk management in software projects?
+      answer: |
+        We conduct in-depth **technical assessments** to identify risks **early**, 
+        evaluate **code quality**, and implement security audits and mitigation 
+        plans.
+
+    - question: Can you help us modernize our digital infrastructure?
+      answer: |
+        Absolutely. We specialize in **digital transformation** and **innovation** 
+        strategies that involve **cloud adoption**, customer experience 
+        **optimization**, and **AI-driven** insights.
+
+    - question: What makes your development services different?
+      answer: |
+        We offer **end-to-end** software development with a focus on **agile** 
+        delivery, **code quality**, **security**, and long-term **maintainability**.
+
+    - question: Do you provide ongoing support after project delivery?
+      answer: |
+        Yes. We offer **post-launch** maintenance, **optimization**, and support to 
+        ensure your software **evolves** with your **business needs**.
+
+    - question: How do your data solutions improve decision-making?
+      answer: |
+        We help businesses turn **raw data** into **strategic insights** using 
+        advanced **analytics**, machine learning, and **intuitive dashboards**.
+
+    - question: What industries do you serve?
+      answer: |
+        We work across industries—especially with **startups** and **scale-ups**—to 
+        help them grow with the right **technology foundations**.
+
+    - question: Can you help us prepare for investment or due diligence?
+      answer: |
+        Yes. We support investment readiness by auditing your technical 
+        **assets** and **risks**, helping you showcase a strong and **scalable** 
+        foundation.
+
+    - question: How do you ensure security and compliance?
+      answer: |
+        We perform **vulnerability** assessments and implement compliance 
+        strategies to meet standards like **GDPR** and **HIPAA**.
+
+    - question: Do you offer mentoring or coaching?
+      answer: |
+        Yes. We provide **mentoring**, technical **coaching**, and architectural 
+        **guidance** as part of our **training** and **consulting** packages.
+
+    - question: What’s the first step to work with Bilus Teknoloji?
+      answer: |
+        Contact us to schedule a discovery session where we **assess** your 
+        needs and recommend a **tailored** plan for **consulting**, **training**, 
+        or **development**.
