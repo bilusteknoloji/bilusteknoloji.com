@@ -117,13 +117,11 @@ proxy_map_apps.each do |lang, app_folders|
       
       proxy_render_url = "/pages/#{lang}/#{apps_folder_name[lang]}/#{app_name}/#{folder_name}/index.html"
       proxy_render_url = "/pages/#{lang}/#{apps_folder_name[lang]}/#{app_name}/index.html" if folder_name == ''
-      # puts "#{proxy_web_url}, #{proxy_render_url}"
       proxy proxy_web_url, proxy_render_url, ignore: true
     end
   end
 end
 # -----------------------------------------------------------------------------
-
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
 
 activate :external_pipeline,
