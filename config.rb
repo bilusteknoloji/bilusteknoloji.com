@@ -103,12 +103,7 @@ apps_folder_name = {
   en: 'apps',
 }
 
-# https://bilusteknoloji.com/en/apps/trivia-wars/support/
-
 proxy_map_apps = {
-  en: {
-    'trivia-wars': ['support'],
-  },
   tr: {
     'yengec': ['', 'destek', 'gizlilik'],
   },
@@ -130,10 +125,6 @@ end
 # -----------------------------------------------------------------------------
 
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
-
-# proxy "/tr/uygulamalar/yengec/index.html", "/pages/tr/uygulamalar/yengec/index.html", ignore: true
-# proxy "/tr/uygulamalar/yengec/destek/index.html", "/pages/tr/uygulamalar/yengec/destek/index.html", ignore: true
-# proxy "/tr/uygulamalar/yengec/gizlilik/index.html", "/pages/tr/uygulamalar/yengec/gizlilik/index.html", ignore: true
 
 activate :external_pipeline,
   name: :tailwind,
