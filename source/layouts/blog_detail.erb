@@ -4,11 +4,22 @@
 <section class="2xl:py-24 article-style">
     <div class="container mx-auto">
         <div class="flex justify-between">
-            <div class="prose xl:prose-xl">
+            <div class="p-5 prose md:max-w-none md:w-full xl:max-w-prose xl:prose-xl 2xl:p-0">
                 <h1><%= current_page.data.title %></h1>
                 <%= yield %>
             </div>
+            <%= partial "partials/services_sidebar" %>
         </div>
+        
+        <div class="px-5 py-5 space-y-5 border-b prose xl:prose-xl 2xl:px-0">
+            <% if current_page.article_next %>
+            <a href="<%= current_page.article_next.url %>" class="block">&larr; <%= current_page.article_next.title %></a>
+            <% end %>
+            <% if current_page.article_previous %>
+            <a href="<%= current_page.article_previous.url %>" class="block"><%= current_page.article_previous.title %> &rarr;</a>
+            <% end %>
+        </div>
+        
     </div>
 </section>
 
