@@ -89,10 +89,12 @@ end
 # -----------------------------------------------------------------------------
 proxy_map[:en][:pages].each do |folder_name|
   page "/en/#{folder_name}/*", layout: 'page'
+  locals_val = { lang: :en }
+  locals_val[:no_optimize] = true if folder_name == 'contact'
   proxy "/en/#{folder_name}/index.html", 
         "/pages/en/#{folder_name}/index.html", 
         ignore: true,
-        locals: { lang: :en }
+        locals: locals_val
 end
 # -----------------------------------------------------------------------------
 
@@ -128,8 +130,10 @@ configure :development do
   activate :livereload, host: '127.0.0.1'
 end
 
-activate :external_pipeline,
-  name: :tailwind,
-  command: "BROWSERSLIST_IGNORE_OLD_DATA=true npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
-  latency: 2,
-  source: "./dist/"
+unless ARGV.include?('console')
+  activate :external_pipeline,
+    name: :tailwind,
+    command: "BROWSERSLIST_IGNORE_OLD_DATA=true npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
+    latency: 2,
+    source: "./dist/"
+end

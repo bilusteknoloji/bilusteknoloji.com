@@ -7,6 +7,12 @@ module CustomHelpers
     out.join("\n")
   end
 
+  def get_resource_title_and_url_by_path(path)
+    sitemap_obj = sitemap.find_resource_by_path(path)
+    title = sitemap_obj.metadata[:page][:title]
+    title = 'Home' if path == 'index.html'
+    return [title, sitemap_obj.url]
+  end
 
   def get_page_title_and_link(folder)
     return ['NO TITLE FOUND', '#'] unless config[:proxy_map][lang][:pages].include?(folder)

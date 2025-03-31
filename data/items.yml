@@ -281,3 +281,25 @@ testimonials:
       author: 'Hakan Uzul'
       avatar: 'hakan-uzul.jpg'
       title: 'Head of Data, UZUL Datastore'
+
+footer:
+  en:
+    side1:
+      - 'index.html'
+      - 'en/about/index.html'
+      - 'en/services/index.html'
+      - 'en/blog/index.html'
+    side2:
+      - 'en/contact/index.html'
+      - 'en/faq/index.html'
+      - 'en/privacy-policy/index.html'
+      - 'en/terms-of-service/index.html'
+
+mobile_menu:
+  en:
+    - 'index.html'
+    - 'en/about/index.html'
+    - 'en/contact/index.html'
+    - 'en/faq/index.html'
+    - 'en/services/index.html'
+    - 'en/blog/index.html'

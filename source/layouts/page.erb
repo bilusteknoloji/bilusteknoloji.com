@@ -1,6 +1,10 @@
 <% wrap_layout :layout do %>
     <%= partial 'partials/header' %>
     <%= yield %>
+    
+    <% unless locals.has_key?(:no_optimize)  %>
     <%= partial 'partials/optimize_transform' %>
+    <% end %>
+    
     <%= partial 'partials/footer' %>
 <% end %>

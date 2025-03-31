@@ -1,7 +1,8 @@
 <footer class="bg-white 2xl:py-24">
-    <div class="container mx-auto grid grid-cols-1 2xl:grid-cols-2">
-        <div>
-            <address class="not-italic flex flex-col gap-y-2 text-bilus-700">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2">
+
+        <div class="p-10 sm:p-5 2xl:p-0">
+            <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
                 <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
                 <p class="leading-relaxed">
                     Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
@@ -19,7 +20,7 @@
                 </p>
             </address>
             
-            <div class="flex flex-row items-center gap-x-2 text-bilus-500 mt-5">
+            <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
                 <a title="<%= t('follow_us_on_x') %>" href="https://x.com/bilusteknoloji" target="_blank" rel="noopener noreferrer">
                     <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
@@ -39,38 +40,23 @@
                 </a>
             </div>
         </div>
-        <div class="ml-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-20">
-                <div>
-                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
-                        <li><a href="/"><%= t('home') %></a></li>
 
-                        <%
-                        ['about', 'services'].each do |foldername|
-                            title, link = get_page_title_and_link foldername
-                            %>
-                            <li><a title="<%= I18n.t('click_to_view', title: title) %>" href="<%= link %>"><%= title %></a></li>
-                            <%
-                        end
-                        %>
-                        
-                        <% title, link = get_page_title_and_link 'blog' %>
-                        
-                        <li><a title="<%= I18n.t('click_to_view', title: title) %>" href="<%= link %>"><%= title %></a></li>
-                    </ul>
-                </div>
+        <div class="hidden sm:block sm:ml-auto">
+            <div class="grid grid-cols-2 p-5 2xl:p-0 2xl:gap-x-20">
+                <% data.items.footer[lang].each do |_, items| %>
                 <div>
                     <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
-                        <%
-                        ['contact', 'faq', 'privacy-policy', 'terms-of-service'].each do |foldername|
-                            title, link = get_page_title_and_link foldername
-                            %>
-                            <li><a title="<%= I18n.t('click_to_view', title: title) %>" href="<%= link %>"><%= title %></a></li>
-                            <%
-                        end
-                        %>
+                    <% items.each do |item| %>
+                    <li>
+                        <% title, url = get_resource_title_and_url_by_path(item) %>
+                        <a title="<%= I18n.t('click_to_view', title: title) %>" href="<%= url %>"><%= title %></a>
+                    </li>
+                    <% end %>
+                    
                     </ul>
                 </div>
+                <% end %>
+                
             </div>
         </div>
     </div>

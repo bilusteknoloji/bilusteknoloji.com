@@ -6,6 +6,15 @@ Bundler.require
 
 task :default => [:run_server]
 
+
+
+desc 'run console'
+task :console do
+  system %{
+    bin/middleman console
+  }
+end
+
 desc 'run server'
 task :run_server do
   system %{
