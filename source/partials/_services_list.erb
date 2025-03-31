@@ -1,8 +1,12 @@
 <% data.items.services[lang].each do |item| %>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <%= image_tag item.icon, class: 'size-6 2xl:size-16' %>
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl"><%= escape_html(item.title) %></h4>
-    <p class="2xl:leading-relaxed"><%= markdownify_text_only(item.summary) %></p>
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <%= image_tag item.icon, class: 'size-12 xl:size-16' %>
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl"><%= escape_html(item.title) %></h4>
+
+    <p class="leading-relaxed sm:text-lg"><%= markdownify_text_only(item.summary) %></p>
+
     <p class="mt-auto">
         <%
         sitemap_obj = sitemap.find_resource_by_path("#{lang}/services/#{item.folder}/index.html")
@@ -14,5 +18,6 @@
             </svg>
         </a>
     </p>
+
 </div>
 <% end %>

@@ -60,7 +60,7 @@
     }
 
     .heading-2-base {
-        @apply font-extrabold mb-8 2xl:text-4xl;
+        @apply font-extrabold text-xl 2xl:text-4xl;
     }
     
     .heading-2 {
@@ -78,6 +78,7 @@
         prose-h3:text-bilus-400
         prose-h4:text-bilus-700 prose-h4:underline prose-h4:underline-offset-6
         prose-strong:text-bilus-700
+        prose-blockquote:text-bilus-800
         ;
     }
     

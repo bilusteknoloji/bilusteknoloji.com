@@ -240,3 +240,44 @@ general_faq:
         Contact us to schedule a discovery session where we **assess** your 
         needs and recommend a **tailored** plan for **consulting**, **training**, 
         or **development**.
+
+testimonials:
+  en:
+    - summary: |
+        We’ve been working with **Bilus Teknoloji** since the day our company 
+        was founded.
+        
+        Their 20+ years of industry experience, domain knowledge, 
+        and deep understanding of the startup-to-scaleup transition have 
+        been a tremendous asset to our growth.
+        
+        Their strategic guidance gave us a strong momentum in the 
+        right direction.
+      author: 'Uğur Özyılmazel'
+      avatar: 'ugur-ozyilmazel.jpg'
+      title: 'Founder, VB YAZILIM'
+    - summary: |
+        You’ve played a pivotal role in **digitizing** our business processes and 
+        strengthening our technology infrastructure.
+        
+        Every piece of work you do incorporates the **best industry practices** 
+        and innovative solutions.
+        
+        It’s been a privilege working with you, and we highly value your 
+        partnership.
+      author: 'Jade Tilgram'
+      avatar: 'jade-tilgram.jpg'
+      title: 'CIO, MendoB Enterprise'
+    - summary: |
+        Your company has provided us with **immense** strategic value.
+        
+        Our long-standing **partnership** has played a key role in integrating new 
+        technologies and improving our operational **efficiency**.
+        
+        Projects are always delivered **on time** and with results exceeding our 
+        expectations.
+        
+        You truly deserve to be a leader in the IT consulting space!
+      author: 'Hakan Uzul'
+      avatar: 'hakan-uzul.jpg'
+      title: 'Head of Data, UZUL Datastore'
