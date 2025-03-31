@@ -50,7 +50,7 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     <%= javascript_include_tag "site" %>
     <%= yield_content :extra_js %>
 </head>
-<body class="sm:bg-[url('/public/images/ccchaos.svg')]">
+<body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
     <% if development? %><span class="debug"></span><% end %>
     <%= yield %>
 </body>

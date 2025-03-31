@@ -45,7 +45,7 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
                     </div>
                     
                     
-                    <p class="text-gray-500 [&>strong]:text-gray-600">
+                    <p class="text-bilus-400 [&>strong]:text-bilus-400">
                         Your contact details will <strong>only be used</strong> to get in touch
                         with you. We respect <strong>your privacy</strong> and never send spam
                         or promotional content.
@@ -64,10 +64,7 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
 <% content_for :extra_js do %>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('contact loaded');
-
         document.getElementById('contactForm').addEventListener('submit', async function (e) {
-            console.log('contact form submited');
             e.preventDefault();
 
             const form = e.target;
