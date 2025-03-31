@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require_relative 'lib/middleware/rack/downcase_headers'
 
 activate :i18n
 
@@ -25,8 +26,6 @@ set :date_format_short, {
 config[:js_dir]     = 'public/js'
 config[:css_dir]    = 'public/css'
 config[:images_dir] = 'public/images'
-
-activate :livereload
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -123,6 +122,11 @@ proxy_map_apps.each do |lang, app_folders|
 end
 # -----------------------------------------------------------------------------
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
+
+configure :development do
+  use ::Rack::DowncaseHeaders
+  activate :livereload, host: '127.0.0.1'
+end
 
 activate :external_pipeline,
   name: :tailwind,
