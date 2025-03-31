@@ -9,7 +9,7 @@
     <meta name="description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
     <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
     <meta name="author" content="Bilus Teknoloji">
-    <meta name="build-date" content="2025-03-31 04:02:27 +0300">
+    <meta name="build-date" content="2025-04-01 00:59:52 +0300">
     <meta name="color-scheme" content="light" />
 
     <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
@@ -41,8 +41,38 @@
 </head>
 <body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
     
-    <section class="bg-white pt-16 pb-4 sticky top-0 z-30 border-b">
-    <div class="container mx-auto">
+    <div x-data="{ open: false }" class="lg:hidden relative z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+        <div><img src="/public/images/bilus-logo.png" alt="Logo of Bilus Teknoloji" class="size-4 sm:size-5 md:size-6" /></div>
+        <button @click="open = !open" class="text-bilus-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         class="absolute top-full left-0 w-full bg-white shadow-md py-4 px-4 space-y-4">
+         
+         <a class="block nav-links hover-underline" href="/">Home</a>
+         <a class="block nav-links hover-underline" href="/en/about/">About</a>
+         <a class="block nav-links hover-underline" href="/en/contact/">Contact</a>
+         <a class="block nav-links hover-underline" href="/en/faq/">FAQ</a>
+         <a class="block nav-links hover-underline" href="/en/services/">Services</a>
+         <a class="block nav-links hover-underline" href="/en/blog/">Blog</a>
+         <a class="block nav-links hover-underline" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">Google Maps</a>
+
+     </div>
+</div>
+
+<section class="bg-white hidden lg:block lg:pb-4 lg:pt-8 2xl:pt-16 sticky top-0 z-30 border-b">
+    <div class="container mx-auto lg:px-10 2xl:px-0">
         <nav>
             <ul class="flex justify-start items-center gap-x-12">
                 <li>
@@ -85,48 +115,57 @@
 </section>
 
 
-<section class="2xl:pb-24 pt-20">
+<section class="pb-5 md:pb-0 2xl:pt-20 2xl:pb-24">
     <div class="container mx-auto">
         <div class="flex w-full">
-            <div class="2xl:w-4/6">
-                <h1 class="text-bilus-500 mb-5 2xl:text-5xl 2xl:font-bold 2xl:leading-none">
+            <div class="p-5 text-center sm:p-10 lg:text-left lg:w-2/3 xl:w-4/6 2xl:p-0">
+
+                <h1 class="text-bilus-500 mb-5 text-3xl font-bold 2xl:text-5xl 2xl:leading-none">
                     Data-Oriented Technology Management for Scalable Growth
                 </h1>
-                <h2 class="mb-5 2xl:text-3xl 2xl:leading-snug 2xl:max-w-3xl">
+
+                <h2 class="mb-5 text-2xl 2xl:text-3xl 2xl:leading-snug 2xl:max-w-3xl">
                     We transform chaotic tech teams into <strong>high-performance</strong> engines — 
                     driven by <strong>data</strong>, guided by <strong>strategy</strong>.
                 </h2>
-                <p class="mb-5 2xl:text-2xl 2xl:leading-relaxed">
+
+                <p class="mb-5 text-xl 2xl:text-2xl 2xl:leading-relaxed">
                     In today’s <strong>digital</strong> world, effective technology management is 
                     <strong>crucial</strong> for business success. By offering <strong>data-driven</strong> 
                     solutions, we <strong>optimize</strong> your digital infrastructure, <strong>enhance</strong> 
                     operational <strong>efficiency</strong>, and secure <strong>long-term</strong> success.
                 </p>
-                <h3 class="mb-10 text-bilus-600 font-semibold 2xl:text-3xl 2xl:leading-snug 2xl:max-w-2xl">
+
+                <h3 class="text-bilus-600 font-semibold text-lg mb-5 md:mb-10 2xl:text-3xl 2xl:leading-snug 2xl:max-w-2xl">
                     Unleash your potential with our <strong>tailored solutions</strong> 
                     for your every tech needs!
                 </h3>
                 
                 <a title="Let’s get started, get in touch!" href="/en/contact/" class="inline-block bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Get Started Now!</a>
             </div>
-            <div class="2xl:w-2/6">
+
+            <div class="hidden lg:block lg:p-10 lg:w-1/3 2xl:p-0 xl:w-2/6">
                 <div class="w-fit shadow-lg ml-auto">
-                    <img src="/public/images/clipart.jpg" class="mx-auto size-80 border border-bilus-100 rounded-xl" alt="" />
+                    <img src="/public/images/clipart.jpg" class="mx-auto md:size-40 lg:size-64 xl:size-80 border border-bilus-100 rounded-xl" alt="" />
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="2xl:pt-0 2xl:pb-24">
-    <div class="mx-auto grid grid-cols-1 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
-        <div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/puzzle.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Technical Consulting</h4>
-    <p class="2xl:leading-relaxed"> We help businesses <strong>optimize</strong> their organizational structure and processes, 
+<section class="pb-10 2xl:pt-0 2xl:pb-24">
+    <div class="mx-auto px-5 grid grid-cols-1 gap-5 lg:grid-cols-2 2xl:px-0 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+        <div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/puzzle.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Technical Consulting</h4>
+
+    <p class="leading-relaxed sm:text-lg"> We help businesses <strong>optimize</strong> their organizational structure and processes, 
 <strong>aligning</strong> technology with strategic goals to improve <strong>efficiency</strong> and 
 team <strong>performance</strong>. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Technical Consulting" href="/en/services/technical-consulting/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -135,14 +174,19 @@ team <strong>performance</strong>.
             </svg>
         </a>
     </p>
+
 </div>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/cog.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Software Development &amp; Management</h4>
-    <p class="2xl:leading-relaxed"> From <strong>custom</strong> software development to project management, we ensure 
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/cog.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Software Development &amp; Management</h4>
+
+    <p class="leading-relaxed sm:text-lg"> From <strong>custom</strong> software development to project management, we ensure 
 seamless execution through the software development lifecycle (<strong>SDLC</strong>), 
 delivering <strong>scalable</strong> and <strong>reliable</strong> solutions. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Software Development & Management" href="/en/services/software-development-management/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -151,14 +195,19 @@ delivering <strong>scalable</strong> and <strong>reliable</strong> solutions.
             </svg>
         </a>
     </p>
+
 </div>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/pie.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Technical Assessment &amp; Risk Management</h4>
-    <p class="2xl:leading-relaxed"> We provide comprehensive software evaluations, identifying <strong>risks</strong> and 
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/pie.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Technical Assessment &amp; Risk Management</h4>
+
+    <p class="leading-relaxed sm:text-lg"> We provide comprehensive software evaluations, identifying <strong>risks</strong> and 
 improving <strong>quality</strong> through code <strong>reviews</strong> and <strong>due diligence</strong>, 
 enabling informed decision-making. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Technical Assessment & Risk Management" href="/en/services/technical-assessment-and-risk-management/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -167,14 +216,19 @@ enabling informed decision-making.
             </svg>
         </a>
     </p>
+
 </div>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/bars.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Data Management &amp; Analytics Solutions</h4>
-    <p class="2xl:leading-relaxed"> Our <strong>data solutions</strong> help businesses leverage <strong>big data</strong>, 
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/bars.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Data Management &amp; Analytics Solutions</h4>
+
+    <p class="leading-relaxed sm:text-lg"> Our <strong>data solutions</strong> help businesses leverage <strong>big data</strong>, 
 enhance data security, and optimize <strong>data management</strong> for actionable 
 <strong>insights</strong> and strategic <strong>decision-making</strong>. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Data Management & Analytics Solutions" href="/en/services/data-management-and-analytics-solutions/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -183,14 +237,19 @@ enhance data security, and optimize <strong>data management</strong> for actiona
             </svg>
         </a>
     </p>
+
 </div>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/terminal.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Software &amp; Architecture Training</h4>
-    <p class="2xl:leading-relaxed"> Our training programs provide <strong>hands-on</strong>, <strong>real-world</strong> learning in 
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/terminal.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Software &amp; Architecture Training</h4>
+
+    <p class="leading-relaxed sm:text-lg"> Our training programs provide <strong>hands-on</strong>, <strong>real-world</strong> learning in 
 secure <strong>coding</strong>, clean <strong>architecture</strong>, version control, databases, 
 and <strong>cloud-native technologies</strong>. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Software & Architecture Training" href="/en/services/software-and-architecture-training/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -199,13 +258,18 @@ and <strong>cloud-native technologies</strong>.
             </svg>
         </a>
     </p>
+
 </div>
-<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl 2xl:gap-y-5 2xl:p-8 2xl:shadow-md">
-    <img src="/public/images/icons/cube.svg" class="size-6 2xl:size-16" alt="" />
-    <h4 class="text-bilus-600 2xl:font-semibold 2xl:text-2xl">Digital Transformation &amp; Innovation</h4>
-    <p class="2xl:leading-relaxed"> We guide businesses through <strong>digital transformation</strong>, adopting 
+<div class="flex flex-col h-full bg-white border border-bilus-100 rounded-xl p-5 gap-y-5 2xl:p-8 2xl:shadow-md">
+
+    <img src="/public/images/icons/cube.svg" class="size-12 xl:size-16" alt="" />
+
+    <h4 class="text-bilus-600 font-semibold text-lg sm:text-2xl">Digital Transformation &amp; Innovation</h4>
+
+    <p class="leading-relaxed sm:text-lg"> We guide businesses through <strong>digital transformation</strong>, adopting 
 innovative technologies to <strong>optimize processes</strong> and drive growth. 
 </p>
+
     <p class="mt-auto">
         <a title="Click to learn more about Digital Transformation & Innovation" href="/en/services/digital-transformation-and-innovation/" class="text-bilus-400 font-semibold inline-flex items-center gap-1.5 hover:opacity-80">
             Learn More
@@ -214,138 +278,147 @@ innovative technologies to <strong>optimize processes</strong> and drive growth.
             </svg>
         </a>
     </p>
+
 </div>
 
     </div>
 </section>
 
 
-<section class="bg-bilus-800 2xl:py-24">
-    <div class="container mx-auto text-center 2xl:mb-12">
+<section class="bg-bilus-800 py-5 space-y-5 sm:py-10 2xl:py-24">
+
+    <div class="container mx-auto mb-5 text-center space-y-5 lg:mb-10 2xl:space-y-8 2xl:mb-12">
+
         <h2 class="heading-2-rev">Trusted by Industry Leaders</h2>
-        <p class="mx-auto mt-5 text-bilus-100 2xl:max-w-3xl 2xl:text-2xl 2xl:leading-normal">
+
+        <p class="mx-auto text-bilus-100 md:max-w-xl lg:max-w-3xl lg:text-2xl lg:leading-normal">
             See what our clients have to say about our IT solutions. We
             prioritize integrity and collaboration to enhance the efficiency
             and security of your digital infrastructure.
         </p>
+
     </div>
 
-    <div class="container mx-auto text-bilus-100 grid grid-cols-1 2xl:gap-8 2xl:grid-cols-3">
-        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
+    <div class="container mx-auto px-5 text-bilus-100 [&_strong]:text-bilus-100 grid grid-cols-1 gap-y-5 md:px-32 lg:grid-cols-3 lg:px-8 lg:gap-2 xl:gap-y-0 xl:px-8 xl:gap-8 xl:grid-cols-3 2xl:px-0">
+
+        <div class="border-2 border-bilus-300 rounded-xl p-5 lg:p-8 flex flex-col gap-y-5 justify-between">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
             </svg>
             
-            <p>
-                I&rsquo;ve been working with your company for years, and I have always 
-                admired your professionalism. Especially with your deep knowledge in digital 
-                transformation processes and strategic outlook, our projects have always been successful. 
-            </p>
-            <p>
-                Your team&rsquo;s expertise in technology and the solutions you provide to clients 
-                are truly impressive. I wish you continued success in your work!
-            </p>
+            <p>We’ve been working with <strong>Bilus Teknoloji</strong> since the day our company 
+was founded.</p>
+
+<p>Their 20+ years of industry experience, domain knowledge, 
+and deep understanding of the startup-to-scaleup transition have 
+been a tremendous asset to our growth.</p>
+
+<p>Their strategic guidance gave us a strong momentum in the 
+right direction.</p>
+
+
             <div class="flex items-center space-x-4 w-fit">
-                <img src="https://i.pravatar.cc/150?img=69" alt="Robert Benavides" class="border border-bilus-300 size-16 rounded-full object-cover" />
+                <img src="/public/images/testimonials/ugur-ozyilmazel.jpg" alt="Uğur Özyılmazel" class="border border-bilus-400 size-16 rounded-full object-cover" />
                 <div>
-                    <h3 class="text-lg font-semibold text-bilus-100">Robert Benavides</h3>
-                    <h4 class="text-sm text-bilus-300">Eng. Manager, NetTech Solutions</h4>
+                    <h3 class="text-lg font-semibold text-bilus-100">Uğur Özyılmazel</h3>
+                    <h4 class="text-sm text-bilus-300">Founder, VB YAZILIM</h4>
                 </div>
             </div>
-        </div>
-
-        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-            </svg>
-
-            <p>
-                You&rsquo;ve played a pivotal role in digitizing our business
-                processes and strengthening our technology infrastructure.
-            </p>
-            <p>
-                Every piece of work you do incorporates the best industry practices and 
-                innovative solutions. 
-            </p>
             
-            <p>It&rsquo;s been a privilege working with you, and we highly value your partnership.</p>
-
-            <div class="flex items-center space-x-4 w-fit">
-                <img src="https://i.pravatar.cc/150?img=5" alt="Sarah Williams" class="border border-bilus-300 size-16 rounded-full object-cover" />
-                <div>
-                    <h3 class="text-lg font-semibold text-bilus-100">Sarah Williams</h3>
-                    <h4 class="text-sm text-bilus-300">CIO, Innovatech Global</h4>
-                </div>
-            </div>
         </div>
-
-        <div class="border-2 border-bilus-300 rounded-xl 2xl:p-8 flex flex-col gap-y-5 justify-between">
+        <div class="border-2 border-bilus-300 rounded-xl p-5 lg:p-8 flex flex-col gap-y-5 justify-between">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
             </svg>
+            
+            <p>You’ve played a pivotal role in <strong>digitizing</strong> our business processes and 
+strengthening our technology infrastructure.</p>
 
-            <p>Your company has provided us with immense strategic value. </p>
-            <p>
-                Our long-standing partnership has played a key role in integrating new 
-                technologies and improving our operational efficiency. 
-            </p>
-            <p>
-                Projects are always delivered on time and with results exceeding 
-                our expectations. 
-            </p>
-            <p>You truly deserve to be a leader in the IT consulting space!</p>
+<p>Every piece of work you do incorporates the <strong>best industry practices</strong> 
+and innovative solutions.</p>
+
+<p>It’s been a privilege working with you, and we highly value your 
+partnership.</p>
+
 
             <div class="flex items-center space-x-4 w-fit">
-                <img src="https://i.pravatar.cc/150?img=18" alt="Charles Richards" class="border border-bilus-300 size-16 rounded-full object-cover" />
+                <img src="/public/images/testimonials/jade-tilgram.jpg" alt="Jade Tilgram" class="border border-bilus-400 size-16 rounded-full object-cover" />
                 <div>
-                    <h3 class="text-lg font-semibold text-bilus-100">Charles Richards</h3>
-                    <h4 class="text-sm text-bilus-300">IT Director, GlobalSoft</h4>
+                    <h3 class="text-lg font-semibold text-bilus-100">Jade Tilgram</h3>
+                    <h4 class="text-sm text-bilus-300">CIO, MendoB Enterprise</h4>
                 </div>
             </div>
+            
+        </div>
+        <div class="border-2 border-bilus-300 rounded-xl p-5 lg:p-8 flex flex-col gap-y-5 justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-bilus-100">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
+            
+            <p>Your company has provided us with <strong>immense</strong> strategic value.</p>
+
+<p>Our long-standing <strong>partnership</strong> has played a key role in integrating new 
+technologies and improving our operational <strong>efficiency</strong>.</p>
+
+<p>Projects are always delivered <strong>on time</strong> and with results exceeding our 
+expectations.</p>
+
+<p>You truly deserve to be a leader in the IT consulting space!</p>
+
+
+            <div class="flex items-center space-x-4 w-fit">
+                <img src="/public/images/testimonials/hakan-uzul.jpg" alt="Hakan Uzul" class="border border-bilus-400 size-16 rounded-full object-cover" />
+                <div>
+                    <h3 class="text-lg font-semibold text-bilus-100">Hakan Uzul</h3>
+                    <h4 class="text-sm text-bilus-300">Head of Data, UZUL Datastore</h4>
+                </div>
+            </div>
+            
         </div>
     </div>
+
 </section>
 
-<section class="2xl:py-24">
+<section class="p-5 2xl:p-0 md:py-10 2xl:py-24">
     <div class="container mx-auto">
         <div class="text-center">
-            <h2 class="heading-2">
+            <h2 class="leading-6 heading-2 mb-2 2xl:leading-snug 2xl:mb-8">
                 Stay Ahead of the Curve
-                <small class="block mt-2 text-bilus-500">Insights on IT World</small>
+                <small class="block text-bilus-500">Insights on IT World</small>
             </h2>
-            <p class="2xl:text-xl 2xl:mb-12">
-                Explore our latest articles, white papers, and thought leadership content.
+            <p class="mb-5 lg:text-xl lg:mb-12">
+                Explore our <strong>latest articles</strong>, white papers, and thought leadership content.
             </p>
         </div>
         
-        <div class="mb-5 grid grid-cols-1 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+        <div class="mb-5 md:mb-10 grid gap-y-5 grid-cols-1 lg:gap-y-0 lg:gap-8 lg:max-w-7xl lg:grid-cols-3">
             <div class="bg-white border rounded-xl p-6">
                 <a href="/blog/en/2025/03/21/how-it-consultancy-drives-innovation-and-business-success/" title="Click to read How IT Consultancy Drives Innovation and Business Success article" class="group flex flex-col gap-5">
                     <div class="overflow-hidden rounded-lg">
-                        <img src="/public/images/blog/2025-03-21-how-it-consultancy-drives-innovation-and-business-success.webp" alt="Blog cover image of How IT Consultancy Drives Innovation and Business Success article" class="transition duration-300 group-hover:scale-110 rounded-inherit" />
+                        <img src="/public/images/blog/2025-03-21-how-it-consultancy-drives-innovation-and-business-success.png" alt="Blog cover image of How IT Consultancy Drives Innovation and Business Success article" class="w-full h-40 object-cover md:h-52 lg:h-auto transition duration-300 group-hover:scale-110 rounded-inherit" />
                     </div>
                     <h3 class="text-bilus-500 font-semibold text-xl">How IT Consultancy Drives Innovation and Business Success</h3>
                     <div class="leading-relaxed"><p>In an era where technology drives business success, staying ahead of the curve 
 can be <strong>challenging</strong>. While <strong>technology</strong> offers immense opportunities, 
-managing IT systems effectively is often a <strong>complex</strong> task.</p>
-</div>
+managing IT systems effectively is often a <strong>complex</strong> task.
+</p></div>
                 </a>
             </div>
             <div class="bg-white border rounded-xl p-6">
                 <a href="/blog/en/2025/03/05/the-importance-of-it-consultancy-for-modern-businesses/" title="Click to read The Importance of IT Consultancy for Modern Businesses article" class="group flex flex-col gap-5">
                     <div class="overflow-hidden rounded-lg">
-                        <img src="/public/images/blog/2025-03-05-the-importance-of-it-consultancy-for-modern-businesses.webp" alt="Blog cover image of The Importance of IT Consultancy for Modern Businesses article" class="transition duration-300 group-hover:scale-110 rounded-inherit" />
+                        <img src="/public/images/blog/2025-03-05-the-importance-of-it-consultancy-for-modern-businesses.png" alt="Blog cover image of The Importance of IT Consultancy for Modern Businesses article" class="w-full h-40 object-cover md:h-52 lg:h-auto transition duration-300 group-hover:scale-110 rounded-inherit" />
                     </div>
                     <h3 class="text-bilus-500 font-semibold text-xl">The Importance of IT Consultancy for Modern Businesses</h3>
                     <div class="leading-relaxed"><p>In today’s fast-paced digital world, businesses of all sizes rely heavily on
-<strong>technology</strong> to operate efficiently and stay <strong>competitive</strong>.</p>
-</div>
+<strong>technology</strong> to operate efficiently and stay <strong>competitive</strong>.
+</p></div>
                 </a>
             </div>
             <div class="bg-white border rounded-xl p-6">
                 <a href="/blog/en/2025/03/01/why-it-consultancy-is-essential-for-business-growth/" title="Click to read Why IT Consultancy is Essential for Business Growth article" class="group flex flex-col gap-5">
                     <div class="overflow-hidden rounded-lg">
-                        <img src="/public/images/blog/2025-03-01-why-it-consultancy-is-essential-for-business-growth.webp" alt="Blog cover image of Why IT Consultancy is Essential for Business Growth article" class="transition duration-300 group-hover:scale-110 rounded-inherit" />
+                        <img src="/public/images/blog/2025-03-01-why-it-consultancy-is-essential-for-business-growth.png" alt="Blog cover image of Why IT Consultancy is Essential for Business Growth article" class="w-full h-40 object-cover md:h-52 lg:h-auto transition duration-300 group-hover:scale-110 rounded-inherit" />
                     </div>
                     <h3 class="text-bilus-500 font-semibold text-xl">Why IT Consultancy is Essential for Business Growth</h3>
                     <div class="leading-relaxed"><p>In the digital age, <strong>technology</strong> plays a crucial role in the success of
@@ -363,25 +436,28 @@ businesses. However, many companies <strong>struggle</strong> to keep up with th
 </section>
 
 
-<section class="border-t border-b bg-bilus-100/10 2xl:py-24">
+<section class="border-t border-b bg-bilus-100/10 py-5 xl:py-10 2xl:py-24">
     <div class="container mx-auto text-center">
-        <h2 class="heading-2">
+        <h2 class="px-5 mb-5 heading-2 sm:px-0 2xl:mb-8">
             Optimize Your Technology, Transform Your Future
         </h2>
-        <p class="mx-auto mb-12 2xl:max-w-2xl 2xl:text-xl 2xl:leading-relaxed">
+        <p class="mx-auto mb-10 max-w-xs sm:max-w-lg lg:max-w-2xl lg:text-xl lg:leading-relaxed">
             Experienced <strong>consultants</strong> and <strong>tech
             experts</strong> at your service, providing
             <strong>tailored</strong> solutions to drive <strong>your business
             forward</strong> and ensure seamless digital transformation.
         </p>
-        <a href="/en/contact/" title="Let’s get started, get in touch!" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Get Started Now!</a>
+        <p class="pb-5">
+            <a href="/en/contact/" title="Let’s get started, get in touch!" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Get Started Now!</a>
+        </p>
     </div>
 </section>
 
 <footer class="bg-white 2xl:py-24">
-    <div class="container mx-auto grid grid-cols-1 2xl:grid-cols-2">
-        <div>
-            <address class="not-italic flex flex-col gap-y-2 text-bilus-700">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2">
+
+        <div class="p-10 sm:p-5 2xl:p-0">
+            <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
                 <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
                 <p class="leading-relaxed">
                     Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
@@ -399,7 +475,7 @@ businesses. However, many companies <strong>struggle</strong> to keep up with th
                 </p>
             </address>
             
-            <div class="flex flex-row items-center gap-x-2 text-bilus-500 mt-5">
+            <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
                 <a title="Follow us on X!" href="https://x.com/bilusteknoloji" target="_blank" rel="noopener noreferrer">
                     <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
@@ -419,27 +495,44 @@ businesses. However, many companies <strong>struggle</strong> to keep up with th
                 </a>
             </div>
         </div>
-        <div class="ml-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-20">
-                <div>
-                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
-                        <li><a href="/">Home</a></li>
 
-                            <li><a title="Click to view About page" href="/en/about/">About</a></li>
-                            <li><a title="Click to view Services page" href="/en/services/">Services</a></li>
-                        
-                        
-                        <li><a title="Click to view Blog page" href="/en/blog/">Blog</a></li>
+        <div class="hidden sm:block sm:ml-auto">
+            <div class="grid grid-cols-2 p-5 2xl:p-0 2xl:gap-x-20">
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="Click to view Home page" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a title="Click to view About page" href="/en/about/">About</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Services page" href="/en/services/">Services</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Blog page" href="/en/blog/">Blog</a>
+                    </li>
+                    
                     </ul>
                 </div>
                 <div>
                     <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
-                            <li><a title="Click to view Contact page" href="/en/contact/">Contact</a></li>
-                            <li><a title="Click to view FAQ page" href="/en/faq/">FAQ</a></li>
-                            <li><a title="Click to view Privacy Policy page" href="/en/privacy-policy/">Privacy Policy</a></li>
-                            <li><a title="Click to view Terms of Service page" href="/en/terms-of-service/">Terms of Service</a></li>
+                    <li>
+                        <a title="Click to view Contact page" href="/en/contact/">Contact</a>
+                    </li>
+                    <li>
+                        <a title="Click to view FAQ page" href="/en/faq/">FAQ</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Privacy Policy page" href="/en/privacy-policy/">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Terms of Service page" href="/en/terms-of-service/">Terms of Service</a>
+                    </li>
+                    
                     </ul>
                 </div>
+                
             </div>
         </div>
     </div>
