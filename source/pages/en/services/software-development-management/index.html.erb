@@ -6,13 +6,15 @@ description: Bilus Teknoloji specializes in software development and management,
 <section class="2xl:py-24 article-style">
     <div class="container mx-auto">
         <div class="flex justify-between">
-            <div class="p-5 prose prose-links xl:prose-xl 2xl:p-0">
+            <div class="p-5 prose prose-links max-w-none xl:prose-xl xl:max-w-prose 2xl:p-0">
                 <%= markdown File.read("content/#{lang}/services/software-development-management.md") %>
                 
                 <% _, link = get_page_title_and_link 'services' %>
                 <p>Go back to <a title="Click to go back to Services page" href="<%= link %>">services</a> page</p>
             </div>
-            <%= partial "partials/services_sidebar" %>
+            <div class="xl:px-0 xl:pb-0 2xl:pl-24 2xl:space-y-10">
+                <%= partial "partials/services_sidebar" %>
+            </div>
         </div>
     </div>
 </section>

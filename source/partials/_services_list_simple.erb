@@ -1,0 +1,10 @@
+<div class="hidden md:block xl:p-5 2xl:p-0 2xl:pl-5">
+    <div class="p-8 border border-bilus-100 rounded-xl shadow-md md:bg-[url('/public/images/icons/cog.svg')] md:bg-no-repeat md:bg-[center_right] lg:bg-none">
+        <h2 class="text-2xl font-semibold mb-4">Explore our Services</h2>
+        <ul class="space-y-2">
+        <% data.items.services[lang].each do |item| %>
+        <li><a title="<%= I18n.t('click_to_learn_more', title: item.title) %>" class="font-medium hover-underline"><%= escape_html(item.title) %></a></li>
+        <% end %>
+        </ul>
+    </div>
+</div>
