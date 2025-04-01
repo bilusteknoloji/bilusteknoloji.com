@@ -41,6 +41,7 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
         og_image = "public/images/blog/#{current_page.metadata[:page][:cover]}" if current_page.metadata[:page][:cover].present?
         html_description = markdownify_text_only(current_page.summary, allowed_tags: []) + html_description if current_page.respond_to?(:summary)
         html_description = html_description.gsub("\n", " ")
+        html_description = html_description.lstrip
     end
     %>
 
