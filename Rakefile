@@ -74,6 +74,8 @@ title: "#{args.title}"
 locale: "#{args.language}"
 date: "#{frontmatter_date}"
 cover: "#{file_date}-#{args.title.to_url}.EXT"
+author: "Bilus Teknoloji"
+is_blog: true
 ---
 END
     save_file = "source/blog/#{args.language}/#{file_year}/#{file_date}-#{args.title.to_url}.html.md.erb"
