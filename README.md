@@ -1,3 +1,7 @@
+[![Dependabot Updates](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/dependabot/dependabot-updates)
+[![pages-build-deployment](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/pages/pages-build-deployment)
+![Version](https://img.shields.io/badge/version-0.0.0-orange.svg)
+
 # bilusteknoloji.com
 
 Official website. 2025
@@ -9,6 +13,7 @@ rake build                                  # build site
 rake console                                # run console
 rake deploy                                 # deploy
 rake new:post[title,publish_date,language]  # create blog post
+rake release[revision]                      # release new version major,minor,patch, default: patch
 rake run_server                             # run server
 ```
 

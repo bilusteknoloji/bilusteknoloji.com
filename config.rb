@@ -59,6 +59,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/sitemap.xml", layout: false
 page "/google*.html", layout: false, directory_index: false
+page "/version.txt", layout: false, directory_index: false
 
 
 proxy_map = {
