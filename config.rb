@@ -1,5 +1,6 @@
 require 'bundler/setup'
-require_relative 'lib/middleware/rack/downcase_headers'
+require_relative './lib/middleware/rack/downcase_headers'
+require_relative './lib/patch/erb_force_encoding_fix'
 
 activate :i18n
 
