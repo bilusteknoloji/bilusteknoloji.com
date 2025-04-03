@@ -76,16 +76,23 @@ description: Connect with Bilus Teknoloji today! Visit our contact page for inqu
                 message: form.message.value,
             };
 
-            const text = `
-            📩 *New Contact Form Submission*
-            *Name:* ${data.full_name}
-            *Phone:* ${data.mobile_phone || '-'}
-            *Company:* ${data.company_name || '-'}
-            *Email:* ${data.email}
-            *Message:* ${data.message}
-            `;
+            const text = `📩 *New Contact Form Submission*
 
-            const response = await fetch('https://form-to-slack-vercel-8yto.vercel.app/api/slack', {
+\`\`\`
+Full Name | ${data.full_name}
+Phone     | ${data.mobile_phone || '-'}
+Company   | ${data.company_name || '-'}
+Email     | ${data.email} |
+\`\`\`
+
+Message:
+
+\`\`\`
+${data.message}
+\`\`\`
+`;
+
+            const response = await fetch('http://localhost:3000/api/slack', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
