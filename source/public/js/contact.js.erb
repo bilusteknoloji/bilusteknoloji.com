@@ -1,4 +1,14 @@
+function generateToken() {
+    const now = Date.now();
+    const base36ts = now.toString(36);
+    const random = Math.random().toString(36).substring(2, 10);
+
+    return base36ts + random;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('csrf_token').value = generateToken();
+    
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
         e.preventDefault();
 
@@ -9,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             company_name: form.company_name.value,
             email: form.email.value,
             message: form.message.value,
+            csrf_token: form.csrf_token.value,
         };
 
         const text = `📩 *New Contact Form Submission*
@@ -32,7 +43,7 @@ ${data.message}
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ text })
+            body: JSON.stringify({ text, csrf_token: data.csrf_token })
         });
 
         if (response.ok) {
