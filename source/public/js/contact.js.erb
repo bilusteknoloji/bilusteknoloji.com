@@ -50,7 +50,8 @@ ${data.message}
             alert('Thanks! Your message has been sent.');
             form.reset();
         } else {
-            alert('Error sending message. Please try again later.');
+            const error = await response.json();
+            alert(`Error: ${error?.error || 'Something went wrong. Please try again later.'}`);
         }
     });
     
