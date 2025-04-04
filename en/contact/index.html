@@ -9,7 +9,7 @@
     <meta name="description" content="Connect with Bilus Teknoloji today! Visit our contact page for inquiries, support, and to explore our cutting-edge technology services.">
     <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
     <meta name="author" content="Bilus Teknoloji">
-    <meta name="build-date" content="2025-04-03 16:23:50 +0300">
+    <meta name="build-date" content="2025-04-05 01:00:47 +0300">
     <meta name="color-scheme" content="light" />
 
     <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
@@ -22,7 +22,7 @@
     <link href="/public/css/site.css" rel="stylesheet" />
 
 
-    <meta property="og:url" content="https://bilusteknoloji.com/en/contact/">
+    <meta property="og:url" content="https://bilusteknoloji.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bilus Teknoloji | Contact">
     <meta property="og:description" content="Connect with Bilus Teknoloji today! Visit our contact page for inquiries, support, and to explore our cutting-edge technology services.">
@@ -30,7 +30,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="bilusteknoloji.com">
-    <meta property="twitter:url" content="https://bilusteknoloji.com/en/contact/">
+    <meta property="twitter:url" content="https://bilusteknoloji.com/">
     <meta name="twitter:title" content="Bilus Teknoloji | Contact">
     <meta name="twitter:description" content="Connect with Bilus Teknoloji today! Visit our contact page for inquiries, support, and to explore our cutting-edge technology services.">
     <meta name="twitter:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
@@ -38,54 +38,7 @@
     <meta name="robots" content="index, follow">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/public/js/site.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('contactForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const data = {
-                full_name: form.full_name.value,
-                mobile_phone: form.mobile_phone.value,
-                company_name: form.company_name.value,
-                email: form.email.value,
-                message: form.message.value,
-            };
-
-            const text = `📩 *New Contact Form Submission*
-
-\`\`\`
-Full Name | ${data.full_name}
-Phone     | ${data.mobile_phone || '-'}
-Company   | ${data.company_name || '-'}
-Email     | ${data.email}
-\`\`\`
-
-Message:
-
-\`\`\`
-${data.message}
-\`\`\`
-`;
-
-            const response = await fetch('https://form-to-slack-vercel-8yto.vercel.app/api/slack', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ text })
-            });
-
-            if (response.ok) {
-                alert('Thanks! Your message has been sent.');
-                form.reset();
-            } else {
-                alert('Error sending message. Please try again later.');
-            }
-        });
-        
-    });
-</script>
+        <script src="/public/js/contact.js"></script>
 
     
     <script type="application/ld+json">
@@ -202,7 +155,6 @@ ${data.message}
 
     <section class="2xl:py-24 article-style">
     <div class="container mx-auto">
-
         <div class="flex justify-between">
             <div class="p-5 prose md:max-w-none lg:w-full xl:prose-xl">
                 <h1>Contact Us</h1>
@@ -250,7 +202,7 @@ ${data.message}
                         with you. We respect <strong>your privacy</strong> and never send spam
                         or promotional content.
                     </p>
-                    
+                    <input type="hidden" name="csrf_token" id="csrf_token" value="" />
                     <button type="submit" class="w-full md:w-auto bg-bilus-700 text-white px-12 py-1 font-bold rounded-full hover:bg-gray-800 transition disabled:opacity-50">Send Message</button>
                 </form>
                 
