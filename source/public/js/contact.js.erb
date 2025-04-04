@@ -51,7 +51,7 @@ ${data.message}
             form.reset();
         } else {
             const error = await response.json();
-            alert(`Error: ${error?.error || 'Something went wrong. Please try again later.'}`);
+            alert(`Error: ${error.error || 'Something went wrong. Please try again later.'}`);
         }
     });
     
