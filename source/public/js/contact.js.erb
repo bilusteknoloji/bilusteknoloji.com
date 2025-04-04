@@ -1,0 +1,46 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = {
+            full_name: form.full_name.value,
+            mobile_phone: form.mobile_phone.value,
+            company_name: form.company_name.value,
+            email: form.email.value,
+            message: form.message.value,
+        };
+
+        const text = `📩 *New Contact Form Submission*
+
+\`\`\`
+Full Name | ${data.full_name}
+Phone     | ${data.mobile_phone || '-'}
+Company   | ${data.company_name || '-'}
+Email     | ${data.email}
+\`\`\`
+
+Message:
+
+\`\`\`
+${data.message}
+\`\`\`
+`;
+
+        const response = await fetch('<%= config[:post_form_url] %>/api/slack', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text })
+        });
+
+        if (response.ok) {
+            alert('Thanks! Your message has been sent.');
+            form.reset();
+        } else {
+            alert('Error sending message. Please try again later.');
+        }
+    });
+    
+});

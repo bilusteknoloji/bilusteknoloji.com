@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'uglifier'
 require_relative './lib/middleware/rack/downcase_headers'
 require_relative './lib/patch/erb_force_encoding_fix'
 
@@ -130,6 +131,15 @@ end
 configure :development do
   use ::Rack::DowncaseHeaders
   activate :livereload, host: '127.0.0.1'
+  config[:post_form_url] = 'http://localhost:3000'
+end
+
+configure :build do
+  activate :minify_javascript,
+    compressor: proc {
+      ::Uglifier.new(:harmony => true, :mangle => {:toplevel => true}, :compress => {:unsafe => true})
+    }
+  config[:post_form_url] = 'https://form-to-slack-vercel-8yto.vercel.app'
 end
 
 unless ARGV.include?('console')

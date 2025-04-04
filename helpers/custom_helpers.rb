@@ -1,5 +1,6 @@
 module CustomHelpers
   def inspect(*objs)
+    return unless development?
     out = []
     out << '<div class="debug-inspect">'
     out << objs.map{|obj| escape_html(obj) }
