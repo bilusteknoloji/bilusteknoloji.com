@@ -63,21 +63,21 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     yengec
   ].each do |folder_name|
     xml.url do
-      xml.loc "https://#{domain}/tr/apps/#{folder_name}/"
+      xml.loc "https://#{domain}/tr/uygulamalar/#{folder_name}/"
       xml.changefreq "monthly"
       xml.priority "0.7"
       sitemap_obj = sitemap.find_resource_by_path("tr/uygulamalar/#{folder_name}/index.html")
       xml.lastmod File.mtime(sitemap_obj.source_file).strftime('%Y-%m-%d')
     end
     xml.url do
-      xml.loc "https://#{domain}/tr/apps/#{folder_name}/destek/"
+      xml.loc "https://#{domain}/tr/uygulamalar/#{folder_name}/destek/"
       xml.changefreq "monthly"
       xml.priority "0.3"
       sitemap_obj = sitemap.find_resource_by_path("tr/uygulamalar/#{folder_name}/destek/index.html")
       xml.lastmod File.mtime(sitemap_obj.source_file).strftime('%Y-%m-%d')
     end
     xml.url do
-      xml.loc "https://#{domain}/tr/apps/#{folder_name}/gizlilik/"
+      xml.loc "https://#{domain}/tr/uygulamalar/#{folder_name}/gizlilik/"
       xml.changefreq "monthly"
       xml.priority "0.3"
       sitemap_obj = sitemap.find_resource_by_path("tr/uygulamalar/#{folder_name}/gizlilik/index.html")
