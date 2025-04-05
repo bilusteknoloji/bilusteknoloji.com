@@ -98,7 +98,18 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
         }
     }
     </script>
-    
+
+
+    <% unless development? %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEE042HCXF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BEE042HCXF');
+    </script>
+    <% end %>
+
 </head>
 <body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
     <% if development? %><span class="debug"></span><% end %>
