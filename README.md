@@ -1,6 +1,6 @@
 [![Dependabot Updates](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/dependabot/dependabot-updates)
 [![pages-build-deployment](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bilusteknoloji/bilusteknoloji.com/actions/workflows/pages/pages-build-deployment)
-![Version](https://img.shields.io/badge/version-0.1.12-orange.svg)
+![Version](https://img.shields.io/badge/version-0.1.13-orange.svg)
 
 # bilusteknoloji.com
 
