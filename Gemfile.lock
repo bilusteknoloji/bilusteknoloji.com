@@ -75,7 +75,7 @@ GEM
     middleman-autoprefixer (3.0.0)
       autoprefixer-rails (~> 10.0)
       middleman-core (>= 4.0.0)
-    middleman-blog (4.0.3)
+    middleman-blog (4.1.0)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
@@ -196,7 +196,7 @@ DEPENDENCIES
   csv
   middleman (~> 4.5)
   middleman-autoprefixer (~> 3.0)
-  middleman-blog (~> 4.0)
+  middleman-blog (~> 4.1)
   middleman-livereload (~> 3.4, >= 3.4.7)
   mutex_m
   nokogiri (~> 1.18)
