@@ -3,6 +3,8 @@ require 'uglifier'
 require_relative './lib/middleware/rack/downcase_headers'
 require_relative './lib/patch/erb_force_encoding_fix'
 
+Time.zone = 'Europe/Istanbul'
+
 activate :i18n
 
 set :markdown_engine, :redcarpet
