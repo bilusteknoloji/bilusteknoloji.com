@@ -1,0 +1,91 @@
+---
+title: "What is Model Context Protocol (MCP)?"
+locale: "en"
+date: "2025-04-12 09:52"
+cover: "2025-04-12-what-is-model-context-protocol-mcp.jpg"
+author: "Bilus Teknoloji"
+is_blog: true
+---
+
+As large language models (*LLMs*) become more powerful, their ability to
+interact with the real world is often limited by their static nature — they
+can’t access fresh data, execute custom logic, or adapt dynamically to
+different tasks. **Model Context Protocol (MCP)** is here to change that.
+READ_MORE
+
+MCP is an open protocol developed by [Anthropic](https://www.anthropic.com/)
+designed to bridge LLMs with external tools, resources, and prompts in a
+standardized, scalable way.
+
+<figure>
+    <%= image_tag "blog/2025-04-12-what-is-model-context-protocol-mcp.jpg", 
+        class: 'w-full border rounded-xl shadow-lg sm:h-40 lg:h-auto sm:object-cover', 
+        alt: 'What is Model Context Protocol (mcp)' %>
+</figure>
+
+
+## Why MCP Matters
+
+Traditional LLMs operate in a closed-box fashion. Once trained, their
+knowledge becomes **stale** and they can’t inherently "reach out" to query
+databases, call APIs, or use external files.
+
+### MCP provides a structured, language-agnostic interface to overcome that limitation.
+
+- **Tools**: Execute external functions (e.g., search weather, run SQL query).
+- **Resources**: Retrieve external files or documents.
+- **Prompts**: Use task-specific templates to guide interaction logic.
+
+This allows LLM-based apps to be:
+
+- More **dynamic**
+- More **up-to-date**
+- More **domain-specific**
+- More capable of reasoning with **real data**
+
+## Real-World Use Case
+
+Let’s imagine you’re building a support chatbot for an insurance company.
+
+With **MCP**, your LLM can:
+
+1. Use a **Tool** to call a claim-status API.
+2. Retrieve a **Resource** containing policy details as a PDF.
+3. Use a **Prompt** that frames the conversation with empathy and legal caution.
+
+Example:
+
+```json
+{
+    "tool": "getClaimStatus",
+    "resource": "documents/policies/auto-2023.pdf",
+    "prompt": "templates/support_response"
+}
+```
+
+Instead of hallucinating or returning outdated info, the LLM combines
+**context-aware** inputs with **real data**.
+
+## How to Get Started
+
+You can build MCP-compliant systems using official SDKs in:
+
+- Golang
+- TypeScript
+- Python
+- Java
+- Kotlin
+- C#
+
+Start here 👉 [github.com/modelcontextprotocol](https://github.com/modelcontextprotocol) Or 
+check the docs 👉 [modelcontextprotocol.io](https://modelcontextprotocol.io)
+
+**Model Context Protocol (MCP)** redefines what language models can do by
+giving them structured, secure, and modular access to tools, data, and
+prompts. 
+
+It brings reasoning closer to real-world usage — and lets LLMs collaborate
+more meaningfully with the systems around them.
+
+If you’re building AI-powered apps, **MCP might just be the missing piece**
+you’ve been looking for.

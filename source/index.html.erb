@@ -115,7 +115,9 @@ blog: en
                             class: "w-full h-40 object-cover md:h-52 lg:h-auto transition duration-300 group-hover:scale-110 rounded-inherit" %>
                     </div>
                     <h3 class="text-bilus-500 font-semibold text-xl"><%= post.data.title %></h3>
-                    <div class="leading-relaxed"><%= post.summary %></div>
+                    <div class="leading-relaxed space-y-4">
+                        <%= markdown post.summary %>
+                    </div>
                 </a>
             </div>
             <% end %>
