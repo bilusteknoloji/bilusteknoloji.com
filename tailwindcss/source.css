@@ -73,6 +73,7 @@
     
     .article-style {
         @apply
+        prose-lead:text-bilus-600
         prose-h1:text-bilus-600 
         prose-h2:text-bilus-500
         prose-h3:text-bilus-400
