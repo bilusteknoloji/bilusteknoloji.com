@@ -30,7 +30,7 @@ GEM
     connection_pool (2.5.0)
     contracts (0.17.2)
     crass (1.0.6)
-    csv (3.3.3)
+    csv (3.3.4)
     dotenv (3.1.7)
     drb (2.2.1)
     em-websocket (0.5.3)
