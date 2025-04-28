@@ -1,0 +1,77 @@
+---
+title: How to run your private LLM on your cloud?
+lang: en
+date: 2025-04-28 09:40
+cover: 2025-04-28-how-to-run-your-private-llm-on-your-cloud.png
+author: Bilus Teknoloji
+is_blog: true
+---
+
+Setting up and running your own **LLM server** is actually easier than you 
+might think. All you need is a **VPS** running on the cloud and **Ubuntu** Linux.
+READ_MORE
+
+<figure>
+    <%= image_tag "blog/#{current_page.data.cover}", 
+        class: 'w-full border rounded-xl shadow-lg sm:h-40 lg:h-auto sm:object-cover', 
+        alt: 'What is Model Context Protocol (mcp)' %>
+</figure>
+
+You need to create a new **VPS** instance with a cloud provider that fits your
+budget. For better results, your virtual machine should ideally have **GPU**
+(*Graphics Processing Unit*) support, but for simple experiments, you can still
+run models that only use the **CPU**.
+
+For simple experiments, you can use an instance with at least **8 CPU**s and 
+**32 GB** of RAM. Installing [Ollama][ollama] is not difficult at all. Normally, 
+you can install it on your machine via a simple CLI command like
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+but by placing a [traefik][traefik] load balancer in front, you can serve it 
+securely over `HTTPS`.
+
+```ruby
+require 'bundler/setup'
+require 'uglifier'
+require_relative './lib/middleware/rack/downcase_headers'
+require_relative './lib/patch/erb_force_encoding_fix'
+
+Time.zone = 'Europe/Istanbul'
+
+activate :syntax
+activate :i18n
+
+set :markdown_engine, :redcarpet
+set :markdown, {
+  fenced_code_blocks: true,
+  smartypants: true,
+  tables: true,
+  underline: true,
+  strikethrough: true,
+  superscript: true,
+  highlight: true,
+}
+
+set :date_format_long, {
+  tr: "%d %B %Y, %A %H:%M",
+  en: "%A, %B %-d, %Y, %-I:%M %p",
+}
+set :date_format_short, {
+  tr: "%d %B %Y, %A",
+  en: "%A, %B %-d, %Y",
+}
+
+config[:js_dir]     = 'public/js'
+config[:css_dir]    = 'public/css'
+config[:images_dir] = 'public/images'
+
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
+end
+```
+
+[ollama]: https://github.com/ollama/ollama
+[traefik]: https://traefik.io/

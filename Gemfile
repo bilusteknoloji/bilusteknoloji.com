@@ -11,13 +11,11 @@ gem 'bigdecimal'
 gem 'mutex_m', require: 'mutex_m'
 gem 'base64'
 gem 'csv'
-gem "rexml", ">= 3.3.6"
+gem 'rexml', '>= 3.3.6'
 gem 'redcarpet', '~> 3.6'
 
-gem "builder", "~> 3.3"
-
-gem "stringex", "~> 2.8"
-
-gem "nokogiri", "~> 1.18"
-
-gem "sanitize", "~> 7.0"
+gem 'builder', '~> 3.3'
+gem 'stringex', '~> 2.8'
+gem 'nokogiri', '~> 1.18'
+gem 'sanitize', '~> 7.0'
+gem 'middleman-syntax', '~> 3.5'

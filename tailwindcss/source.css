@@ -83,6 +83,10 @@
         prose-a:text-bilus-500
         ;
     }
+
+    .article-style .highlight { @apply bg-[#002b36] text-[#93a1a1]; }
+
+    .highlight .nb { @apply text-[#ff0000]; }
     
     .prose-links {
         @apply prose-a:text-bilus-500 prose-a:underline-offset-6 hover:prose-a:no-underline;
