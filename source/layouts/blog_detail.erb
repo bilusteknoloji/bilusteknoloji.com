@@ -37,5 +37,9 @@
 </section>
 
     <%= partial 'partials/footer' %>
-<% end %>
 
+    <% content_for :extra_js do %>
+        <%= javascript_include_tag 'copy-to-clipboard.js' %>
+    <% end %>
+    
+<% end %>

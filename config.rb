@@ -5,6 +5,7 @@ require_relative './lib/patch/erb_force_encoding_fix'
 
 Time.zone = 'Europe/Istanbul'
 
+activate :syntax
 activate :i18n
 
 set :markdown_engine, :redcarpet

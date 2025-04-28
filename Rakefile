@@ -70,11 +70,11 @@ namespace :new do
     
     output = <<-END
 ---
-title: "#{args.title}"
-locale: "#{args.language}"
-date: "#{frontmatter_date}"
-cover: "#{file_date}-#{args.title.to_url}.EXT"
-author: "Bilus Teknoloji"
+title: #{args.title}
+lang: #{args.language}
+date: #{frontmatter_date}
+cover: #{file_date}-#{args.title.to_url}.EXT
+author: Bilus Teknoloji
 is_blog: true
 ---
 END
