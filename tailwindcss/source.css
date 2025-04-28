@@ -84,10 +84,70 @@
         ;
     }
 
-    .article-style .highlight { @apply bg-[#002b36] text-[#93a1a1]; }
+    /* https://gist.github.com/roachhd/5a894df2b76536f92fec */
 
-    .highlight .nb { @apply text-[#ff0000]; }
-    
+    .highlight      { @apply bg-[#002B36] text-[#839496]; }
+    .highlight .c   { @apply text-[#586E75]; }
+    .highlight .err { @apply text-[#dc322f]; }
+    .highlight .k   { @apply text-[#859900]; }
+    .highlight .o   { @apply text-[#93a1a1]; }
+    .highlight .cm  { @apply text-[#586E75]; }
+    .highlight .cp  { @apply text-[#B58900]; }
+    .highlight .c1  { @apply text-[#586E75]; }
+    .highlight .cs  { @apply text-[#dc322f]; }
+    .highlight .gd  { @apply text-[#dc322f] bg-[#eee8d5]; }
+    .highlight .ge  { @apply italic; }
+    .highlight .gr  { @apply text-[#dc322f]; }
+    .highlight .gh  { @apply text-[#268BD2]; }
+    .highlight .gi  { @apply text-[#219186] bg-[#eee8d5]; }
+    .highlight .go  { @apply text-[#839496]; }
+    .highlight .gp  { @apply text-[#839496]; }
+    .highlight .gs  { @apply font-bold; }
+    .highlight .gu  { @apply text-[#268BD2]; }
+    .highlight .gt  { @apply text-[#dc322f]; }
+    .highlight .kc  { @apply text-[#859900]; }
+    .highlight .kd  { @apply text-[#859900]; }
+    .highlight .kn  { @apply text-[#859900]; }
+    .highlight .kp  { @apply text-[#859900]; }
+    .highlight .kr  { @apply text-[#859900]; }
+    .highlight .kt  { @apply text-[#859900]; }
+    .highlight .m   { @apply text-[#D33682]; }
+    .highlight .mf  { @apply text-[#D33682]; }
+    .highlight .mh  { @apply text-[#D33682]; }
+    .highlight .mi  { @apply text-[#D33682]; }
+    .highlight .il  { @apply text-[#D33682]; }
+    .highlight .dl  { @apply text-[#2AA198]; }
+    .highlight .s   { @apply text-[#2AA198]; }
+    .highlight .s1  { @apply text-slate-300; } /* Literal.String.Single */
+    .highlight .s2  { @apply text-slate-200; } /* Literal.String.Double */
+    .highlight .sb  { @apply text-[#2AA198]; }
+    .highlight .sc  { @apply text-[#2AA198]; }
+    .highlight .sd  { @apply text-[#2AA198]; }
+    .highlight .se  { @apply text-[#2AA198]; }
+    .highlight .sh  { @apply text-[#2AA198]; }
+    .highlight .si  { @apply text-[#2AA198]; }
+    .highlight .sx  { @apply text-[#2AA198]; }
+    .highlight .sr  { @apply text-[#dc322f]; }
+    .highlight .ss  { @apply text-[#CB4B17]; }
+    .highlight .na  { @apply text-[#93A1A1]; }
+    .highlight .nb  { @apply text-[#CB4B16]; }
+    .highlight .nc  { @apply text-[#268BD2]; }
+    .highlight .no  { @apply text-[#B58800]; }
+    .highlight .nd  { @apply text-[#268BD2]; }
+    .highlight .ni  { @apply text-[#cb4b16]; }
+    .highlight .ne  { @apply text-[#CB4B16]; }
+    .highlight .nf  { @apply text-[#268BD2]; }
+    .highlight .nl  { @apply text-[#268BD2]; }
+    .highlight .nn  { @apply text-[#268BD2]; }
+    .highlight .nt  { @apply text-[#268BD2]; }
+    .highlight .nv  { @apply text-[#268BD2]; }
+    .highlight .ow  { @apply text-[#859900]; }
+    .highlight .w   { @apply text-[#839496]; }
+    .highlight .bp  { @apply text-[#268BD2]; }
+    .highlight .vc  { @apply text-[#268BD2]; }
+    .highlight .vg  { @apply text-[#268BD2]; }
+    .highlight .vi  { @apply text-[#268BD2]; }
+
     .prose-links {
         @apply prose-a:text-bilus-500 prose-a:underline-offset-6 hover:prose-a:no-underline;
     }

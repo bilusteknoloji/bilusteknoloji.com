@@ -1,7 +1,7 @@
 ---
 title: How to run your private LLM on your cloud?
 lang: en
-date: 2025-04-28 09:40
+date: 2025-04-28 22:00
 cover: 2025-04-28-how-to-run-your-private-llm-on-your-cloud.png
 author: Bilus Teknoloji
 is_blog: true
@@ -24,54 +24,396 @@ run models that only use the **CPU**.
 
 For simple experiments, you can use an instance with at least **8 CPU**s and 
 **32 GB** of RAM. Installing [Ollama][ollama] is not difficult at all. Normally, 
-you can install it on your machine via a simple CLI command like
+you can install it on your machine via a simple CLI command like;
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-but by placing a [traefik][traefik] load balancer in front, you can serve it 
-securely over `HTTPS`.
+however, by placing a [traefik][traefik] load balancer in front, you can serve
+it securely over `HTTPS`. So, before going further, let’s install [docker][docker]
+to our VPS.
 
-```ruby
-require 'bundler/setup'
-require 'uglifier'
-require_relative './lib/middleware/rack/downcase_headers'
-require_relative './lib/patch/erb_force_encoding_fix'
+First, set up Docker’s `apt` repository:
 
-Time.zone = 'Europe/Istanbul'
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-activate :syntax
-activate :i18n
-
-set :markdown_engine, :redcarpet
-set :markdown, {
-  fenced_code_blocks: true,
-  smartypants: true,
-  tables: true,
-  underline: true,
-  strikethrough: true,
-  superscript: true,
-  highlight: true,
-}
-
-set :date_format_long, {
-  tr: "%d %B %Y, %A %H:%M",
-  en: "%A, %B %-d, %Y, %-I:%M %p",
-}
-set :date_format_short, {
-  tr: "%d %B %Y, %A",
-  en: "%A, %B %-d, %Y",
-}
-
-config[:js_dir]     = 'public/js'
-config[:css_dir]    = 'public/css'
-config[:images_dir] = 'public/images'
-
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 ```
 
+Then, install the Docker packages:
+
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+You should see when;
+
+```bash
+sudo docker ps
+```
+
+    CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+Then, verify that the installation is successful by running the `hello-world`
+image:
+
+```bash
+sudo docker run hello-world
+```
+
+If you don’t see the `docker ps` result:
+
+```bash
+sudo systemctl enable docker
+```
+
+Now, add your current (*logged in*) user to `docker` group:
+
+```bash
+sudo usermod -aG docker "${USER}"
+```
+
+You can now reboot your server and use docker w/o `sudo`:
+
+```bash
+sudo reboot
+```
+
+After reboot, re-connect and check:
+
+```bash
+docker ps
+```
+
+Before going further, you must tweak some firewall rules:
+
+```bash
+sudo ufw status
+
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere                  
+443                        ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+OpenSSH (v6)               ALLOW       Anywhere (v6)             
+443 (v6)                   ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)  
+```
+
+If you don’t see like this, now allow:
+
+```bash
+sudo ufw allow 443
+sudo ufw allow 80
+sudo ufw status   # re-check
+```
+
+Now, let’s create a network for our services:
+
+```bash
+docker network create traefik_net
+```
+
+Now, point your **A** DNS record to your vps, also you can point **\*.myollama.com** 
+as **CNAME** DNS record too. We’ll use **myollama.com** as an example domain, 
+set your’s instead of that.
+
+Now, you have docker up and running, let’s add some services:
+
+```bash
+nano docker-compose.yml
+```
+
+Here is you `yaml` file:
+
+```yaml
+services:
+  traefik:
+    image: traefik:v3.2
+    container_name: traefik
+    networks:
+      - traefik_net
+    command:
+      - "--providers.docker"
+      - "--providers.docker.watch=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.forwardedheaders.insecure=true"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.websecure.forwardedheaders.insecure=true"
+      - "--entrypoints.web.transport.respondingTimeouts.readTimeout=3600s"
+      - "--entrypoints.web.transport.respondingTimeouts.idleTimeout=3600s"
+      - "--entrypoints.websecure.transport.respondingTimeouts.readTimeout=3600s"
+      - "--entrypoints.websecure.transport.respondingTimeouts.idleTimeout=3600s"
+
+      - "--certificatesresolvers.myollama.acme.tlschallenge=true"
+      - "--certificatesresolvers.myollama.acme.email=your@email" # set yours here...
+      - "--certificatesresolvers.myollama.acme.storage=/letsencrypt/acme.json"
+
+      - "--api.dashboard=true"
+      - "--api.insecure=false"
+      - "--log.level=INFO"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefikdashboard.rule=Host(`traefik.myollama.com`)"
+      - "traefik.http.routers.traefikdashboard.entrypoints=websecure"
+      - "traefik.http.routers.traefikdashboard.tls=true"
+      - "traefik.http.routers.traefikdashboard.tls.certresolver=myollama"
+      - "traefik.http.routers.traefikdashboard.service=api@internal"
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: host
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - letsencrypt_data:/letsencrypt
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: always
+    volumes:
+      - ollama:/root/.ollama
+    networks:
+      - traefik_net
+    environment:
+      OLLAMA_HOST: "0.0.0.0"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_net"
+      - "traefik.http.routers.ollama.rule=Host(`ollama.myollama.com`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.ollama.entrypoints=websecure"
+      - "traefik.http.routers.ollama.tls=true"
+      - "traefik.http.routers.ollama.tls.certresolver=myollama"
+      - "traefik.http.services.ollama.loadbalancer.server.port=11434"
+
+volumes:
+  letsencrypt_data:
+    driver: local
+  ollama:
+    external: true
+
+networks:
+  traefik_net:
+    external: true
+```
+
+To test you infrastructure, run:
+
+```bash
+docker compose up
+```
+
+Now, you should open the traefik’s admin page:
+
+https://traefik.myollama.com
+
+If you see the traefik admin panel, this means all look good. Before hitting
+<kbd>CTRL</kbd> + <kbd>C</kbd>, try to make an api-call to your ollama:
+
+```bash
+curl https://ollama.myollama.com/api/tags
+```
+
+You should see an empty list. Ollama has many free models, check [here][ollama-models]. 
+Now, let’s add `llama3.2`:
+
+```bash
+curl https://ollama.myollama.com/api/pull \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name": "llama3.2"}'
+```
+
+Verify your models list again:
+
+```bash
+curl https://ollama.myollama.com/api/tags
+```
+
+Now, let’s ask some questions:
+
+```bash
+curl https://ollama.myollama.com/api/generate -d '{
+  "model": "llama3.2",
+  "prompt": "Do you know Commodore 64?"
+}'
+```
+
+You should see the streaming response:
+
+```bash
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.009341093Z","response":"The","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.066937138Z","response":" Commod","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.129586007Z","response":"ore","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.185728788Z","response":" ","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.243180793Z","response":"64","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.300290398Z","response":"!","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.361670982Z","response":" Yes","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.420431671Z","response":",","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.479269069Z","response":" I","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.534692399Z","response":" do","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.590992232Z","response":".","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.648129077Z","response":" The","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.70492895Z","response":" Commod","done":false}
+{"model":"llama3.2","created_at":"2025-04-28T17:57:02.76015093Z","response":"ore","done":false}
+:
+:
+{"model":"llama3.2","created_at":"2025-04-28T17:57:20.810774225Z","response":"","done":true,"done_reason":"stop","context":[128006,9125,128007,.....,30],"total_duration":21537524622,"load_duration":2029325408,"prompt_eval_count":33,"prompt_eval_duration":703136354,"eval_count":323,"eval_duration":18803717677}
+```
+
+Yes, you have your own LLM running on your private VPS! Now, you can exit via
+hitting <kbd>CTRL</kbd> + <kbd>C</kbd> and improve your `docker-compose.yml`
+for more private access.
+
+You can limit/restrict access with load balancer. You can allow some special
+IPs or enable **CORS** for desired domains:
+
+Allow only these IP addresses `92.45.1XX.1YY` and `78.19X.2XX.YY` and allow
+only these domains `*.ngrok.app` and `mycustomollama.com` domain for **CORS**:
+
+```yaml
+services:
+  traefik:
+    image: traefik:v3.2
+    container_name: traefik
+    networks:
+      - traefik_net
+    command:
+      - "--providers.docker"
+      - "--providers.docker.watch=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.forwardedheaders.insecure=true"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.websecure.forwardedheaders.insecure=true"
+      - "--entrypoints.web.transport.respondingTimeouts.readTimeout=3600s"
+      - "--entrypoints.web.transport.respondingTimeouts.idleTimeout=3600s"
+      - "--entrypoints.websecure.transport.respondingTimeouts.readTimeout=3600s"
+      - "--entrypoints.websecure.transport.respondingTimeouts.idleTimeout=3600s"
+
+      - "--certificatesresolvers.myollama.acme.tlschallenge=true"
+      - "--certificatesresolvers.myollama.acme.email=your@email" # set yours here...
+      - "--certificatesresolvers.myollama.acme.storage=/letsencrypt/acme.json"
+
+      - "--api.dashboard=true"
+      - "--api.insecure=false"
+      - "--log.level=INFO"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefikdashboard.rule=Host(`traefik.myollama.com`) && (ClientIP(`92.45.1XX.1YY`) || ClientIP(`78.19X.2XX.YY`))"
+      - "traefik.http.routers.traefikdashboard.entrypoints=websecure"
+      - "traefik.http.routers.traefikdashboard.tls=true"
+      - "traefik.http.routers.traefikdashboard.tls.certresolver=myollama"
+      - "traefik.http.routers.traefikdashboard.service=api@internal"
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: host
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - letsencrypt_data:/letsencrypt
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: always
+    volumes:
+      - ollama:/root/.ollama
+    networks:
+      - traefik_net
+    environment:
+      OLLAMA_HOST: "0.0.0.0"
+      OLLAMA_ORIGINS: "https://*.ngrok.app,https://mycustomollama.com,http://localhost,https://localhost,http://localhost:*,https://localhost:*,http://127.0.0.1,https://127.0.0.1,http://127.0.0.1:*,https://127.0.0.1:*,http://0.0.0.0,https://0.0.0.0,http://0.0.0.0:*,https://0.0.0.0:*,app://*,file://*,tauri://*,vscode-webview://*,vscode-file://*"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_net"
+      - "traefik.http.routers.ollama.rule=Host(`ollama.myollama.com`) && PathPrefix(`/api`) && (ClientIP(`92.45.1XX.1YY`) || ClientIP(`78.19X.2XX.YY`))"
+      - "traefik.http.routers.ollama.entrypoints=websecure"
+      - "traefik.http.routers.ollama.tls=true"
+      - "traefik.http.routers.ollama.tls.certresolver=myollama"
+      - "traefik.http.services.ollama.loadbalancer.server.port=11434"
+
+volumes:
+  letsencrypt_data:
+    driver: local
+  ollama:
+    external: true
+
+networks:
+  traefik_net:
+    external: true
+```
+
+Test you configuration via `docker compose up`, make sure you can access the
+traefik admin panel, and api. Great ha? now, let’s add these `docker compose up` 
+command to your system’s startup, incase of reboot or crash, your ollama 
+will start automatically.
+
+Create a file in: `~/traefik-ollama.service` on your VPS, assuming your logged
+in user is `ubuntu` user:
+
+```ini
+[Unit]
+Description=Traefik + Ollama stack
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/
+ExecStart=/usr/bin/docker compose up -d
+ExecStop=/usr/bin/docker compose down
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Now, link this file to:
+
+```bash
+sudo ln -s /home/ubuntu/traefik-ollama.service /etc/systemd/system/
+```
+
+Now, enable:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable traefik-ollama.service
+sudo systemctl start traefik-ollama.service
+```
+
+Now, reboot your vps and check if the system is auto started? Visit, ollama’s
+[api documentaion][ollama-api] page for more functionality.
+
+
 [ollama]: https://github.com/ollama/ollama
+[ollama-models]: https://ollama.com/search
+[ollama-api]: https://github.com/ollama/ollama/blob/main/docs/api.md
 [traefik]: https://traefik.io/
+[docker]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
