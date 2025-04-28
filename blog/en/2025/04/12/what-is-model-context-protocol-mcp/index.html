@@ -9,7 +9,7 @@
     <meta name="description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
     <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
     <meta name="author" content="Bilus Teknoloji">
-    <meta name="build-date" content="2025-04-12 12:55:33 +0300">
+    <meta name="build-date" content="2025-04-28 22:40:14 +0300">
     <meta name="color-scheme" content="light" />
 
     <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
@@ -38,7 +38,8 @@
     <meta name="robots" content="index, follow">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/public/js/site.js"></script>
-    
+            <script src="/public/js/copy-to-clipboard.js"></script>
+
     
     <script type="application/ld+json">
     {
@@ -225,14 +226,12 @@ databases, call APIs, or use external files.</p>
 </ol>
 
 <p>Example:</p>
-
-<pre><code class="json">{
-    &quot;tool&quot;: &quot;getClaimStatus&quot;,
-    &quot;resource&quot;: &quot;documents/policies/auto-2023.pdf&quot;,
-    &quot;prompt&quot;: &quot;templates/support_response&quot;
-}
-</code></pre>
-
+<div class="highlight"><pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"getClaimStatus"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"documents/policies/auto-2023.pdf"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prompt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"templates/support_response"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>Instead of hallucinating or returning outdated info, the LLM combines
 <strong>context-aware</strong> inputs with <strong>real data</strong>.</p>
 
@@ -265,6 +264,7 @@ you’ve been looking for.</p>
                 
                 <div class="border-t-8 px-5 py-5 space-y-5 prose xl:prose-xl 2xl:px-0">
                     <h3>Continue reading other articles?</h3>
+                    <a href="/blog/en/2025/04/28/how-to-run-your-private-llm-on-your-cloud/" class="block">&larr; How to run your private LLM on your cloud?</a>
                     <a href="/blog/en/2025/04/01/what-is-an-api-gateway-and-why-does-it-matter/" class="block">What is an API Gateway and Why Does It Matter? &rarr;</a>
                 </div>
             </div>
@@ -274,6 +274,7 @@ you’ve been looking for.</p>
     <div class="p-8 border border-bilus-100 rounded-xl shadow-md">
         <h4 class="text-bilus-500 font-semibold mb-5 2xl:text-2xl">Latest Articles</h4>
         <ul class="*:my-4 last:*:mb-0">
+            <li><a title="Click to read How to run your private LLM on your cloud? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/28/how-to-run-your-private-llm-on-your-cloud/">How to run your private LLM on your cloud?</a></li>
             <li><a title="Click to read What is Model Context Protocol (MCP)? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/12/what-is-model-context-protocol-mcp/">What is Model Context Protocol (MCP)?</a></li>
             <li><a title="Click to read What is an API Gateway and Why Does It Matter? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/01/what-is-an-api-gateway-and-why-does-it-matter/">What is an API Gateway and Why Does It Matter?</a></li>
             <li><a title="Click to read How IT Consultancy Drives Innovation and Business Success? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/03/21/how-it-consultancy-drives-innovation-and-business-success/">How IT Consultancy Drives Innovation and Business Success?</a></li>
@@ -389,6 +390,7 @@ you’ve been looking for.</p>
     </div>
 </footer>
 
+    
+
 </body>
 </html>
-

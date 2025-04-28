@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilus Teknoloji | How to run your private LLM on your cloud?</title>
+
+    <meta name="title" content="Bilus Teknoloji | How to run your private LLM on your cloud?">
+    <meta name="description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
+    <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
+    <meta name="author" content="Bilus Teknoloji">
+    <meta name="build-date" content="2025-04-28 22:40:14 +0300">
+    <meta name="color-scheme" content="light" />
+
+    <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.svg" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bilus" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link href="/public/css/site.css" rel="stylesheet" />
+
+
+    <meta property="og:url" content="https://bilusteknoloji.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bilus Teknoloji | How to run your private LLM on your cloud?">
+    <meta property="og:description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
+    <meta property="og:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bilusteknoloji.com">
+    <meta property="twitter:url" content="https://bilusteknoloji.com/">
+    <meta name="twitter:title" content="Bilus Teknoloji | How to run your private LLM on your cloud?">
+    <meta name="twitter:description" content="Bilus Teknoloji provides innovative and sustainable software solutions. From web and mobile development to technical consulting, we help businesses thrive.">
+    <meta name="twitter:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="robots" content="index, follow">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/public/js/site.js"></script>
+            <script src="/public/js/copy-to-clipboard.js"></script>
+
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bilus Teknoloji",
+        "url": "https://bilusteknoloji.com/",
+        "logo": "https://bilusteknoloji.com/public/images/bilus-logo-ld.png",
+        "description": "Bilus Teknoloji helps companies grow with better software, scalable infrastructure and improved engineering practices. We offer consulting, training and development services tailored for startups and scaleups.",
+        "founder": {
+            "@type": "Person",
+            "name": "Mehmet İlker Varol",
+            "sameAs": "https://www.linkedin.com/in/ilkervarol/"
+        },
+        "foundingDate": "2024",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hello@bilusteknoloji.com",
+            "availableLanguage": ["English", "Turkish"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/bilusteknoloji/",
+            "https://github.com/bilusteknoloji/",
+            "https://x.com/bilusteknoloji/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Şeyh Galip Sk - OFTON Elysium B Blok 2/1",
+            "addressLocality": "Kadıköy",
+            "addressRegion": "İstanbul",
+            "postalCode": "34718",
+            "addressCountry": "TR"
+        }
+    }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEE042HCXF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BEE042HCXF');
+    </script>
+
+</head>
+<body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
+    
+        <div x-data="{ open: false }" class="bg-white sticky top-0 lg:hidden relative z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+        <div><img src="/public/images/bilus-logo.png" alt="Logo of Bilus Teknoloji" class="size-4 sm:size-5 md:size-6" /></div>
+        <button @click="open = !open" class="text-bilus-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         class="absolute top-full left-0 w-full bg-white shadow-md py-4 px-4 space-y-4">
+         
+         <a class="block nav-links hover-underline" href="/">Home</a>
+         <a class="block nav-links hover-underline" href="/en/about/">About</a>
+         <a class="block nav-links hover-underline" href="/en/contact/">Contact</a>
+         <a class="block nav-links hover-underline" href="/en/faq/">FAQ</a>
+         <a class="block nav-links hover-underline" href="/en/services/">Services</a>
+         <a class="block nav-links hover-underline" href="/en/blog/">Blog</a>
+         <a class="block nav-links hover-underline" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">Google Maps</a>
+
+     </div>
+</div>
+
+<section class="bg-white hidden lg:block lg:pb-4 lg:pt-8 2xl:pt-16 sticky top-0 z-30 border-b">
+    <div class="container mx-auto lg:px-10 2xl:px-0">
+        <nav>
+            <ul class="flex justify-start items-center gap-x-12">
+                <li>
+                    <a class="nav-links hover-underline flex items-center gap-x-2" href="/">
+                        <img src="/public/images/bilus-logo.png" alt="Logo of Bilus Teknoloji" class="size-4" />
+
+                        Bilus Teknoloji
+                    </a>
+                </li>
+                
+                <li class="relative group">
+                    <a title="Click to view Services page" class="inline-flex items-center gap-1 nav-links" href="/en/services/">
+                        Services
+                        <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <ul class="absolute left-0 top-full mt-2 w-80 first:*:pt-4 last:*:pb-4 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-40">
+                        <li class="px-4 pt-4"><a title="Click to view Technical Consulting page" href="/en/services/technical-consulting/" class="submenu-links">Technical Consulting</a></li>
+                        <li class="px-4 pt-4"><a title="Click to view Software Development &amp; Management page" href="/en/services/software-development-management/" class="submenu-links">Software Development &amp; Management</a></li>
+                        <li class="px-4 pt-4"><a title="Click to view Technical Assessment &amp; Risk Management page" href="/en/services/technical-assessment-and-risk-management/" class="submenu-links">Technical Assessment &amp; Risk Management</a></li>
+                        <li class="px-4 pt-4"><a title="Click to view Data Management &amp; Analytics Solutions page" href="/en/services/data-management-and-analytics-solutions/" class="submenu-links">Data Management &amp; Analytics Solutions</a></li>
+                        <li class="px-4 pt-4"><a title="Click to view Software &amp; Architecture Training page" href="/en/services/software-and-architecture-training/" class="submenu-links">Software &amp; Architecture Training</a></li>
+                        <li class="px-4 pt-4"><a title="Click to view Digital Transformation &amp; Innovation page" href="/en/services/digital-transformation-and-innovation/" class="submenu-links">Digital Transformation &amp; Innovation</a></li>
+                    </ul>
+                </li>
+                
+                <li><a class="nav-links hover-underline" href="/en/blog/">Blog</a></li>
+
+                <li><a class="nav-links hover-underline" href="/en/about/">About</a></li>
+
+                <li class="flex-grow"></li>
+
+                <li><a class="nav-links hover-underline" href="/en/contact/">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</section>
+
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="px-5 pt-5 prose md:max-w-none md:w-full xl:max-w-prose xl:prose-xl 2xl:px-0 2xl:pt-0">
+                
+                <h1>How to run your private LLM on your cloud?</h1>
+                <time class="text-base text-bilus-400 font-medium" pubdate datetime="2025-04-28T22:00:00+03:00" title="28 April 2025, Monday 22:00">
+                    28 April 2025, Monday 22:00
+                    , Written by: <span class="font-semibold">Bilus Teknoloji</span>
+                    
+                </time>
+
+                <p class="lead">Setting up and running your own <strong>LLM server</strong> is actually easier than you 
+might think. All you need is a <strong>VPS</strong> running on the cloud and <strong>Ubuntu</strong> Linux.
+</p>
+
+<figure>
+    <img src="/public/images/blog/2025-04-28-how-to-run-your-private-llm-on-your-cloud.png" class="w-full border rounded-xl shadow-lg sm:h-40 lg:h-auto sm:object-cover" alt="What is Model Context Protocol (mcp)" />
+</figure>
+
+<p>You need to create a new <strong>VPS</strong> instance with a cloud provider that fits your
+budget. For better results, your virtual machine should ideally have <strong>GPU</strong>
+(<em>Graphics Processing Unit</em>) support, but for simple experiments, you can still
+run models that only use the <strong>CPU</strong>.</p>
+
+<p>For simple experiments, you can use an instance with at least <strong>8 CPU</strong>s and 
+<strong>32 GB</strong> of RAM. Installing <a href="https://github.com/ollama/ollama">Ollama</a> is not difficult at all. Normally, 
+you can install it on your machine via a simple CLI command like;</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-fsSL</span> https://ollama.com/install.sh | sh
+</code></pre></div>
+<p>however, by placing a <a href="https://traefik.io/">traefik</a> load balancer in front, you can serve
+it securely over <code>HTTPS</code>. So, before going further, let’s install <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">docker</a>
+to our VPS.</p>
+
+<p>First, set up Docker’s <code>apt</code> repository:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># Add Docker's official GPG key:</span>
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ca-certificates curl
+<span class="nb">sudo install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings
+<span class="nb">sudo </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc
+<span class="nb">sudo chmod </span>a+r /etc/apt/keyrings/docker.asc
+
+<span class="c"># Add the repository to Apt sources:</span>
+<span class="nb">echo</span> <span class="se">\</span>
+  <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
+  </span><span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">UBUNTU_CODENAME</span><span class="k">:-</span><span class="nv">$VERSION_CODENAME</span><span class="k">}</span><span class="s2">"</span><span class="si">)</span><span class="s2"> stable"</span> | <span class="se">\</span>
+  <span class="nb">sudo tee</span> /etc/apt/sources.list.d/docker.list <span class="o">&gt;</span> /dev/null
+<span class="nb">sudo </span>apt-get update
+</code></pre></div>
+<p>Then, install the Docker packages:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre></div>
+<p>You should see when;</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>docker ps
+</code></pre></div><div class="highlight"><pre class="highlight plaintext"><code>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+</code></pre></div>
+<p>Then, verify that the installation is successful by running the <code>hello-world</code>
+image:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>docker run hello-world
+</code></pre></div>
+<p>If you don’t see the <code>docker ps</code> result:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
+</code></pre></div>
+<p>Now, add your current (<em>logged in</em>) user to <code>docker</code> group:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="s2">"</span><span class="k">${</span><span class="nv">USER</span><span class="k">}</span><span class="s2">"</span>
+</code></pre></div>
+<p>You can now reboot your server and use docker w/o <code>sudo</code>:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>reboot
+</code></pre></div>
+<p>After reboot, re-connect and check:</p>
+<div class="highlight"><pre class="highlight shell"><code>docker ps
+</code></pre></div>
+<p>Before going further, you must tweak some firewall rules:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>ufw status
+
+Status: active
+
+To                         Action      From
+<span class="nt">--</span>                         <span class="nt">------</span>      <span class="nt">----</span>
+OpenSSH                    ALLOW       Anywhere                  
+443                        ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+OpenSSH <span class="o">(</span>v6<span class="o">)</span>               ALLOW       Anywhere <span class="o">(</span>v6<span class="o">)</span>             
+443 <span class="o">(</span>v6<span class="o">)</span>                   ALLOW       Anywhere <span class="o">(</span>v6<span class="o">)</span>             
+80 <span class="o">(</span>v6<span class="o">)</span>                    ALLOW       Anywhere <span class="o">(</span>v6<span class="o">)</span>  
+</code></pre></div>
+<p>If you don’t see like this, now allow:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>ufw allow 443
+<span class="nb">sudo </span>ufw allow 80
+<span class="nb">sudo </span>ufw status   <span class="c"># re-check</span>
+</code></pre></div>
+<p>Now, let’s create a network for our services:</p>
+<div class="highlight"><pre class="highlight shell"><code>docker network create traefik_net
+</code></pre></div>
+<p>Now, point your <strong>A</strong> DNS record to your vps, also you can point <strong>*.myollama.com</strong> 
+as <strong>CNAME</strong> DNS record too. We’ll use <strong>myollama.com</strong> as an example domain, 
+set your’s instead of that.</p>
+
+<p>Now, you have docker up and running, let’s add some services:</p>
+<div class="highlight"><pre class="highlight shell"><code>nano docker-compose.yml
+</code></pre></div>
+<p>Here is you <code>yaml</code> file:</p>
+<div class="highlight"><pre class="highlight yaml"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">traefik</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">traefik:v3.2</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">traefik</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik_net</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker.watch=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.address=:80"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.forwardedheaders.insecure=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.address=:443"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.forwardedheaders.insecure=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.transport.respondingTimeouts.readTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.transport.respondingTimeouts.idleTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.transport.respondingTimeouts.readTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.transport.respondingTimeouts.idleTimeout=3600s"</span>
+
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.tlschallenge=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.email=your@email"</span> <span class="c1"># set yours here...</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.storage=/letsencrypt/acme.json"</span>
+
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.dashboard=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.insecure=false"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--log.level=INFO"</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.enable=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.rule=Host(`traefik.myollama.com`)"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.entrypoints=websecure"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.tls=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.tls.certresolver=myollama"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.service=api@internal"</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">target</span><span class="pi">:</span> <span class="m">80</span>
+        <span class="na">published</span><span class="pi">:</span> <span class="m">80</span>
+        <span class="na">protocol</span><span class="pi">:</span> <span class="s">tcp</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="s">host</span>
+      <span class="pi">-</span> <span class="na">target</span><span class="pi">:</span> <span class="m">443</span>
+        <span class="na">published</span><span class="pi">:</span> <span class="m">443</span>
+        <span class="na">protocol</span><span class="pi">:</span> <span class="s">tcp</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="s">host</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock</span>
+      <span class="pi">-</span> <span class="s">letsencrypt_data:/letsencrypt</span>
+
+  <span class="na">ollama</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">ollama/ollama</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">ollama</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ollama:/root/.ollama</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik_net</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">OLLAMA_HOST</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.0.0.0"</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.enable=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.docker.network=traefik_net"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.rule=Host(`ollama.myollama.com`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.entrypoints=websecure"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.tls=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.tls.certresolver=myollama"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.services.ollama.loadbalancer.server.port=11434"</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">letsencrypt_data</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+  <span class="na">ollama</span><span class="pi">:</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">traefik_net</span><span class="pi">:</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div>
+<p>To test you infrastructure, run:</p>
+<div class="highlight"><pre class="highlight shell"><code>docker compose up
+</code></pre></div>
+<p>Now, you should open the traefik’s admin page:</p>
+
+<p>https://traefik.myollama.com</p>
+
+<p>If you see the traefik admin panel, this means all look good. Before hitting
+<kbd>CTRL</kbd> + <kbd>C</kbd>, try to make an api-call to your ollama:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl https://ollama.myollama.com/api/tags
+</code></pre></div>
+<p>You should see an empty list. Ollama has many free models, check <a href="https://ollama.com/search">here</a>. 
+Now, let’s add <code>llama3.2</code>:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl https://ollama.myollama.com/api/pull <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"name": "llama3.2"}'</span>
+</code></pre></div>
+<p>Verify your models list again:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl https://ollama.myollama.com/api/tags
+</code></pre></div>
+<p>Now, let’s ask some questions:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl https://ollama.myollama.com/api/generate <span class="nt">-d</span> <span class="s1">'{
+  "model": "llama3.2",
+  "prompt": "Do you know Commodore 64?"
+}'</span>
+</code></pre></div>
+<p>You should see the streaming response:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.009341093Z"</span>,<span class="s2">"response"</span>:<span class="s2">"The"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.066937138Z"</span>,<span class="s2">"response"</span>:<span class="s2">" Commod"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.129586007Z"</span>,<span class="s2">"response"</span>:<span class="s2">"ore"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.185728788Z"</span>,<span class="s2">"response"</span>:<span class="s2">" "</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.243180793Z"</span>,<span class="s2">"response"</span>:<span class="s2">"64"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.300290398Z"</span>,<span class="s2">"response"</span>:<span class="s2">"!"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.361670982Z"</span>,<span class="s2">"response"</span>:<span class="s2">" Yes"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.420431671Z"</span>,<span class="s2">"response"</span>:<span class="s2">","</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.479269069Z"</span>,<span class="s2">"response"</span>:<span class="s2">" I"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.534692399Z"</span>,<span class="s2">"response"</span>:<span class="s2">" do"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.590992232Z"</span>,<span class="s2">"response"</span>:<span class="s2">"."</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.648129077Z"</span>,<span class="s2">"response"</span>:<span class="s2">" The"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.70492895Z"</span>,<span class="s2">"response"</span>:<span class="s2">" Commod"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:02.76015093Z"</span>,<span class="s2">"response"</span>:<span class="s2">"ore"</span>,<span class="s2">"done"</span>:false<span class="o">}</span>
+:
+:
+<span class="o">{</span><span class="s2">"model"</span>:<span class="s2">"llama3.2"</span>,<span class="s2">"created_at"</span>:<span class="s2">"2025-04-28T17:57:20.810774225Z"</span>,<span class="s2">"response"</span>:<span class="s2">""</span>,<span class="s2">"done"</span>:true,<span class="s2">"done_reason"</span>:<span class="s2">"stop"</span>,<span class="s2">"context"</span>:[128006,9125,128007,.....,30],<span class="s2">"total_duration"</span>:21537524622,<span class="s2">"load_duration"</span>:2029325408,<span class="s2">"prompt_eval_count"</span>:33,<span class="s2">"prompt_eval_duration"</span>:703136354,<span class="s2">"eval_count"</span>:323,<span class="s2">"eval_duration"</span>:18803717677<span class="o">}</span>
+</code></pre></div>
+<p>Yes, you have your own LLM running on your private VPS! Now, you can exit via
+hitting <kbd>CTRL</kbd> + <kbd>C</kbd> and improve your <code>docker-compose.yml</code>
+for more private access.</p>
+
+<p>You can limit/restrict access with load balancer. You can allow some special
+IPs or enable <strong>CORS</strong> for desired domains:</p>
+
+<p>Allow only these IP addresses <code>92.45.1XX.1YY</code> and <code>78.19X.2XX.YY</code> and allow
+only these domains <code>*.ngrok.app</code> and <code>mycustomollama.com</code> domain for <strong>CORS</strong>:</p>
+<div class="highlight"><pre class="highlight yaml"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">traefik</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">traefik:v3.2</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">traefik</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik_net</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker.watch=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.address=:80"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.forwardedheaders.insecure=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.address=:443"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.forwardedheaders.insecure=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.transport.respondingTimeouts.readTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.transport.respondingTimeouts.idleTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.transport.respondingTimeouts.readTimeout=3600s"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.transport.respondingTimeouts.idleTimeout=3600s"</span>
+
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.tlschallenge=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.email=your@email"</span> <span class="c1"># set yours here...</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--certificatesresolvers.myollama.acme.storage=/letsencrypt/acme.json"</span>
+
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.dashboard=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.insecure=false"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--log.level=INFO"</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.enable=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.rule=Host(`traefik.myollama.com`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(ClientIP(`92.45.1XX.1YY`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">ClientIP(`78.19X.2XX.YY`))"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.entrypoints=websecure"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.tls=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.tls.certresolver=myollama"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.traefikdashboard.service=api@internal"</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">target</span><span class="pi">:</span> <span class="m">80</span>
+        <span class="na">published</span><span class="pi">:</span> <span class="m">80</span>
+        <span class="na">protocol</span><span class="pi">:</span> <span class="s">tcp</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="s">host</span>
+      <span class="pi">-</span> <span class="na">target</span><span class="pi">:</span> <span class="m">443</span>
+        <span class="na">published</span><span class="pi">:</span> <span class="m">443</span>
+        <span class="na">protocol</span><span class="pi">:</span> <span class="s">tcp</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="s">host</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock</span>
+      <span class="pi">-</span> <span class="s">letsencrypt_data:/letsencrypt</span>
+
+  <span class="na">ollama</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">ollama/ollama</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">ollama</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ollama:/root/.ollama</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik_net</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">OLLAMA_HOST</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.0.0.0"</span>
+      <span class="na">OLLAMA_ORIGINS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://*.ngrok.app,https://mycustomollama.com,http://localhost,https://localhost,http://localhost:*,https://localhost:*,http://127.0.0.1,https://127.0.0.1,http://127.0.0.1:*,https://127.0.0.1:*,http://0.0.0.0,https://0.0.0.0,http://0.0.0.0:*,https://0.0.0.0:*,app://*,file://*,tauri://*,vscode-webview://*,vscode-file://*"</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.enable=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.docker.network=traefik_net"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.rule=Host(`ollama.myollama.com`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(ClientIP(`92.45.1XX.1YY`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">ClientIP(`78.19X.2XX.YY`))"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.entrypoints=websecure"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.tls=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.routers.ollama.tls.certresolver=myollama"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">traefik.http.services.ollama.loadbalancer.server.port=11434"</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">letsencrypt_data</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+  <span class="na">ollama</span><span class="pi">:</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">traefik_net</span><span class="pi">:</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div>
+<p>Test you configuration via <code>docker compose up</code>, make sure you can access the
+traefik admin panel, and api. Great ha? now, let’s add these <code>docker compose up</code> 
+command to your system’s startup, incase of reboot or crash, your ollama 
+will start automatically.</p>
+
+<p>Create a file in: <code>~/traefik-ollama.service</code> on your VPS, assuming your logged
+in user is <code>ubuntu</code> user:</p>
+<div class="highlight"><pre class="highlight ini"><code><span class="nn">[Unit]</span>
+<span class="py">Description</span><span class="p">=</span><span class="s">Traefik + Ollama stack</span>
+<span class="py">After</span><span class="p">=</span><span class="s">docker.service</span>
+<span class="py">Requires</span><span class="p">=</span><span class="s">docker.service</span>
+
+<span class="nn">[Service]</span>
+<span class="py">Type</span><span class="p">=</span><span class="s">oneshot</span>
+<span class="py">WorkingDirectory</span><span class="p">=</span><span class="s">/home/ubuntu/</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/usr/bin/docker compose up -d</span>
+<span class="py">ExecStop</span><span class="p">=</span><span class="s">/usr/bin/docker compose down</span>
+<span class="py">RemainAfterExit</span><span class="p">=</span><span class="s">yes</span>
+
+<span class="nn">[Install]</span>
+<span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<p>Now, link this file to:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo ln</span> <span class="nt">-s</span> /home/ubuntu/traefik-ollama.service /etc/systemd/system/
+</code></pre></div>
+<p>Now, enable:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nb">sudo </span>systemctl daemon-reload
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>traefik-ollama.service
+<span class="nb">sudo </span>systemctl start traefik-ollama.service
+</code></pre></div>
+<p>Now, reboot your vps and check if the system is auto started? Visit, ollama’s
+<a href="https://github.com/ollama/ollama/blob/main/docs/api.md">api documentaion</a> page for more functionality.</p>
+
+                
+                <div class="border-t-8 px-5 py-5 space-y-5 prose xl:prose-xl 2xl:px-0">
+                    <h3>Continue reading other articles?</h3>
+                    <a href="/blog/en/2025/04/12/what-is-model-context-protocol-mcp/" class="block">What is Model Context Protocol (MCP)? &rarr;</a>
+                </div>
+            </div>
+
+            <div class="md:px-5 md:pb-5 xl:px-0 xl:pb-0 2xl:pl-24 2xl:space-y-10">
+                <div class="hidden xl:block xl:p-5 2xl:p-0 2xl:pl-5">
+    <div class="p-8 border border-bilus-100 rounded-xl shadow-md">
+        <h4 class="text-bilus-500 font-semibold mb-5 2xl:text-2xl">Latest Articles</h4>
+        <ul class="*:my-4 last:*:mb-0">
+            <li><a title="Click to read How to run your private LLM on your cloud? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/28/how-to-run-your-private-llm-on-your-cloud/">How to run your private LLM on your cloud?</a></li>
+            <li><a title="Click to read What is Model Context Protocol (MCP)? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/12/what-is-model-context-protocol-mcp/">What is Model Context Protocol (MCP)?</a></li>
+            <li><a title="Click to read What is an API Gateway and Why Does It Matter? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/04/01/what-is-an-api-gateway-and-why-does-it-matter/">What is an API Gateway and Why Does It Matter?</a></li>
+            <li><a title="Click to read How IT Consultancy Drives Innovation and Business Success? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/03/21/how-it-consultancy-drives-innovation-and-business-success/">How IT Consultancy Drives Innovation and Business Success?</a></li>
+            <li><a title="Click to read The Importance of IT Consultancy for Modern Businesses article" class="text-bilus-500 hover-underline" href="/blog/en/2025/03/05/the-importance-of-it-consultancy-for-modern-businesses/">The Importance of IT Consultancy for Modern Businesses</a></li>
+            <li><a title="Click to read Why IT Consultancy is Essential for Business Growth? article" class="text-bilus-500 hover-underline" href="/blog/en/2025/03/01/why-it-consultancy-is-essential-for-business-growth/">Why IT Consultancy is Essential for Business Growth?</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="hidden md:block xl:p-5 2xl:p-0 2xl:pl-5">
+    <div class="p-8 border border-bilus-100 rounded-xl shadow-md md:bg-[url('/public/images/icons/cog.svg')] md:bg-no-repeat md:bg-[center_right] lg:bg-none">
+        <h2 class="text-2xl font-semibold mb-4">Explore our Services</h2>
+        <ul class="space-y-2">
+        <li><a title="Click to learn more about Technical Consulting" class="font-medium hover-underline">Technical Consulting</a></li>
+        <li><a title="Click to learn more about Software Development & Management" class="font-medium hover-underline">Software Development &amp; Management</a></li>
+        <li><a title="Click to learn more about Technical Assessment & Risk Management" class="font-medium hover-underline">Technical Assessment &amp; Risk Management</a></li>
+        <li><a title="Click to learn more about Data Management & Analytics Solutions" class="font-medium hover-underline">Data Management &amp; Analytics Solutions</a></li>
+        <li><a title="Click to learn more about Software & Architecture Training" class="font-medium hover-underline">Software &amp; Architecture Training</a></li>
+        <li><a title="Click to learn more about Digital Transformation & Innovation" class="font-medium hover-underline">Digital Transformation &amp; Innovation</a></li>
+        </ul>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-white 2xl:py-24">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2">
+
+        <div class="p-10 sm:p-5 2xl:p-0">
+            <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
+                <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
+                <p class="leading-relaxed">
+                    Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
+                    34718 - Acıbadem - İstanbul<br/>
+                    Türkiye
+                </p>
+                <p>
+                    <a title="Click to view See in Google Maps page" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        Google Maps
+                    </a>
+                </p>
+            </address>
+            
+            <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
+                <a title="Follow us on X!" href="https://x.com/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Follow us on GitHub!" href="https://github.com/bilusteknoloji/" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Follow us on LinkedIn!" href="https://www.linkedin.com/company/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden sm:block sm:ml-auto">
+            <div class="grid grid-cols-2 p-5 2xl:p-0 2xl:gap-x-20">
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="Click to view Home page" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a title="Click to view About page" href="/en/about/">About</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Services page" href="/en/services/">Services</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Blog page" href="/en/blog/">Blog</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="Click to view Contact page" href="/en/contact/">Contact</a>
+                    </li>
+                    <li>
+                        <a title="Click to view FAQ page" href="/en/faq/">FAQ</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Privacy Policy page" href="/en/privacy-policy/">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a title="Click to view Terms of Service page" href="/en/terms-of-service/">Terms of Service</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+</body>
+</html>
