@@ -36,7 +36,7 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     og_url = 'https://bilusteknoloji.com/'
     og_image = 'public/images/opengraph.png'
 
-    if inspect current_page.metadata[:page][:is_blog].present?
+    if current_page.data&.is_blog&.present?
         og_url = "https://bilusteknoloji.com#{current_page.url}"
         og_image = "public/images/blog/#{current_page.metadata[:page][:cover]}" if current_page.metadata[:page][:cover].present?
         html_description = markdownify_text_only(current_page.summary, allowed_tags: []) + html_description if current_page.respond_to?(:summary)
