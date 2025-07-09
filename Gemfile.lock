@@ -18,9 +18,9 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     autoprefixer-rails (10.4.19.0)
       execjs (~> 2)
-    base64 (0.2.0)
+    base64 (0.3.0)
     benchmark (0.4.0)
-    bigdecimal (3.1.9)
+    bigdecimal (3.2.2)
     builder (3.3.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -30,7 +30,7 @@ GEM
     connection_pool (2.5.0)
     contracts (0.17.2)
     crass (1.0.6)
-    csv (3.3.4)
+    csv (3.3.5)
     dotenv (3.1.7)
     drb (2.2.1)
     em-websocket (0.5.3)
@@ -75,7 +75,7 @@ GEM
     middleman-autoprefixer (3.0.0)
       autoprefixer-rails (~> 10.0)
       middleman-core (>= 4.0.0)
-    middleman-blog (4.0.3)
+    middleman-blog (4.1.0)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
@@ -198,9 +198,9 @@ DEPENDENCIES
   bigdecimal
   builder (~> 3.3)
   csv
-  middleman (~> 4.5)
+  middleman (~> 4.6)
   middleman-autoprefixer (~> 3.0)
-  middleman-blog (~> 4.0)
+  middleman-blog (~> 4.1)
   middleman-livereload (~> 3.4, >= 3.4.7)
   middleman-syntax (~> 3.5)
   mutex_m
