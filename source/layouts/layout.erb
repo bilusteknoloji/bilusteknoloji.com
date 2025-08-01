@@ -16,9 +16,6 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= html_title %></title>
 
-    <meta name="title" content="<%= html_title %>">
-    <meta name="description" content="<%= html_description %>">
-    <meta name="keywords" content="<%= html_keywords %>">
     <meta name="author" content="Bilus Teknoloji">
     <meta name="build-date" content="<%= Time.now %>">
     <meta name="color-scheme" content="light" />
@@ -39,9 +36,9 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     if current_page.data&.is_blog&.present?
         og_url = "https://bilusteknoloji.com#{current_page.url}"
         og_image = "public/images/blog/#{current_page.metadata[:page][:cover]}" if current_page.metadata[:page][:cover].present?
-        html_description = markdownify_text_only(current_page.summary, allowed_tags: []) + html_description if current_page.respond_to?(:summary)
+        html_description = markdownify_text_only(current_page.summary, allowed_tags: []) if current_page.respond_to?(:summary)
         html_description = html_description.gsub("\n", " ")
-        html_description = html_description.lstrip
+        html_description = html_description.strip
     end
     %>
 
@@ -58,8 +55,12 @@ html_keywords = current_page.data.keywords if current_page.data.keywords.present
     <meta name="twitter:description" content="<%= html_description %>">
     <meta name="twitter:image" content="https://bilusteknoloji.com/<%= og_image %>">
 
+    <meta name="title" content="<%= html_title %>">
+    <meta name="description" content="<%= html_description %>">
+    <meta name="keywords" content="<%= html_keywords %>">
+
     <meta name="robots" content="index, follow">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     <%= javascript_include_tag "site" %>
     <%= yield_content :extra_js %>
     
