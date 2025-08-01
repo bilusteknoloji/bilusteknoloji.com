@@ -1,0 +1,47 @@
+---
+title: Careers
+description: Discover career opportunities at Bilus Teknoloji. Apply for open positions, join our innovative team, and help shape the future of technology.
+---
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="p-5 prose md:max-w-none lg:w-full xl:prose-xl">
+                <h1>Careers</h1>
+                
+                <p class="lg:max-w-2xl">
+                    Discover career opportunities at <strong>Bilus Teknoloji</strong>. 
+                    Apply for open positions, join our <strong>innovative team</strong>, and help
+                    shape <strong>the future</strong> of technology.
+                </p>
+                
+                <div x-data="jobsComponent()" x-init="hideExpired()">
+                    <h2>Current Positions</h2>
+                    <div>
+                        <% data.jobs.each do |job| %>
+                        <div x-ref="job" data-expires="<%= job.expires_at %>" x-cloak>
+                            <p class="-space-y-2">
+                                <a class="block" target="_blank" title="<%= job.url_title %>" href="<%= job.url %>"><%= job.title %></a>
+                                <small class="block"><%= job.created_at %></small>
+                            </p>
+                            <div class="lg:max-w-2xl">
+                                <%= markdown(job.description) %>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                    <template x-if="openCount === 0">
+                      <p>No open positions at the moment.</p>
+                    </template>
+                    
+                </div>
+            </div>
+            <%= partial "partials/services_sidebar" %>
+        </div>
+        <hr/>
+    </div>
+</section>
+
+<% content_for :extra_js do %>
+    <%= javascript_include_tag 'jobs.js' %>
+<% end %>

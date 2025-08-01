@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'uglifier'
-require_relative './lib/middleware/rack/downcase_headers'
+# require_relative './lib/middleware/rack/downcase_headers'
 require_relative './lib/patch/erb_force_encoding_fix'
 
 Time.zone = 'Europe/Istanbul'
@@ -69,7 +69,7 @@ page "/version.txt", layout: false, directory_index: false
 
 proxy_map = {
   en: {
-    pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service', 'blog'],
+    pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service', 'blog', 'careers'],
     services: [
       'technical-consulting',
       'software-development-management',
@@ -96,7 +96,8 @@ end
 proxy_map[:en][:pages].each do |folder_name|
   page "/en/#{folder_name}/*", layout: 'page'
   locals_val = { lang: :en }
-  locals_val[:no_optimize] = true if folder_name == 'contact'
+  
+  locals_val[:no_optimize] = true if ['contact', 'careers'].include?(folder_name)
   proxy "/en/#{folder_name}/index.html", 
         "/pages/en/#{folder_name}/index.html", 
         ignore: true,
@@ -132,7 +133,7 @@ end
 # proxy "/target-path.html", "/template-file.html", locals: { some_variable: "value" }
 
 configure :development do
-  use ::Rack::DowncaseHeaders
+  # use ::Rack::DowncaseHeaders
   activate :livereload, host: '127.0.0.1'
   config[:post_form_url] = 'http://localhost:3000'
 end
@@ -150,5 +151,6 @@ unless ARGV.include?('console')
     name: :tailwind,
     command: "BROWSERSLIST_IGNORE_OLD_DATA=true npx --prefix ./tailwindcss tailwindcss -c ./tailwindcss/tailwind.config.js -i ./tailwindcss/source.css -o ./dist/public/css/site.css -m #{"--watch" unless build?}",
     latency: 2,
-    source: "./dist/"
+    source: "./dist/",
+    ignore_exit_code: true
 end
