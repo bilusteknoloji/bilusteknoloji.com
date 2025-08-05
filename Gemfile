@@ -18,6 +18,6 @@ gem 'builder', '~> 3.3'
 gem 'stringex', '~> 2.8'
 gem 'nokogiri', '~> 1.18'
 gem 'sanitize', '~> 7.0'
-gem 'middleman-syntax', '~> 3.5'
+gem 'middleman-syntax', '~> 3.6'
 gem 'rack', '>= 3.1.16'
 
