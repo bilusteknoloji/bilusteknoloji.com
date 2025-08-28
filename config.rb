@@ -141,7 +141,7 @@ end
 configure :build do
   activate :minify_javascript,
     compressor: proc {
-      ::Uglifier.new(:harmony => true, :mangle => {:toplevel => true}, :compress => {:unsafe => true})
+      ::Uglifier.new(:harmony => true, :mangle => {:toplevel => false}, :compress => {:unsafe => true})
     }
   config[:post_form_url] = 'https://form-to-slack-vercel-8yto.vercel.app'
 end
