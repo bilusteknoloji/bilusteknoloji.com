@@ -23,3 +23,12 @@ New blog post:
 rake new:post["What is an API Gateway and Why Does It Matter?"]   # publish date is now, lang: en
 rake new:post["What is an API Gateway and Why Does It Matter?","2025-04-01 12:42"]   # publish date April 1, 12:42, lang: en
 ```
+
+---
+
+## Environment Variables
+
+- `REDIS_UPSTASH_URL`
+- `REDISCLI_AUTH`
+
+---
