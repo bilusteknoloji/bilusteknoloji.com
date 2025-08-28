@@ -1,1 +1,1 @@
-function e(){return{openCount:0,hideExpired(){const e=new Date;this.$refs.job.parentElement.querySelectorAll("[data-expires]").forEach(t=>{new Date(t.dataset.expires)>e?this.openCount++:t.remove()})}}}
+function jobsComponent(){return{openCount:0,hideExpired(){const e=new Date;this.$refs.job.parentElement.querySelectorAll("[data-expires]").forEach(t=>{new Date(t.dataset.expires)>e?this.openCount++:t.remove()})}}}
