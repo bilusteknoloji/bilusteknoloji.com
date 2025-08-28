@@ -1,32 +1,34 @@
 # frozen_string_literal: true
 
+require 'English'
 require 'bundler'
 require 'time'
 Bundler.require
 
 task :default => [:run_server]
 
-
-
 desc 'run console'
 task :console do
-  system %{
-    bin/middleman console
-  }
+  system %{ bin/middleman console }
+  exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+rescue Interrupt
+  exit(130)
 end
 
 desc 'run server'
 task :run_server do
-  system %{
-    bin/middleman server
-  }
+  system %{ bin/middleman server }
+  exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+rescue Interrupt
+  exit(130)
 end
 
 desc 'build site'
 task :build do
-  system %{
-    bin/middleman build --clean --verbose
-  }
+  system %{ bin/middleman build --clean --verbose }
+  exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+rescue Interrupt
+  exit(130)
 end
 
 desc 'deploy'
@@ -46,6 +48,9 @@ task :deploy do
     git pull
   }
   puts 'deployed...'
+  exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+rescue Interrupt
+  exit(130)
 end
 
 VALID_LANGUAGES = ['en']
@@ -107,7 +112,9 @@ task :bump, [:revision] => [:has_bump_my_version] do |_, args|
   end
 
   system %{ bump-my-version bump #{args.revision} }
-  exit $?.exitstatus
+  exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+rescue Interrupt
+  exit(130)
 end
 
 
@@ -115,4 +122,15 @@ desc "release new version #{AVAILABLE_REVISIONS.join(',')}, default: patch"
 task :release, [:revision] => [:is_repo_clean] do |_, args|
   args.with_defaults(revision: 'patch')
   Rake::Task['bump'].invoke(args.revision)
+end
+
+
+namespace :redis do
+  desc 'connect upstash redis'
+  task :connect do
+    system %{ redis-cli --tls -h "${REDIS_UPSTASH_URL}" }
+    exit($CHILD_STATUS&.exitstatus || 1) unless ENV['RAKE_CONTINUE']
+  rescue Interrupt
+    exit(130)
+  end
 end
