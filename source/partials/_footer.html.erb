@@ -1,23 +1,47 @@
 <footer class="bg-white 2xl:py-24">
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70%_30%]">
 
         <div class="p-10 sm:p-5 2xl:p-0">
             <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
-                <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
-                <p class="leading-relaxed">
-                    Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
-                    34718 - Acıbadem - İstanbul / Türkiye<br/>
-                    Office: <a class="font-medium" href="tel:+905322214608">+90 (532) 221 46 08</a>
-                </p>
-                <p>
-                    <a title="<%= I18n.t('click_to_view', title: t('see_in_google_maps')) %>" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                        </svg>
-                        Google Maps
-                    </a>
-                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="leading-relaxed space-y-2">
+                        <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
+                        <p>
+                            Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
+                            34718 - Acıbadem - İstanbul<br/>
+                            Türkiye
+                        </p>
+                        <p>Office: <a class="font-medium" href="tel:+905322214608">+90 (532) 221 46 08</a></p>
+                        <p>
+                            <a title="<%= I18n.t('click_to_view', title: t('see_in_google_maps')) %>" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                                Google Maps
+                            </a>
+                        </p>
+                    </div>
+                    <div class="leading-relaxed space-y-2">
+                        <p class="mb-1 text-bilus-500 text-lg font-bold">Bilustek LLC</p>
+                        <p>
+                            2261 Market Street STE 86996<br/>
+                            San Francisco, CA 94114<br/>
+                            USA
+                        </p>
+                        <p>Office: <a class="font-medium" href="tel:+13203177912">+1 (320) 317-7912</a></p>
+                        <p>
+                            <a title="<%= I18n.t('click_to_view', title: t('see_in_google_maps')) %>" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/zrqRx2VoDKpnAMCn6" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                                Google Maps
+                            </a>
+                        </p>
+                        
+                    </div>
+                </div>
             </address>
             
             <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
