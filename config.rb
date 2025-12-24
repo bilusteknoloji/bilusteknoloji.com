@@ -79,6 +79,9 @@ proxy_map = {
       'digital-transformation-and-innovation',
     ]
   },
+  tr: {
+    pages: ['servisler'],
+  }
 }
 set :proxy_map, proxy_map
 
@@ -100,6 +103,18 @@ proxy_map[:en][:pages].each do |folder_name|
   locals_val[:no_optimize] = true if ['contact', 'careers'].include?(folder_name)
   proxy "/en/#{folder_name}/index.html", 
         "/pages/en/#{folder_name}/index.html", 
+        ignore: true,
+        locals: locals_val
+end
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+proxy_map[:tr][:pages].each do |folder_name|
+  page "/tr/#{folder_name}/*", layout: 'page_empty'
+  locals_val = { lang: :tr }
+  
+  proxy "/tr/#{folder_name}/index.html", 
+        "/pages/tr/#{folder_name}/index.html", 
         ignore: true,
         locals: locals_val
 end
