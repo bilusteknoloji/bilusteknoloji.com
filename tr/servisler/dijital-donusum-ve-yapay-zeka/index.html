@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilus Teknoloji | Dijital Dönüşüm ve Yapay Zeka</title>
+
+    <meta name="author" content="Bilus Teknoloji">
+    <meta name="build-date" content="2026-03-29 22:45:54 +0300">
+    <meta name="color-scheme" content="light" />
+
+    <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.svg" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bilus" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link href="/public/css/site.css" rel="stylesheet" />
+
+
+    <meta property="og:url" content="https://bilusteknoloji.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bilus Teknoloji | Dijital Dönüşüm ve Yapay Zeka">
+    <meta property="og:description" content="Bilus Teknoloji dijital dönüşüm ve yapay zeka hizmetleri ile şirketinizin YZ yolculuğunu planlayın ve hayata geçirin.">
+    <meta property="og:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bilusteknoloji.com">
+    <meta property="twitter:url" content="https://bilusteknoloji.com/">
+    <meta name="twitter:title" content="Bilus Teknoloji | Dijital Dönüşüm ve Yapay Zeka">
+    <meta name="twitter:description" content="Bilus Teknoloji dijital dönüşüm ve yapay zeka hizmetleri ile şirketinizin YZ yolculuğunu planlayın ve hayata geçirin.">
+    <meta name="twitter:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="title" content="Bilus Teknoloji | Dijital Dönüşüm ve Yapay Zeka">
+    <meta name="description" content="Bilus Teknoloji dijital dönüşüm ve yapay zeka hizmetleri ile şirketinizin YZ yolculuğunu planlayın ve hayata geçirin.">
+    <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
+
+    <meta name="robots" content="index, follow">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="/public/js/site.js"></script>
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bilus Teknoloji",
+        "url": "https://bilusteknoloji.com/",
+        "logo": "https://bilusteknoloji.com/public/images/bilus-logo-ld.png",
+        "description": "Bilus Teknoloji helps companies grow with better software, scalable infrastructure and improved engineering practices. We offer consulting, training and development services tailored for startups and scaleups.",
+        "founder": {
+            "@type": "Person",
+            "name": "Mehmet İlker Varol",
+            "sameAs": "https://www.linkedin.com/in/ilkervarol/"
+        },
+        "foundingDate": "2024",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hello@bilusteknoloji.com",
+            "availableLanguage": ["English", "Turkish"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/bilusteknoloji/",
+            "https://github.com/bilusteknoloji/",
+            "https://x.com/bilusteknoloji/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Şeyh Galip Sk - OFTON Elysium B Blok 2/1",
+            "addressLocality": "Kadıköy",
+            "addressRegion": "İstanbul",
+            "postalCode": "34718",
+            "addressCountry": "TR"
+        }
+    }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEE042HCXF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BEE042HCXF');
+    </script>
+
+</head>
+<body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
+    
+        <div x-data="{ open: false }" class="bg-white sticky top-0 lg:hidden relative z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+        <div><img src="/public/images/bilus-logo.png" alt="Bilus Teknoloji Logosu" class="size-4 sm:size-5 md:size-6" /></div>
+        <button @click="open = !open" class="text-bilus-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         class="absolute top-full left-0 w-full bg-white shadow-md py-4 px-4 space-y-4">
+
+         <a class="block nav-links hover-underline" href="/">Anasayfa</a>
+         <a class="block nav-links hover-underline" href="/tr/hakkinda/">Hakkında</a>
+         <a class="block nav-links hover-underline" href="/tr/servisler/">Servisler</a>
+         <a class="block nav-links hover-underline" href="/tr/urunler/">Ürünler</a>
+         <a class="block nav-links hover-underline" href="/tr/iletisim/">İletişim</a>
+         <a class="block nav-links hover-underline" href="/tr/sss/">Sıkça Sorulan Sorular</a>
+         <a class="block nav-links hover-underline" href="/en/">English</a>
+
+     </div>
+</div>
+
+<section class="bg-white hidden lg:block lg:pb-4 lg:pt-8 2xl:pt-16 sticky top-0 z-30 border-b">
+    <div class="container mx-auto lg:px-10 2xl:px-0">
+        <nav>
+            <ul class="flex justify-start items-center gap-x-12">
+                <li>
+                    <a class="nav-links hover-underline flex items-center gap-x-2" href="/">
+                        <img src="/public/images/bilus-logo.png" alt="Bilus Teknoloji Logosu" class="size-4" />
+
+                        Bilus Teknoloji
+                    </a>
+                </li>
+
+                <li class="relative group">
+                    <a title="Servisler sayfasını görüntülemek için tıklayın" class="inline-flex items-center gap-1 nav-links" href="/tr/servisler/">
+                        Servisler
+                        <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <ul class="absolute left-0 top-full mt-2 w-80 first:*:pt-4 last:*:pb-4 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-40">
+                        <li class="px-4 pt-4"><a title="Teknik Danışmanlık sayfasını görüntülemek için tıklayın" href="/tr/servisler/teknik-danismanlik/" class="submenu-links">Teknik Danışmanlık</a></li>
+                        <li class="px-4 pt-4"><a title="Teknik Değerlendirme ve Risk Analizi sayfasını görüntülemek için tıklayın" href="/tr/servisler/teknik-degerlendirme-ve-risk-analizi/" class="submenu-links">Teknik Değerlendirme ve Risk Analizi</a></li>
+                        <li class="px-4 pt-4"><a title="Yazılım Geliştirme ve Yönetimi sayfasını görüntülemek için tıklayın" href="/tr/servisler/yazilim-gelistirme-ve-yonetimi/" class="submenu-links">Yazılım Geliştirme ve Yönetimi</a></li>
+                        <li class="px-4 pt-4"><a title="Veri Yönetimi ve Analitik sayfasını görüntülemek için tıklayın" href="/tr/servisler/veri-yonetimi-ve-analitik/" class="submenu-links">Veri Yönetimi ve Analitik</a></li>
+                        <li class="px-4 pt-4"><a title="Eğitim sayfasını görüntülemek için tıklayın" href="/tr/servisler/egitim/" class="submenu-links">Eğitim</a></li>
+                        <li class="px-4 pt-4"><a title="Dijital Dönüşüm ve Yapay Zeka sayfasını görüntülemek için tıklayın" href="/tr/servisler/dijital-donusum-ve-yapay-zeka/" class="submenu-links">Dijital Dönüşüm ve Yapay Zeka</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="nav-links hover-underline" href="/tr/urunler/">Ürünler</a></li>
+
+                <li><a class="nav-links hover-underline" href="/tr/hakkinda/">Hakkında</a></li>
+
+                <li class="flex-grow"></li>
+
+                <li><a class="nav-links hover-underline" href="/tr/iletisim/">İletişim</a></li>
+
+                <li><a class="nav-links hover-underline" href="/en/">English</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</section>
+
+    
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="p-5 prose prose-links max-w-none xl:prose-xl xl:max-w-prose 2xl:p-0">
+                <h1>Dijital Dönüşüm ve Yapay Zeka</h1>
+
+<p>Şirket <strong>yapay zekadan</strong> yararlanmak istiyor ama nereden <strong>başlayacağını</strong>
+bilmiyor. Pilot projeler başlatılıyor, hiçbiri üretime <strong>geçemiyor</strong>.</p>
+
+<p>Dönüşümü hem <strong>stratejik</strong> hem de <strong>operasyonel</strong> düzeyde <strong>yönetiyoruz</strong>.
+Neyin değer üretebileceğini <strong>birlikte</strong> belirliyoruz, <strong>öncelik sırasını</strong>
+çıkarıyoruz ve <strong>uyguluyoruz</strong>.</p>
+
+
+                <p><a title="Servisler sayfasına dön" href="/tr/servisler/">Servisler</a> sayfasına geri dön</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section class="border-t border-b bg-bilus-100/10 py-5 xl:py-10 2xl:py-24">
+    <div class="container mx-auto text-center">
+        <h2 class="px-5 mb-5 heading-2 sm:px-0 2xl:mb-8">
+            Teknolojinizi Optimize Edin, Geleceğinizi Dönüştürün
+        </h2>
+        <p class="mx-auto mb-10 max-w-xs sm:max-w-lg lg:max-w-2xl lg:text-xl lg:leading-relaxed">
+            Deneyimli <strong>danışmanlar</strong> ve <strong>teknoloji
+            uzmanları</strong> hizmetinizde; işinizi <strong>ileriye taşıyacak</strong>
+            <strong>özel</strong> çözümlerle kesintisiz dijital dönüşüm sağlıyoruz.
+        </p>
+
+        <p class="pb-12 mt-10">
+            <a href="/tr/iletisim/" title="Hemen iletişime geçin!" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Hemen Başlayın!</a>
+        </p>
+        
+        <div class="mx-auto max-w-4xl px-5 2xl:px-0">
+            <p class="text-sm text-bilus-400 font-semibold uppercase tracking-widest mb-6">Birlikte çalıştığımız firmalar</p>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Sipay</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Fintech</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">BinBin</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Micromobility</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Tarım Kredi</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Kooperatif Teknolojisi</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Mobven</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Enterprise Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Madduck</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Mobile Applications</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">VB Yazılım</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Software Development</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Next Big App</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Marketing Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Bilustek, LLC</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">AI Product Studio</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Innoem</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Ar-Ge Danışmanlık</span>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+    
+    <footer class="bg-white 2xl:py-24">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70%_30%]">
+
+        <div class="p-10 sm:p-5 2xl:p-0">
+            <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="leading-relaxed space-y-2">
+                        <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
+                        <p>
+                            Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
+                            34718 - Acıbadem - İstanbul<br/>
+                            Türkiye
+                        </p>
+                        <p><a class="font-medium" href="tel:+905322214608">+90 (532) 221 46 08</a></p>
+                        <p>
+                            <a title="Google Maps'te Görüntüle sayfasını görüntülemek için tıklayın" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                                Google Maps
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </address>
+            
+            <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
+                <a title="Bizi X'te takip edin!" href="https://x.com/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Bizi GitHub'da takip edin!" href="https://github.com/bilusteknoloji/" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Bizi LinkedIn'de takip edin!" href="https://www.linkedin.com/company/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden sm:block sm:ml-auto">
+            <div class="grid grid-cols-2 p-5 2xl:p-0 2xl:gap-x-20">
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="Anasayfa sayfasını görüntülemek için tıklayın" href="/">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a title="Hakkında sayfasını görüntülemek için tıklayın" href="/tr/hakkinda/">Hakkında</a>
+                    </li>
+                    <li>
+                        <a title="Servisler sayfasını görüntülemek için tıklayın" href="/tr/servisler/">Servisler</a>
+                    </li>
+                    <li>
+                        <a title="Ürünler sayfasını görüntülemek için tıklayın" href="/tr/urunler/">Ürünler</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="İletişim sayfasını görüntülemek için tıklayın" href="/tr/iletisim/">İletişim</a>
+                    </li>
+                    <li>
+                        <a title="Sıkça Sorulan Sorular sayfasını görüntülemek için tıklayın" href="/tr/sss/">Sıkça Sorulan Sorular</a>
+                    </li>
+                    <li>
+                        <a title="Gizlilik Politikası sayfasını görüntülemek için tıklayın" href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a>
+                    </li>
+                    <li>
+                        <a title="Kullanım Şartları sayfasını görüntülemek için tıklayın" href="/tr/kullanim-sartlari/">Kullanım Şartları</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

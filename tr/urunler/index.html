@@ -1,0 +1,1437 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilus Teknoloji | Ürünler</title>
+
+    <meta name="author" content="Bilus Teknoloji">
+    <meta name="build-date" content="2026-03-29 22:45:54 +0300">
+    <meta name="color-scheme" content="light" />
+
+    <link rel="icon" type="image/png" href="/public/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.svg" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bilus" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link href="/public/css/site.css" rel="stylesheet" />
+
+
+    <meta property="og:url" content="https://bilusteknoloji.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bilus Teknoloji | Ürünler">
+    <meta property="og:description" content="Bilus Teknoloji'nin geliştirdiği ürünler. Yapay zeka, geliştirici araçları ve kurumsal çözümler.">
+    <meta property="og:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bilusteknoloji.com">
+    <meta property="twitter:url" content="https://bilusteknoloji.com/">
+    <meta name="twitter:title" content="Bilus Teknoloji | Ürünler">
+    <meta name="twitter:description" content="Bilus Teknoloji'nin geliştirdiği ürünler. Yapay zeka, geliştirici araçları ve kurumsal çözümler.">
+    <meta name="twitter:image" content="https://bilusteknoloji.com/public/images/opengraph.png">
+
+    <meta name="title" content="Bilus Teknoloji | Ürünler">
+    <meta name="description" content="Bilus Teknoloji'nin geliştirdiği ürünler. Yapay zeka, geliştirici araçları ve kurumsal çözümler.">
+    <meta name="keywords" content="Software Solutions, Technical Consulting, Web Development, Mobile Development, Microservices, Data Management, DevOps">
+
+    <meta name="robots" content="index, follow">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="/public/js/site.js"></script>
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bilus Teknoloji",
+        "url": "https://bilusteknoloji.com/",
+        "logo": "https://bilusteknoloji.com/public/images/bilus-logo-ld.png",
+        "description": "Bilus Teknoloji helps companies grow with better software, scalable infrastructure and improved engineering practices. We offer consulting, training and development services tailored for startups and scaleups.",
+        "founder": {
+            "@type": "Person",
+            "name": "Mehmet İlker Varol",
+            "sameAs": "https://www.linkedin.com/in/ilkervarol/"
+        },
+        "foundingDate": "2024",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "hello@bilusteknoloji.com",
+            "availableLanguage": ["English", "Turkish"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/bilusteknoloji/",
+            "https://github.com/bilusteknoloji/",
+            "https://x.com/bilusteknoloji/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Şeyh Galip Sk - OFTON Elysium B Blok 2/1",
+            "addressLocality": "Kadıköy",
+            "addressRegion": "İstanbul",
+            "postalCode": "34718",
+            "addressCountry": "TR"
+        }
+    }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEE042HCXF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BEE042HCXF');
+    </script>
+
+</head>
+<body class="sm:bg-[url('/public/images/ccchaos.svg')] text-bilus-600">
+    
+        <div x-data="{ open: false }" class="bg-white sticky top-0 lg:hidden relative z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+        <div><img src="/public/images/bilus-logo.png" alt="Bilus Teknoloji Logosu" class="size-4 sm:size-5 md:size-6" /></div>
+        <button @click="open = !open" class="text-bilus-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         class="absolute top-full left-0 w-full bg-white shadow-md py-4 px-4 space-y-4">
+
+         <a class="block nav-links hover-underline" href="/">Anasayfa</a>
+         <a class="block nav-links hover-underline" href="/tr/hakkinda/">Hakkında</a>
+         <a class="block nav-links hover-underline" href="/tr/servisler/">Servisler</a>
+         <a class="block nav-links hover-underline" href="/tr/urunler/">Ürünler</a>
+         <a class="block nav-links hover-underline" href="/tr/iletisim/">İletişim</a>
+         <a class="block nav-links hover-underline" href="/tr/sss/">Sıkça Sorulan Sorular</a>
+         <a class="block nav-links hover-underline" href="/en/">English</a>
+
+     </div>
+</div>
+
+<section class="bg-white hidden lg:block lg:pb-4 lg:pt-8 2xl:pt-16 sticky top-0 z-30 border-b">
+    <div class="container mx-auto lg:px-10 2xl:px-0">
+        <nav>
+            <ul class="flex justify-start items-center gap-x-12">
+                <li>
+                    <a class="nav-links hover-underline flex items-center gap-x-2" href="/">
+                        <img src="/public/images/bilus-logo.png" alt="Bilus Teknoloji Logosu" class="size-4" />
+
+                        Bilus Teknoloji
+                    </a>
+                </li>
+
+                <li class="relative group">
+                    <a title="Servisler sayfasını görüntülemek için tıklayın" class="inline-flex items-center gap-1 nav-links" href="/tr/servisler/">
+                        Servisler
+                        <svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <ul class="absolute left-0 top-full mt-2 w-80 first:*:pt-4 last:*:pb-4 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-40">
+                        <li class="px-4 pt-4"><a title="Teknik Danışmanlık sayfasını görüntülemek için tıklayın" href="/tr/servisler/teknik-danismanlik/" class="submenu-links">Teknik Danışmanlık</a></li>
+                        <li class="px-4 pt-4"><a title="Teknik Değerlendirme ve Risk Analizi sayfasını görüntülemek için tıklayın" href="/tr/servisler/teknik-degerlendirme-ve-risk-analizi/" class="submenu-links">Teknik Değerlendirme ve Risk Analizi</a></li>
+                        <li class="px-4 pt-4"><a title="Yazılım Geliştirme ve Yönetimi sayfasını görüntülemek için tıklayın" href="/tr/servisler/yazilim-gelistirme-ve-yonetimi/" class="submenu-links">Yazılım Geliştirme ve Yönetimi</a></li>
+                        <li class="px-4 pt-4"><a title="Veri Yönetimi ve Analitik sayfasını görüntülemek için tıklayın" href="/tr/servisler/veri-yonetimi-ve-analitik/" class="submenu-links">Veri Yönetimi ve Analitik</a></li>
+                        <li class="px-4 pt-4"><a title="Eğitim sayfasını görüntülemek için tıklayın" href="/tr/servisler/egitim/" class="submenu-links">Eğitim</a></li>
+                        <li class="px-4 pt-4"><a title="Dijital Dönüşüm ve Yapay Zeka sayfasını görüntülemek için tıklayın" href="/tr/servisler/dijital-donusum-ve-yapay-zeka/" class="submenu-links">Dijital Dönüşüm ve Yapay Zeka</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="nav-links hover-underline" href="/tr/urunler/">Ürünler</a></li>
+
+                <li><a class="nav-links hover-underline" href="/tr/hakkinda/">Hakkında</a></li>
+
+                <li class="flex-grow"></li>
+
+                <li><a class="nav-links hover-underline" href="/tr/iletisim/">İletişim</a></li>
+
+                <li><a class="nav-links hover-underline" href="/en/">English</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</section>
+
+    
+<section class="2xl:py-24">
+    <div class="container mx-auto">
+        <nav class="mx-auto mb-12 flex flex-wrap gap-4 justify-center p-5 lg:max-w-3xl lg:px-0 lg:pt-12 lg:max-w-4xl 2xl:pt-0">
+            <a href="#kasabook" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">KasaBook</a>
+            <a href="#apartmaniyonet" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Apartmanı Yönet</a>
+            <a href="#talentmirror" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Talent Mirror</a>
+            <a href="#cauldron" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Cauldron</a>
+            <a href="#talentscore" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Talent Score</a>
+            <a href="#secretdrop" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">SecretDrop</a>
+            <a href="#orchestra" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Orchestra</a>
+            <a href="#splitray" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Splitray</a>
+            <a href="#ai-ceo-office" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">AI CEO Office</a>
+            <a href="#dealflow" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">DealFlow AI</a>
+            <a href="#sipay-ai-assistant" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Sipay Yapay Zeka Asistanı</a>
+            <a href="#bilus-dorametrics" class="border border-gray-200 bg-gray-50 text-gray-600 rounded-full px-5 py-2 text-sm font-medium hover:bg-bilus-500 hover:text-white hover:border-bilus-500 transition duration-200 drop-shadow-lg">Bilus Dorametrics</a>
+        </nav>
+
+        <div class="mx-auto px-5 2xl:px-0 space-y-12">
+            <div id="kasabook" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/kasabook.png"
+                         srcset="/public/images/products/kasabook.png 1x, /public/images/products/kasabook@2x.png 2x"
+                         alt="KasaBook"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Finans Yönetimi</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">KasaBook</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Büyüyen İşletmeler için Akıllı Finans Yönetimi</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Gider ve gelir takibi, <strong>yapay zeka</strong> ile fiş ve fatura tarama, banka
+ekstreleri, K/Z raporları ve <strong>akıllı içgörüler</strong> — hepsi tek platformda. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gider ve gelir defteri (çoklu para birimi)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            YZ ile fiş, fatura ve belge tarama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Banka ekstresi içe aktarma ve otomatik sınıflandırma
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            KasaBook IQ — doğal dilde YZ asistanı
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            K/Z ve nakit akışı raporları
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ekip işbirliği ve çalışma alanları
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">500+</div>
+                            <div class="text-bilus-400 text-xs">İşletme</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">50K+</div>
+                            <div class="text-bilus-400 text-xs">İşlem takibi</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">12+</div>
+                            <div class="text-bilus-400 text-xs">Para birimi</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">5</div>
+                            <div class="text-bilus-400 text-xs">Dil desteği</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenAI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Stripe</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://kasabook.pro" target="_blank" rel="noopener noreferrer" title="KasaBook" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Powered by Stripe">
+                            <img src="/public/images/powered-by-stripe.svg" alt="Powered by Stripe" class="h-8 opacity-70 hover:opacity-100 transition" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="apartmaniyonet" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/apartmaniyonet.png"
+                         srcset="/public/images/products/apartmaniyonet.png 1x, /public/images/products/apartmaniyonet@2x.png 2x"
+                         alt="Apartmanı Yönet"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Apartman Yönetimi</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Apartmanı Yönet</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Apartman Yönetiminde Yeni Dönem</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Aidat takibi, kasa defteri, <strong>gider yönetimi</strong> ve sakin iletişimi —
+hepsi tek platformda. Sakinlerin kendi paneli, anket sistemi ve
+<strong>fatura dağıtımı</strong> dahil. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Daire bazlı 12 aylık aidat takibi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            5 farklı gider dağıtım yöntemi (m², pay, sabit, manuel, eşit)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Sakin paneli (borç, ödeme geçmişi, kırılım)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Anket ve toplantı yönetimi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Kasa defteri ve aylık raporlama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Sakin davet sistemi
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">500+</div>
+                            <div class="text-bilus-400 text-xs">Apartman</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">12K+</div>
+                            <div class="text-bilus-400 text-xs">Sakin</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">₺2M+</div>
+                            <div class="text-bilus-400 text-xs">Takip edilen aidat</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Stripe</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://apartmaniyonet.com" target="_blank" rel="noopener noreferrer" title="Apartmanı Yönet" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Powered by Stripe">
+                            <img src="/public/images/powered-by-stripe.svg" alt="Powered by Stripe" class="h-8 opacity-70 hover:opacity-100 transition" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="talentmirror" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/talentmirror.png"
+                         srcset="/public/images/products/talentmirror.png 1x, /public/images/products/talentmirror@2x.png 2x"
+                         alt="Talent Mirror"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">İşe Alım & YZ</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Talent Mirror</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">YZ Destekli Mülakat ve Aday Değerlendirme Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         İşe alım sürecini <strong>otomatikleştiren</strong>, YZ destekli video mülakatlar
+ile adayları <strong>tarafsız</strong> değerlendiren bulut tabanlı platform. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Otomatik mülakat oluşturma (tek tıkla)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            YZ destekli video mülakat ve puanlama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Özgeçmiş analizi ve ATS skorlama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Kopya çekme tespiti ve detaylı raporlar
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Takım işbirliği ve paylaşımlı değerlendirme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            iOS mobil uygulama desteği
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">5K+</div>
+                            <div class="text-bilus-400 text-xs">Mülakat yapıldı</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%80</div>
+                            <div class="text-bilus-400 text-xs">Zaman tasarrufu</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%98</div>
+                            <div class="text-bilus-400 text-xs">Müşteri memnuniyeti</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Python</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Django</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Alpine.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenAI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Swift</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://talentmirror.cloud" target="_blank" rel="noopener noreferrer" title="Talent Mirror" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <span class="inline-flex items-center gap-1.5 text-xs text-gray-500 bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 font-medium">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            iOS App
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="cauldron" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/cauldron.png"
+                         srcset="/public/images/products/cauldron.png 1x, /public/images/products/cauldron@2x.png 2x"
+                         alt="Cauldron"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Geliştirici Metrikleri</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS / PaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Cauldron</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Git Aktivitesini Mühendislik Zekasına Dönüştürün</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         GitHub, GitLab, Gitea ve Codeberg'den <strong>gerçek zamanlı</strong> webhook
+yakalama. Geliştirici bazında <strong>aktivite metrikleri</strong> ve <strong>maliyet analizi</strong>. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gerçek zamanlı webhook yakalama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Geliştirici bazlı aktivite metrikleri
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Commit başına mühendislik maliyet analizi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Cloud veya on-premise kurulum
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">4+</div>
+                            <div class="text-bilus-400 text-xs">Git platformu</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">Gerçek zamanlı</div>
+                            <div class="text-bilus-400 text-xs">Olay işleme</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Kafka</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://cauldron.pro" target="_blank" rel="noopener noreferrer" title="Cauldron" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <span class="inline-flex items-center gap-1.5 text-xs text-gray-500 bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 font-medium">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            iOS App
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="talentscore" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/talentscore.png"
+                         srcset="/public/images/products/talentscore.png 1x, /public/images/products/talentscore@2x.png 2x"
+                         alt="Talent Score"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Özgeçmiş Analizi</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Talent Score</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">YZ Destekli Özgeçmiş Analizi ve ATS Skorlama Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         <strong>10M+</strong> özgeçmiş üzerinde eğitilmiş YZ ile profesyonel ATS skorlama,
+yetkinlik değerlendirmesi ve <strong>kariyer önerileri</strong>. İş arayanlar ve
+işe alım ekipleri için. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Kapsamlı 0-100 ATS uyumluluk skorlama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Yetkinlik tespiti ve seviye belirleme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            YZ destekli kariyer yönlendirme ve pozisyon eşleştirme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Toplu yükleme (10 özgeçmişe kadar)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            PDF, DOCX ve TXT format desteği
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">10M+</div>
+                            <div class="text-bilus-400 text-xs">Eğitim verisi</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%95</div>
+                            <div class="text-bilus-400 text-xs">Doğruluk</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">~20sn</div>
+                            <div class="text-bilus-400 text-xs">Analiz süresi</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Python</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Django</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Alpine.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenAI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://talentscore.cloud" target="_blank" rel="noopener noreferrer" title="Talent Score" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Powered by Stripe">
+                            <img src="/public/images/powered-by-stripe.svg" alt="Powered by Stripe" class="h-8 opacity-70 hover:opacity-100 transition" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="secretdrop" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/secretdrop.png"
+                         srcset="/public/images/products/secretdrop.png 1x, /public/images/products/secretdrop@2x.png 2x"
+                         alt="SecretDrop"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Güvenlik</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">Açık Kaynak</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">SecretDrop</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Şifreli Tek Kullanımlık Gizli Bilgi Paylaşımı</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         API anahtarlarını, .env dosyalarını ve hassas bilgileri <strong>güvenle</strong> paylaşın.
+Şifreleme anahtarı sunucuya <strong>asla ulaşmaz</strong>. Alıcı e-posta ile doğrulanır,
+gizli bilgi okunduktan sonra <strong>kalıcı olarak silinir</strong>. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            AES-256-GCM şifreleme (anahtar sunucuya ulaşmaz)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            HKDF-SHA256 ile alıcıya bağlı çözme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Okunduktan sonra kalıcı silme (burn after reading)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            OAuth ile giriş (Google, GitHub, Apple)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Tamamen açık kaynak (MIT lisansı)
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">AES-256</div>
+                            <div class="text-bilus-400 text-xs">Şifreleme</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">0</div>
+                            <div class="text-bilus-400 text-xs">Veri saklama</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">React</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Stripe</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://secretdrop.us" target="_blank" rel="noopener noreferrer" title="SecretDrop" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Powered by Stripe">
+                            <img src="/public/images/powered-by-stripe.svg" alt="Powered by Stripe" class="h-8 opacity-70 hover:opacity-100 transition" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="orchestra" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/orchestra.png"
+                         srcset="/public/images/products/orchestra.png 1x, /public/images/products/orchestra@2x.png 2x"
+                         alt="Orchestra"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Kurumsal YZ Platformu</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">Self-hosted</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Orchestra</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">YZ Ajan ve İş Akışı Orkestrasyon Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Kurumların otonom <strong>YZ ajanları</strong> oluşturmasını, yönetmesini ve
+ölçeklendirmesini sağlayan <strong>self-hosted</strong> orkestrasyon motoru.
+Veri egemenliği, uyumluluk ve modüler esneklik. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Herhangi bir LLM ile ajan oluşturma stüdyosu
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Çok ajanlı iş akışı orkestrasyonu
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Self-hosted kurulum (K8s, OpenShift)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            SOC2 / ISO / GDPR uyumlu mimari
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Token kullanımı ve maliyet analizi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Jira, Confluence ve 3. parti entegrasyonlar
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">10x</div>
+                            <div class="text-bilus-400 text-xs">Daha hızlı dağıtım</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%100</div>
+                            <div class="text-bilus-400 text-xs">Veri egemenliği</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">React</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">FastAPI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Kubernetes</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenShift</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://orchestra.toolstack.app" target="_blank" rel="noopener noreferrer" title="Orchestra" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="splitray" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/splitray.png"
+                         srcset="/public/images/products/splitray.png 1x, /public/images/products/splitray@2x.png 2x"
+                         alt="Splitray"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Geliştirici Araçları</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Splitray</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Tek Webhook, Sınırsız Hedef</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         App Store, <strong>Stripe</strong>, GitHub ve daha fazlasından gelen webhook'ları
+birden fazla hedefe <strong>eş zamanlı</strong> yönlendirin. Otomatik yeniden deneme,
+HMAC imza doğrulama ve <strong>tam teslimat logları</strong>. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Fan-out — tek webhook, sınırsız hedef
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Exponential backoff ile otomatik yeniden deneme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            HMAC imza doğrulama (gelen ve giden)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Tam teslimat logları ve durum takibi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Tek tıkla endpoint açma/kapama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            7+ webhook sağlayıcı desteği
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">7+</div>
+                            <div class="text-bilus-400 text-xs">Sağlayıcı</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">Sınırsız</div>
+                            <div class="text-bilus-400 text-xs">Hedef</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">React</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Stripe</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://splitray.app" target="_blank" rel="noopener noreferrer" title="Splitray" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Powered by Stripe">
+                            <img src="/public/images/powered-by-stripe.svg" alt="Powered by Stripe" class="h-8 opacity-70 hover:opacity-100 transition" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="ai-ceo-office" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/ai-ceo-office.png"
+                         srcset="/public/images/products/ai-ceo-office.png 1x, /public/images/products/ai-ceo-office@2x.png 2x"
+                         alt="AI CEO Office"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Yönetici YZ Asistanı</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">Self-hosted</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">AI CEO Office</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Akıllı Yönetici Karar Destek Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Kurumsal sistemlerle (Slack, Teams, Jira, Salesforce) entegre olan
+<strong>YZ destekli</strong> Genel Müdür asistanı. Gerçek zamanlı içgörüler,
+<strong>karar desteği</strong> ve yönetici otomasyonu. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Yönetici brifing paneli
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gerçek zamanlı karar destek sistemi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gelen kutusu zekası ve önceliklendirme
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Risk ve uyumluluk takibi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Araştırma ve değerlendirme modülü
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Google Drive ve 3. parti entegrasyonlar
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%80</div>
+                            <div class="text-bilus-400 text-xs">Daha hızlı raporlama</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%25-40</div>
+                            <div class="text-bilus-400 text-xs">Daha iyi kararlar</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">FastAPI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">LangChain</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://ceoai.toolstack.app" target="_blank" rel="noopener noreferrer" title="AI CEO Office" class="inline-flex items-center gap-2 bg-bilus-700 text-white px-6 py-2 font-bold rounded-full hover:bg-bilus-500 transition duration-200 ease-in-out text-sm">
+                            Uygulamaya Git
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="dealflow" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/dealflow.png"
+                         srcset="/public/images/products/dealflow.png 1x, /public/images/products/dealflow@2x.png 2x"
+                         alt="DealFlow AI"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Satış YZ</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">SaaS</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">DealFlow AI</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">B2B Satış Otomasyon Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Gmail, Outlook ve lider CRM'lerle (HubSpot, Salesforce) entegre olan
+<strong>YZ destekli</strong> satış asistanı. E-posta işleme, pipeline yönetimi ve
+<strong>teklif oluşturmayı</strong> otomatikleştirir. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            YZ destekli e-posta işleme ve yanıtlama
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Akıllı pipeline yönetimi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Dinamik teklif oluşturma
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            CRM entegrasyonu ve senkronizasyon
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">+%20</div>
+                            <div class="text-bilus-400 text-xs">Kapanan anlaşma</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">%35</div>
+                            <div class="text-bilus-400 text-xs">Daha az teklif süresi</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Next.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Node.js</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenAI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                    </div>
+                </div>
+
+            </div>
+            <div id="sipay-ai-assistant" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex  scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/sipay-ai-assistant.png"
+                         srcset="/public/images/products/sipay-ai-assistant.png 1x, /public/images/products/sipay-ai-assistant@2x.png 2x"
+                         alt="Sipay Yapay Zeka Asistanı"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Sesli YZ Asistanı</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">Kurumsal Çözüm</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Sipay Yapay Zeka Asistanı</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">Burcu Serin — Sipay'ın Sesli YZ Asistanı</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         Telefon gibi arayın, <strong>konuşarak</strong> Sipay hakkında bilgi alın. POS satın
+alma sürecinde <strong>onboarding</strong> rehberliği, ürün bilgisi ve fintech
+hizmetleri hakkında <strong>7/24</strong> sesli destek. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Doğal dilde sesli iletişim
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Sipay ürün ve hizmet bilgilendirmesi
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            POS satın alma onboarding rehberliği
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Fintech hizmetleri hakkında anlık yanıt
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            7/24 kesintisiz erişim
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">7/24</div>
+                            <div class="text-bilus-400 text-xs">Erişim</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">Sesli</div>
+                            <div class="text-bilus-400 text-xs">YZ Asistanı</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Python</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">FastAPI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">OpenAI</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Twilio</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                    </div>
+                </div>
+
+            </div>
+            <div id="bilus-dorametrics" class="bg-white border border-bilus-100 rounded-2xl overflow-hidden shadow-sm lg:flex lg:flex-row-reverse scroll-mt-32">
+
+                <div class="lg:w-1/2 overflow-hidden bg-bilus-50 flex items-center justify-center p-4 lg:p-0">
+                    <img src="/public/images/products/bilus-dorametrics.png"
+                         srcset="/public/images/products/bilus-dorametrics.png 1x, /public/images/products/bilus-dorametrics@2x.png 2x"
+                         alt="Bilus Dorametrics"
+                         class="w-full h-auto m-12 border border-bilus-200 drop-shadow-2xl" />
+                </div>
+
+                <div class="p-6 lg:w-1/2 lg:p-10 flex flex-col justify-center overflow-hidden">
+                    <div class="mb-3 flex flex-wrap gap-2">
+                        <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5 font-medium">Mühendislik Analitiği</span>
+                        <span class="text-xs text-white bg-bilus-500 rounded-full px-3 py-0.5 font-medium">Kurumsal Çözüm</span>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-bilus-600 mb-2 lg:text-3xl">Bilus Dorametrics</h2>
+                    <p class="text-bilus-500 font-semibold mb-4 lg:text-lg">GitHub Entegreli Mühendislik Veri Ambarı ve Dashboard Platformu</p>
+                    <div class="text-bilus-600 leading-relaxed mb-6">
+                         GitHub'ın tüm event'leri ile entegre <strong>veri ambarı</strong> projesi. Gerçek
+zamanlı dashboard'lar, <strong>veri analitiği</strong> ve tamamen özelleştirilebilir
+metrikler. <strong>100+</strong> hazır metrik dashboard. 
+
+                    </div>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            GitHub event entegrasyonu (tüm event tipleri)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gerçek zamanlı veri ambarı (data warehouse)
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            100+ hazır metrik dashboard
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Tamamen özelleştirilebilir dashboard ve raporlar
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            DORA metrikleri ve mühendislik performansı
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-bilus-600">
+                            <svg class="w-4 h-4 text-bilus-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Kuruma özel veri analitiği
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">100+</div>
+                            <div class="text-bilus-400 text-xs">Metrik dashboard</div>
+                        </div>
+                        <div class="bg-bilus-100/20 border border-bilus-100 rounded-lg px-4 py-2 text-center">
+                            <div class="text-bilus-600 font-bold text-lg">Gerçek zamanlı</div>
+                            <div class="text-bilus-400 text-xs">Veri işleme</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Go</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Python</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">PostgreSQL</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Kafka</span>
+                        <span class="text-xs bg-bilus-800 text-white rounded-full px-3 py-1">Grafana</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-wrap">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    
+    <section class="border-t border-b bg-bilus-100/10 py-5 xl:py-10 2xl:py-24">
+    <div class="container mx-auto text-center">
+        <h2 class="px-5 mb-5 heading-2 sm:px-0 2xl:mb-8">
+            Teknolojinizi Optimize Edin, Geleceğinizi Dönüştürün
+        </h2>
+        <p class="mx-auto mb-10 max-w-xs sm:max-w-lg lg:max-w-2xl lg:text-xl lg:leading-relaxed">
+            Deneyimli <strong>danışmanlar</strong> ve <strong>teknoloji
+            uzmanları</strong> hizmetinizde; işinizi <strong>ileriye taşıyacak</strong>
+            <strong>özel</strong> çözümlerle kesintisiz dijital dönüşüm sağlıyoruz.
+        </p>
+
+        <p class="pb-12 mt-10">
+            <a href="/tr/iletisim/" title="Hemen iletişime geçin!" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Hemen Başlayın!</a>
+        </p>
+        
+        <div class="mx-auto max-w-4xl px-5 2xl:px-0">
+            <p class="text-sm text-bilus-400 font-semibold uppercase tracking-widest mb-6">Birlikte çalıştığımız firmalar</p>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Sipay</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Fintech</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">BinBin</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Micromobility</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Tarım Kredi</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Kooperatif Teknolojisi</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Mobven</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Enterprise Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Madduck</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Mobile Applications</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">VB Yazılım</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Software Development</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Next Big App</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Marketing Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Bilustek, LLC</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">AI Product Studio</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Innoem</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Ar-Ge Danışmanlık</span>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+    
+    <footer class="bg-white 2xl:py-24">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70%_30%]">
+
+        <div class="p-10 sm:p-5 2xl:p-0">
+            <address class="not-italic text-center sm:text-left flex flex-col gap-y-2 text-bilus-700">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="leading-relaxed space-y-2">
+                        <p class="text-bilus-500 text-lg font-bold">Bilus Teknoloji A.Ş</p>
+                        <p>
+                            Şeyh Galip Sk - OFTON Elysium B Blok 2/1<br/>
+                            34718 - Acıbadem - İstanbul<br/>
+                            Türkiye
+                        </p>
+                        <p><a class="font-medium" href="tel:+905322214608">+90 (532) 221 46 08</a></p>
+                        <p>
+                            <a title="Google Maps'te Görüntüle sayfasını görüntülemek için tıklayın" class="text-sm inline-flex items-center gap-x-1" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                                Google Maps
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </address>
+            
+            <div class="flex flex-row justify-center sm:justify-start items-center gap-x-2 text-bilus-500 mt-5">
+                <a title="Bizi X'te takip edin!" href="https://x.com/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Bizi GitHub'da takip edin!" href="https://github.com/bilusteknoloji/" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z"></path>
+                    </svg>
+                </a>
+
+                <a title="Bizi LinkedIn'de takip edin!" href="https://www.linkedin.com/company/bilusteknoloji" target="_blank" rel="noopener noreferrer">
+                    <svg class="size-8" fill="currentColor" stroke="none" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="hidden sm:block sm:ml-auto">
+            <div class="grid grid-cols-2 p-5 2xl:p-0 2xl:gap-x-20">
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="Anasayfa sayfasını görüntülemek için tıklayın" href="/">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a title="Hakkında sayfasını görüntülemek için tıklayın" href="/tr/hakkinda/">Hakkında</a>
+                    </li>
+                    <li>
+                        <a title="Servisler sayfasını görüntülemek için tıklayın" href="/tr/servisler/">Servisler</a>
+                    </li>
+                    <li>
+                        <a title="Ürünler sayfasını görüntülemek için tıklayın" href="/tr/urunler/">Ürünler</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <ul class="*:mb-4 last:*:mb-0 text-sm text-bilus-500 [&>li>a]:font-semibold [&>li>a]:hover-underline">
+                    <li>
+                        <a title="İletişim sayfasını görüntülemek için tıklayın" href="/tr/iletisim/">İletişim</a>
+                    </li>
+                    <li>
+                        <a title="Sıkça Sorulan Sorular sayfasını görüntülemek için tıklayın" href="/tr/sss/">Sıkça Sorulan Sorular</a>
+                    </li>
+                    <li>
+                        <a title="Gizlilik Politikası sayfasını görüntülemek için tıklayın" href="/tr/gizlilik-politikasi/">Gizlilik Politikası</a>
+                    </li>
+                    <li>
+                        <a title="Kullanım Şartları sayfasını görüntülemek için tıklayın" href="/tr/kullanim-sartlari/">Kullanım Şartları</a>
+                    </li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
