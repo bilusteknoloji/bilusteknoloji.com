@@ -424,6 +424,7 @@ mobile_menu:
     - 'tr/hakkinda/index.html'
     - 'tr/servisler/index.html'
     - 'tr/urunler/index.html'
+    - 'tr/iletisim/index.html'
     - 'tr/sss/index.html'
   en:
     - 'en/index.html'

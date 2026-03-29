@@ -93,6 +93,9 @@
 
                 <li class="flex-grow"></li>
 
+                <% title, link = get_page_title_and_link 'iletisim' %>
+                <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+
                 <li><a class="nav-links hover-underline" href="/en/">English</a></li>
                 <% end %>
 
