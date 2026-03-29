@@ -11,7 +11,7 @@ module CustomHelpers
   def get_resource_title_and_url_by_path(path)
     sitemap_obj = sitemap.find_resource_by_path(path)
     title = sitemap_obj.metadata[:page][:title]
-    title = 'Home' if path == 'index.html'
+    title = I18n.t('home') if path == 'index.html' || path == 'en/index.html'
     return [title, sitemap_obj.url]
   end
 

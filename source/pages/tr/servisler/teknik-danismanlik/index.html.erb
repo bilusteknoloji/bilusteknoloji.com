@@ -1,0 +1,18 @@
+---
+title: Teknik Danışmanlık
+description: Bilus Teknoloji profesyonel teknik danışmanlık hizmetleri ile operasyonlarınızı optimize edin.
+---
+<% I18n.locale = :tr %>
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="p-5 prose prose-links max-w-none xl:prose-xl xl:max-w-prose 2xl:p-0">
+                <%= markdown File.read("content/#{lang}/services/teknik-danismanlik.md") %>
+
+                <% _, link = get_page_title_and_link 'servisler' %>
+                <p><a title="Servisler sayfasına dön" href="<%= link %>">Servisler</a> sayfasına geri dön</p>
+            </div>
+        </div>
+    </div>
+</section>

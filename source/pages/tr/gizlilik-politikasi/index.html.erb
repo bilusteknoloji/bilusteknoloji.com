@@ -1,0 +1,15 @@
+---
+title: Gizlilik Politikası
+description: Bilus Teknoloji olarak gizliliğinize öncelik veriyoruz. Veri koruma önlemlerimiz ve bilgilerinizi nasıl koruduğumuz hakkında bilgi edinin.
+---
+<% I18n.locale = :tr %>
+
+<section class="2xl:py-24 article-style">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+            <div class="p-5 2xl:p-0 prose prose-links md:max-w-none md:w-full xl:max-w-prose xl:prose-xl">
+                <%= markdown File.read("content/#{lang}/pages/gizlilik-politikasi.md") %>
+            </div>
+        </div>
+    </div>
+</section>

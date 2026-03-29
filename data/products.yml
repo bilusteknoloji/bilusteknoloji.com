@@ -1,0 +1,360 @@
+products:
+  tr:
+    - slug: kasabook
+      display_order: 1
+      name: KasaBook
+      category: Finans Yönetimi
+      model: SaaS
+      tagline: Büyüyen İşletmeler için Akıllı Finans Yönetimi
+      summary: |
+        Gider ve gelir takibi, **yapay zeka** ile fiş ve fatura tarama, banka
+        ekstreleri, K/Z raporları ve **akıllı içgörüler** — hepsi tek platformda.
+      features:
+        - Gider ve gelir defteri (çoklu para birimi)
+        - YZ ile fiş, fatura ve belge tarama
+        - Banka ekstresi içe aktarma ve otomatik sınıflandırma
+        - KasaBook IQ — doğal dilde YZ asistanı
+        - K/Z ve nakit akışı raporları
+        - Ekip işbirliği ve çalışma alanları
+      stats:
+        - value: "500+"
+          label: İşletme
+        - value: "50K+"
+          label: İşlem takibi
+        - value: "12+"
+          label: Para birimi
+        - value: "5"
+          label: Dil desteği
+      tech:
+        - Go
+        - Next.js
+        - OpenAI
+        - PostgreSQL
+        - Stripe
+      stripe: true
+      url: https://kasabook.pro
+      screenshot: products/kasabook.png
+    - slug: cauldron
+      display_order: 4
+      name: Cauldron
+      category: Geliştirici Metrikleri
+      model: SaaS / PaaS
+      tagline: Git Aktivitesini Mühendislik Zekasına Dönüştürün
+      summary: |
+        GitHub, GitLab, Gitea ve Codeberg'den **gerçek zamanlı** webhook
+        yakalama. Geliştirici bazında **aktivite metrikleri** ve **maliyet analizi**.
+      features:
+        - Gerçek zamanlı webhook yakalama
+        - Geliştirici bazlı aktivite metrikleri
+        - Commit başına mühendislik maliyet analizi
+        - Cloud veya on-premise kurulum
+      stats:
+        - value: "4+"
+          label: Git platformu
+        - value: "Gerçek zamanlı"
+          label: Olay işleme
+      tech:
+        - Go
+        - Next.js
+        - PostgreSQL
+        - Kafka
+      url: https://cauldron.pro
+      ios_app: true
+      screenshot: products/cauldron.png
+    - slug: talentscore
+      display_order: 5
+      name: Talent Score
+      category: Özgeçmiş Analizi
+      model: SaaS
+      tagline: YZ Destekli Özgeçmiş Analizi ve ATS Skorlama Platformu
+      summary: |
+        **10M+** özgeçmiş üzerinde eğitilmiş YZ ile profesyonel ATS skorlama,
+        yetkinlik değerlendirmesi ve **kariyer önerileri**. İş arayanlar ve
+        işe alım ekipleri için.
+      features:
+        - Kapsamlı 0-100 ATS uyumluluk skorlama
+        - Yetkinlik tespiti ve seviye belirleme
+        - YZ destekli kariyer yönlendirme ve pozisyon eşleştirme
+        - Toplu yükleme (10 özgeçmişe kadar)
+        - PDF, DOCX ve TXT format desteği
+      stats:
+        - value: "10M+"
+          label: Eğitim verisi
+        - value: "%95"
+          label: Doğruluk
+        - value: "~20sn"
+          label: Analiz süresi
+      tech:
+        - Python
+        - Django
+        - Go
+        - Alpine.js
+        - OpenAI
+        - PostgreSQL
+      stripe: true
+      url: https://talentscore.cloud
+      screenshot: products/talentscore.png
+    - slug: secretdrop
+      display_order: 6
+      name: SecretDrop
+      category: Güvenlik
+      model: Açık Kaynak
+      tagline: Şifreli Tek Kullanımlık Gizli Bilgi Paylaşımı
+      summary: |
+        API anahtarlarını, .env dosyalarını ve hassas bilgileri **güvenle** paylaşın.
+        Şifreleme anahtarı sunucuya **asla ulaşmaz**. Alıcı e-posta ile doğrulanır,
+        gizli bilgi okunduktan sonra **kalıcı olarak silinir**.
+      features:
+        - AES-256-GCM şifreleme (anahtar sunucuya ulaşmaz)
+        - HKDF-SHA256 ile alıcıya bağlı çözme
+        - Okunduktan sonra kalıcı silme (burn after reading)
+        - OAuth ile giriş (Google, GitHub, Apple)
+        - Tamamen açık kaynak (MIT lisansı)
+      stats:
+        - value: "AES-256"
+          label: Şifreleme
+        - value: "0"
+          label: Veri saklama
+      tech:
+        - Go
+        - React
+        - Stripe
+      stripe: true
+      url: https://secretdrop.us
+      screenshot: products/secretdrop.png
+    - slug: talentmirror
+      display_order: 3
+      name: Talent Mirror
+      category: İşe Alım & YZ
+      model: SaaS
+      tagline: YZ Destekli Mülakat ve Aday Değerlendirme Platformu
+      summary: |
+        İşe alım sürecini **otomatikleştiren**, YZ destekli video mülakatlar
+        ile adayları **tarafsız** değerlendiren bulut tabanlı platform.
+      features:
+        - Otomatik mülakat oluşturma (tek tıkla)
+        - YZ destekli video mülakat ve puanlama
+        - Özgeçmiş analizi ve ATS skorlama
+        - Kopya çekme tespiti ve detaylı raporlar
+        - Takım işbirliği ve paylaşımlı değerlendirme
+        - iOS mobil uygulama desteği
+      stats:
+        - value: "5K+"
+          label: Mülakat yapıldı
+        - value: "%80"
+          label: Zaman tasarrufu
+        - value: "%98"
+          label: Müşteri memnuniyeti
+      tech:
+        - Python
+        - Django
+        - Alpine.js
+        - OpenAI
+        - PostgreSQL
+        - Swift
+      url: https://talentmirror.cloud
+      ios_app: true
+      screenshot: products/talentmirror.png
+    - slug: splitray
+      display_order: 8
+      name: Splitray
+      category: Geliştirici Araçları
+      model: SaaS
+      tagline: Tek Webhook, Sınırsız Hedef
+      summary: |
+        App Store, **Stripe**, GitHub ve daha fazlasından gelen webhook'ları
+        birden fazla hedefe **eş zamanlı** yönlendirin. Otomatik yeniden deneme,
+        HMAC imza doğrulama ve **tam teslimat logları**.
+      features:
+        - Fan-out — tek webhook, sınırsız hedef
+        - Exponential backoff ile otomatik yeniden deneme
+        - HMAC imza doğrulama (gelen ve giden)
+        - Tam teslimat logları ve durum takibi
+        - Tek tıkla endpoint açma/kapama
+        - 7+ webhook sağlayıcı desteği
+      stats:
+        - value: "7+"
+          label: Sağlayıcı
+        - value: "Sınırsız"
+          label: Hedef
+      tech:
+        - Go
+        - React
+        - Stripe
+      stripe: true
+      url: https://splitray.app
+      screenshot: products/splitray.png
+    - slug: apartmaniyonet
+      display_order: 2
+      name: Apartmanı Yönet
+      category: Apartman Yönetimi
+      model: SaaS
+      tagline: Apartman Yönetiminde Yeni Dönem
+      summary: |
+        Aidat takibi, kasa defteri, **gider yönetimi** ve sakin iletişimi —
+        hepsi tek platformda. Sakinlerin kendi paneli, anket sistemi ve
+        **fatura dağıtımı** dahil.
+      features:
+        - Daire bazlı 12 aylık aidat takibi
+        - 5 farklı gider dağıtım yöntemi (m², pay, sabit, manuel, eşit)
+        - Sakin paneli (borç, ödeme geçmişi, kırılım)
+        - Anket ve toplantı yönetimi
+        - Kasa defteri ve aylık raporlama
+        - Sakin davet sistemi
+      stats:
+        - value: "500+"
+          label: Apartman
+        - value: "12K+"
+          label: Sakin
+        - value: "₺2M+"
+          label: Takip edilen aidat
+      tech:
+        - Go
+        - Next.js
+        - PostgreSQL
+        - Stripe
+      stripe: true
+      url: https://apartmaniyonet.com
+      screenshot: products/apartmaniyonet.png
+    - slug: orchestra
+      display_order: 7
+      name: Orchestra
+      category: Kurumsal YZ Platformu
+      model: Self-hosted
+      tagline: YZ Ajan ve İş Akışı Orkestrasyon Platformu
+      summary: |
+        Kurumların otonom **YZ ajanları** oluşturmasını, yönetmesini ve
+        ölçeklendirmesini sağlayan **self-hosted** orkestrasyon motoru.
+        Veri egemenliği, uyumluluk ve modüler esneklik.
+      features:
+        - Herhangi bir LLM ile ajan oluşturma stüdyosu
+        - Çok ajanlı iş akışı orkestrasyonu
+        - Self-hosted kurulum (K8s, OpenShift)
+        - SOC2 / ISO / GDPR uyumlu mimari
+        - Token kullanımı ve maliyet analizi
+        - Jira, Confluence ve 3. parti entegrasyonlar
+      stats:
+        - value: "10x"
+          label: Daha hızlı dağıtım
+        - value: "%100"
+          label: Veri egemenliği
+      tech:
+        - React
+        - Next.js
+        - FastAPI
+        - PostgreSQL
+        - Kubernetes
+        - OpenShift
+      url: https://orchestra.toolstack.app
+      screenshot: products/orchestra.png
+    - slug: ai-ceo-office
+      display_order: 9
+      name: AI CEO Office
+      category: Yönetici YZ Asistanı
+      model: Self-hosted
+      tagline: Akıllı Yönetici Karar Destek Platformu
+      summary: |
+        Kurumsal sistemlerle (Slack, Teams, Jira, Salesforce) entegre olan
+        **YZ destekli** Genel Müdür asistanı. Gerçek zamanlı içgörüler,
+        **karar desteği** ve yönetici otomasyonu.
+      features:
+        - Yönetici brifing paneli
+        - Gerçek zamanlı karar destek sistemi
+        - Gelen kutusu zekası ve önceliklendirme
+        - Risk ve uyumluluk takibi
+        - Araştırma ve değerlendirme modülü
+        - Google Drive ve 3. parti entegrasyonlar
+      stats:
+        - value: "%80"
+          label: Daha hızlı raporlama
+        - value: "%25-40"
+          label: Daha iyi kararlar
+      tech:
+        - Next.js
+        - FastAPI
+        - LangChain
+        - PostgreSQL
+      url: https://ceoai.toolstack.app
+      screenshot: products/ai-ceo-office.png
+    - slug: dealflow
+      display_order: 10
+      name: DealFlow AI
+      category: Satış YZ
+      model: SaaS
+      tagline: B2B Satış Otomasyon Platformu
+      summary: |
+        Gmail, Outlook ve lider CRM'lerle (HubSpot, Salesforce) entegre olan
+        **YZ destekli** satış asistanı. E-posta işleme, pipeline yönetimi ve
+        **teklif oluşturmayı** otomatikleştirir.
+      features:
+        - YZ destekli e-posta işleme ve yanıtlama
+        - Akıllı pipeline yönetimi
+        - Dinamik teklif oluşturma
+        - CRM entegrasyonu ve senkronizasyon
+      stats:
+        - value: "+%20"
+          label: Kapanan anlaşma
+        - value: "%35"
+          label: Daha az teklif süresi
+      tech:
+        - Next.js
+        - Node.js
+        - OpenAI
+        - PostgreSQL
+      screenshot: products/dealflow.png
+    - slug: sipay-ai-assistant
+      display_order: 11
+      name: Sipay Yapay Zeka Asistanı
+      category: Sesli YZ Asistanı
+      model: Kurumsal Çözüm
+      tagline: "Burcu Serin — Sipay'ın Sesli YZ Asistanı"
+      summary: |
+        Telefon gibi arayın, **konuşarak** Sipay hakkında bilgi alın. POS satın
+        alma sürecinde **onboarding** rehberliği, ürün bilgisi ve fintech
+        hizmetleri hakkında **7/24** sesli destek.
+      features:
+        - Doğal dilde sesli iletişim
+        - Sipay ürün ve hizmet bilgilendirmesi
+        - POS satın alma onboarding rehberliği
+        - Fintech hizmetleri hakkında anlık yanıt
+        - 7/24 kesintisiz erişim
+      stats:
+        - value: "7/24"
+          label: Erişim
+        - value: "Sesli"
+          label: YZ Asistanı
+      tech:
+        - Python
+        - FastAPI
+        - OpenAI
+        - Twilio
+      screenshot: products/sipay-ai-assistant.png
+    - slug: bilus-dorametrics
+      display_order: 12
+      name: Bilus Dorametrics
+      category: Mühendislik Analitiği
+      model: Kurumsal Çözüm
+      tagline: GitHub Entegreli Mühendislik Veri Ambarı ve Dashboard Platformu
+      summary: |
+        GitHub'ın tüm event'leri ile entegre **veri ambarı** projesi. Gerçek
+        zamanlı dashboard'lar, **veri analitiği** ve tamamen özelleştirilebilir
+        metrikler. **100+** hazır metrik dashboard.
+      features:
+        - GitHub event entegrasyonu (tüm event tipleri)
+        - Gerçek zamanlı veri ambarı (data warehouse)
+        - 100+ hazır metrik dashboard
+        - Tamamen özelleştirilebilir dashboard ve raporlar
+        - DORA metrikleri ve mühendislik performansı
+        - Kuruma özel veri analitiği
+      stats:
+        - value: "100+"
+          label: Metrik dashboard
+        - value: "Gerçek zamanlı"
+          label: Veri işleme
+      tech:
+        - Go
+        - Python
+        - PostgreSQL
+        - Kafka
+        - Grafana
+      screenshot: products/bilus-dorametrics.png

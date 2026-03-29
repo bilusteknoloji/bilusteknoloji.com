@@ -1,0 +1,18 @@
+---
+tr:
+  home: 'Anasayfa'
+  bilus_logo_alt: Bilus Teknoloji Logosu
+  bilus_office_alt: Bilus Teknoloji ofis fotoğrafı
+  click_to_view: '%{title} sayfasını görüntülemek için tıklayın'
+  click_to_read: '%{title} yazısını okumak için tıklayın'
+  click_to_read_all_articles: 'Tüm yazıları okumak için tıklayın'
+  click_to_learn_more: '%{title} hakkında daha fazla bilgi için tıklayın'
+  learn_more: 'Detay'
+  blog_cover_image_article: '%{title} yazısının kapak görseli'
+  see_in_google_maps: 'Google Maps''te Görüntüle'
+  follow_us_on_x: 'Bizi X''te takip edin!'
+  follow_us_on_github: 'Bizi GitHub''da takip edin!'
+  follow_us_on_linkedin: 'Bizi LinkedIn''de takip edin!'
+  read_all_articles: 'Tüm Yazıları Oku'
+  latests_articles: 'Son Yazılar'
+  get_started_now: 'Hemen iletişime geçin!'

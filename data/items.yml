@@ -114,6 +114,44 @@ whychoose:
         in the **digital age**.
 
 services:
+  tr:
+    - icon: "icons/puzzle.svg"
+      folder: "teknik-danismanlik"
+      title: "Teknik Danışmanlık"
+      summary: |
+        Şirketin teknoloji kararlarını **sahiplenen**, ekiple birlikte
+        **planlayan** ve **uygulayan** bir liderlik ortağı oluyoruz.
+    - icon: "icons/cog.svg"
+      folder: "yazilim-gelistirme-ve-yonetimi"
+      title: "Yazılım Geliştirme ve Yönetimi"
+      summary: |
+        Projenin başından sonuna **sahipleniyoruz**: Ne yapılacağını **planlıyoruz**,
+        ekibi **yönetiyoruz**, kaliteyi **denetliyoruz**, teslim ediyoruz.
+    - icon: "icons/pie.svg"
+      folder: "teknik-degerlendirme-ve-risk-analizi"
+      title: "Teknik Değerlendirme ve Risk Analizi"
+      summary: |
+        Bir şirkete **yatırım** yapılacak ya da **satın alınacak** ve teknoloji
+        tarafının gerçekten ne durumda olduğu **anlaşılmak** isteniyor.
+    - icon: "icons/bars.svg"
+      folder: "veri-yonetimi-ve-analitik"
+      title: "Veri Yönetimi ve Analitik"
+      summary: |
+        Şirketin tüm **veri kaynaklarını** bir araya getiren, **sağlıklı**
+        ve **güncel** tutan bir yapı kuruyoruz.
+    - icon: "icons/terminal.svg"
+      folder: "egitim"
+      title: "Eğitim"
+      summary: |
+        Mühendislik ekibi yeterince **güçlü değil** ya da şirketin benimsemek
+        istediği **yaklaşımlarla** yeterince **tanışık** değil.
+    - icon: "icons/cube.svg"
+      folder: "dijital-donusum-ve-yapay-zeka"
+      title: "Dijital Dönüşüm ve Yapay Zeka"
+      summary: |
+        Şirket **yapay zekadan** yararlanmak istiyor ama nereden
+        **başlayacağını** bilmiyor.
+
   en:
     - icon: "icons/puzzle.svg"
       folder: "technical-consulting"
@@ -158,6 +196,80 @@ services:
         innovative technologies to **optimize processes** and drive growth.
 
 general_faq:
+  tr:
+    - question: Bilus Teknoloji ne iş yapıyor?
+      answer: |
+        Kurumsal teknoloji organizasyonlarının **dönüşümünü** hem stratejik
+        hem de operasyonel düzeyde **yönetiyoruz**. Danışmanlık, yazılım
+        geliştirme, veri yönetimi, eğitim ve **yapay zeka** entegrasyonu
+        alanlarında hizmet veriyoruz.
+
+    - question: Klasik bir danışmanlık firmasından farkınız ne?
+      answer: |
+        Analiz ve öneri sunup **çekilmiyoruz**. Kararları **alıyor**,
+        ekiplerle birlikte **uyguluyoruz** ve ölçülebilir sonuç elde
+        edilene kadar sürecin **içinde kalıyoruz**. Biz bir danışman
+        değil, **icra ortağıyız**.
+
+    - question: Hangi sektörlere hizmet veriyorsunuz?
+      answer: |
+        **Fintech** şirketleri, paylaşımlı **mobilite** operatörleri,
+        büyük ölçekli **kooperatif** yapılanmaları ve erken aşama
+        teknoloji **girişimleri** başlıca hizmet verdiğimiz sektörlerdir.
+
+    - question: Çalışmaya nasıl başlıyoruz?
+      answer: |
+        Her proje **ücretsiz** bir keşif fazıyla başlıyor. 2-3 haftalık
+        bu süreçte birbirimizi tanıyor, gerçekten **değer üretip
+        üretemeyeceğimizi** birlikte anlıyoruz. Herhangi bir
+        **taahhüt** yok.
+
+    - question: Hangi teknoloji alanlarında uzmansınız?
+      answer: |
+        Web ve mobil uygulama geliştirme, **dağıtık mimari** tasarımı,
+        yapay zeka ve **büyük dil modeli** entegrasyonları, ödeme
+        altyapıları, güvenli haberleşme sistemleri ve **kurumsal
+        entegrasyon** alanlarında uzmanız.
+
+    - question: Sadece yazılım mı geliştiriyorsunuz?
+      answer: |
+        Hayır. Yazılım geliştirmenin yanı sıra **proje yönetimi**,
+        talep ve **ürün yönetimi** süreçlerini de hem doğrudan
+        üstleniyor hem de müşteri ekiplerine **aktarıyoruz**.
+
+    - question: Eğitim hizmetleriniz neleri kapsıyor?
+      answer: |
+        Teorik değil, **uygulamalı** eğitimler yapıyoruz. Konular
+        şirketin gerçek ihtiyacına göre şekilleniyor: **Ürün yönetimi**,
+        çevik yöntemler, veri okuryazarlığı, **yapay zeka** kullanımı
+        gibi alanlarda ekiplerin yetkinliğini artırıyoruz.
+
+    - question: Yapay zeka konusunda nasıl yardımcı oluyorsunuz?
+      answer: |
+        Şirketlerin YZ yolculuğunu **planlıyor** ve hayata geçiriyoruz.
+        Neyin değer üretebileceğini birlikte belirliyoruz, **öncelik
+        sırasını** çıkarıyoruz ve pilot projelerden **üretime** geçişi
+        sağlıyoruz.
+
+    - question: Teknik değerlendirme (due diligence) yapıyor musunuz?
+      answer: |
+        Evet. Yatırım veya satın alma süreçlerinde teknoloji tarafının
+        gerçekten ne durumda olduğunu **bağımsız** gözle inceliyoruz.
+        Neyin iyi çalıştığını, neyin **risk** oluşturduğunu ve neyin
+        acil müdahale gerektirdiğini **net bir dille** raporluyoruz.
+
+    - question: Uzaktan mı çalışıyorsunuz yoksa yerinde mi?
+      answer: |
+        Projenin ihtiyacına göre **her iki modeli** de uyguluyoruz.
+        Haftalık veya aylık temelde şirketin **içinde** çalışabildiğimiz
+        gibi, tamamen uzaktan da yürütebiliyoruz.
+
+    - question: Bilus Teknoloji ile nasıl iletişime geçebilirim?
+      answer: |
+        **İletişim** sayfamız üzerinden bize mesaj gönderebilir ya da
+        doğrudan **info@bilusteknoloji.com** adresine e-posta
+        atabilirsiniz.
+
   en:
     - question: What services does Bilus Teknoloji offer?
       answer: |
@@ -283,9 +395,20 @@ testimonials:
       title: 'Head of Data, UZUL Datastore'
 
 footer:
-  en:
+  tr:
     side1:
       - 'index.html'
+      - 'tr/hakkinda/index.html'
+      - 'tr/servisler/index.html'
+      - 'tr/urunler/index.html'
+    side2:
+      - 'tr/iletisim/index.html'
+      - 'tr/sss/index.html'
+      - 'tr/gizlilik-politikasi/index.html'
+      - 'tr/kullanim-sartlari/index.html'
+  en:
+    side1:
+      - 'en/index.html'
       - 'en/about/index.html'
       - 'en/services/index.html'
       - 'en/blog/index.html'
@@ -296,8 +419,15 @@ footer:
       - 'en/terms-of-service/index.html'
 
 mobile_menu:
-  en:
+  tr:
     - 'index.html'
+    - 'tr/hakkinda/index.html'
+    - 'tr/servisler/index.html'
+    - 'tr/urunler/index.html'
+    - 'tr/iletisim/index.html'
+    - 'tr/sss/index.html'
+  en:
+    - 'en/index.html'
     - 'en/about/index.html'
     - 'en/contact/index.html'
     - 'en/faq/index.html'

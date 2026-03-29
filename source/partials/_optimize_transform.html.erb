@@ -1,5 +1,65 @@
 <section class="border-t border-b bg-bilus-100/10 py-5 xl:py-10 2xl:py-24">
     <div class="container mx-auto text-center">
+        <% if lang == :tr %>
+        <h2 class="px-5 mb-5 heading-2 sm:px-0 2xl:mb-8">
+            Teknolojinizi Optimize Edin, Geleceğinizi Dönüştürün
+        </h2>
+        <p class="mx-auto mb-10 max-w-xs sm:max-w-lg lg:max-w-2xl lg:text-xl lg:leading-relaxed">
+            Deneyimli <strong>danışmanlar</strong> ve <strong>teknoloji
+            uzmanları</strong> hizmetinizde; işinizi <strong>ileriye taşıyacak</strong>
+            <strong>özel</strong> çözümlerle kesintisiz dijital dönüşüm sağlıyoruz.
+        </p>
+
+        <p class="pb-12 mt-10">
+            <% _, link = get_page_title_and_link 'iletisim' %>
+            <a href="<%= link %>" title="<%= t('get_started_now') %>" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Hemen Başlayın!</a>
+        </p>
+        
+        <div class="mx-auto max-w-4xl px-5 2xl:px-0">
+            <p class="text-sm text-bilus-400 font-semibold uppercase tracking-widest mb-6">Birlikte çalıştığımız firmalar</p>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Sipay</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Fintech</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">BinBin</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Micromobility</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Tarım Kredi</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Kooperatif Teknolojisi</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Mobven</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Enterprise Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Madduck</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Mobile Applications</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">VB Yazılım</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Software Development</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Next Big App</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Marketing Solutions</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Bilustek, LLC</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">AI Product Studio</span>
+                </div>
+                <div class="bg-white border border-bilus-100 rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm">
+                    <span class="text-bilus-600 font-bold text-lg">Innoem</span>
+                    <span class="text-xs text-bilus-400 bg-bilus-100/30 border rounded-full px-3 py-0.5">Ar-Ge Danışmanlık</span>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <% else %>
         <h2 class="px-5 mb-5 heading-2 sm:px-0 2xl:mb-8">
             Optimize Your Technology, Transform Your Future
         </h2>
@@ -13,5 +73,6 @@
             <% _, link = get_page_title_and_link 'contact' %>
             <a href="<%= link %>" title="<%= t('get_started_now') %>" class="bg-bilus-700 text-white px-6 py-3 font-bold rounded-full hover:bg-bilus-500 focus:outline-none focus:ring-4 focus:ring-bilus-300 transition duration-200 ease-in-out">Get Started Now!</a>
         </p>
+        <% end %>
     </div>
 </section>
