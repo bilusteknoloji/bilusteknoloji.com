@@ -114,6 +114,44 @@ whychoose:
         in the **digital age**.
 
 services:
+  tr:
+    - icon: "icons/puzzle.svg"
+      folder: "teknik-danismanlik"
+      title: "Teknik Danışmanlık"
+      summary: |
+        Şirketin teknoloji kararlarını **sahiplenen**, ekiple birlikte
+        **planlayan** ve **uygulayan** bir liderlik ortağı oluyoruz.
+    - icon: "icons/cog.svg"
+      folder: "yazilim-gelistirme-ve-yonetimi"
+      title: "Yazılım Geliştirme ve Yönetimi"
+      summary: |
+        Projenin başından sonuna **sahipleniyoruz**: Ne yapılacağını **planlıyoruz**,
+        ekibi **yönetiyoruz**, kaliteyi **denetliyoruz**, teslim ediyoruz.
+    - icon: "icons/pie.svg"
+      folder: "teknik-degerlendirme-ve-risk-analizi"
+      title: "Teknik Değerlendirme ve Risk Analizi"
+      summary: |
+        Bir şirkete **yatırım** yapılacak ya da **satın alınacak** ve teknoloji
+        tarafının gerçekten ne durumda olduğu **anlaşılmak** isteniyor.
+    - icon: "icons/bars.svg"
+      folder: "veri-yonetimi-ve-analitik"
+      title: "Veri Yönetimi ve Analitik"
+      summary: |
+        Şirketin tüm **veri kaynaklarını** bir araya getiren, **sağlıklı**
+        ve **güncel** tutan bir yapı kuruyoruz.
+    - icon: "icons/terminal.svg"
+      folder: "egitim"
+      title: "Eğitim"
+      summary: |
+        Mühendislik ekibi yeterince **güçlü değil** ya da şirketin benimsemek
+        istediği **yaklaşımlarla** yeterince **tanışık** değil.
+    - icon: "icons/cube.svg"
+      folder: "dijital-donusum-ve-yapay-zeka"
+      title: "Dijital Dönüşüm ve Yapay Zeka"
+      summary: |
+        Şirket **yapay zekadan** yararlanmak istiyor ama nereden
+        **başlayacağını** bilmiyor.
+
   en:
     - icon: "icons/puzzle.svg"
       folder: "technical-consulting"
@@ -283,9 +321,18 @@ testimonials:
       title: 'Head of Data, UZUL Datastore'
 
 footer:
-  en:
+  tr:
     side1:
       - 'index.html'
+      - 'tr/hakkinda/index.html'
+      - 'tr/servisler/index.html'
+    side2:
+      - 'tr/sss/index.html'
+      - 'tr/gizlilik-politikasi/index.html'
+      - 'tr/kullanim-sartlari/index.html'
+  en:
+    side1:
+      - 'en/index.html'
       - 'en/about/index.html'
       - 'en/services/index.html'
       - 'en/blog/index.html'
@@ -296,8 +343,13 @@ footer:
       - 'en/terms-of-service/index.html'
 
 mobile_menu:
-  en:
+  tr:
     - 'index.html'
+    - 'tr/hakkinda/index.html'
+    - 'tr/servisler/index.html'
+    - 'tr/sss/index.html'
+  en:
+    - 'en/index.html'
     - 'en/about/index.html'
     - 'en/contact/index.html'
     - 'en/faq/index.html'

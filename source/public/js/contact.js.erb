@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const form = e.target;
+
+        if (form.website && form.website.value) {
+            alert('Thanks! Your message has been sent.');
+            form.reset();
+            return;
+        }
+
         const data = {
             full_name: form.full_name.value,
             mobile_phone: form.mobile_phone.value,

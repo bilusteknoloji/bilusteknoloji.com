@@ -67,6 +67,12 @@ page "/google*.html", layout: false, directory_index: false
 page "/version.txt", layout: false, directory_index: false
 
 
+services_folder_name = {
+  tr: 'servisler',
+  en: 'services',
+}
+set :services_folder_name, services_folder_name
+
 proxy_map = {
   en: {
     pages: ['about', 'contact', 'services', 'faq', 'privacy-policy', 'terms-of-service', 'blog', 'careers'],
@@ -80,7 +86,15 @@ proxy_map = {
     ]
   },
   tr: {
-    pages: ['servisler'],
+    pages: ['servisler', 'hakkinda', 'sss', 'gizlilik-politikasi', 'kullanim-sartlari', 'iletisim'],
+    services: [
+      'teknik-danismanlik',
+      'teknik-degerlendirme-ve-risk-analizi',
+      'yazilim-gelistirme-ve-yonetimi',
+      'veri-yonetimi-ve-analitik',
+      'egitim',
+      'dijital-donusum-ve-yapay-zeka',
+    ]
   }
 }
 set :proxy_map, proxy_map
@@ -109,12 +123,23 @@ end
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
+page "/tr/#{services_folder_name[:tr]}/*", layout: 'page'
+proxy_map[:tr][:services].each do |service_folder_name|
+  proxy "/tr/#{services_folder_name[:tr]}/#{service_folder_name}/index.html",
+        "/pages/tr/#{services_folder_name[:tr]}/#{service_folder_name}/index.html",
+        ignore: true,
+        locals: { lang: :tr }
+end
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
 proxy_map[:tr][:pages].each do |folder_name|
-  page "/tr/#{folder_name}/*", layout: 'page_empty'
+  page "/tr/#{folder_name}/*", layout: 'page'
   locals_val = { lang: :tr }
-  
-  proxy "/tr/#{folder_name}/index.html", 
-        "/pages/tr/#{folder_name}/index.html", 
+
+  locals_val[:no_optimize] = true if ['iletisim'].include?(folder_name)
+  proxy "/tr/#{folder_name}/index.html",
+        "/pages/tr/#{folder_name}/index.html",
         ignore: true,
         locals: locals_val
 end
@@ -150,7 +175,7 @@ end
 configure :development do
   # use ::Rack::DowncaseHeaders
   activate :livereload, host: '127.0.0.1'
-  config[:post_form_url] = 'http://localhost:3000'
+  config[:post_form_url] = 'https://form-to-slack-vercel-8yto.vercel.app'
 end
 
 configure :build do

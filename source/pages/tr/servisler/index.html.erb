@@ -1,54 +1,40 @@
 ---
 title: Servisler
-description: Bilus Teknoloji A.Ş. hizmet alanları
+description: Bilus Teknoloji, teknoloji altyapınızı güçlendirmek için uzman hizmetler sunar. Yenilikçi çözümler ve olağanüstü destek için bizimle iş ortağı olun.
 ---
+<% I18n.locale = :tr %>
 
-<section class="_bg-slate-100">
-    <div class="_bg-yellow-200 mx-auto max-w-prose p-4 space-y-4">
-        <div class="py-8">
-            <%= image_tag "bilus-logo.png", alt: t('bilus_logo_alt'), class: "size-24 mx-auto" %>
-        </div>
-        <div class="prose article-style">
-            <p class="lead">
-                Bilus Teknoloji A.Ş.; <strong>fintech</strong>, ödeme sistemleri ve 
-                <strong>yapay zeka</strong> destekli kurumsal dönüşüm projeleri alanında 
-                <strong>uçtan uca</strong> yazılım ve teknoloji danışmanlığı 
-                hizmetleri vermektedir.
-            </p>
+<section class="2xl:py-24">
+    <div class="container mx-auto">
+        <div class="p-5 prose xl:prose-xl article-style 2xl:mb-16 2xl:p-0">
+            <h1><%= current_page.data.title %></h1>
             <p>
-                Bilus ekosistemi; regülasyon uyumlu, ölçeklenebilir ve gerçek iş çıktısı
-                üreten YZ sistemleri ile fintech ve büyük ölçekli kurumlar için stratejik
-                teknoloji partneri olarak konumlanır.
+                <strong>Bilus Teknoloji</strong>, altı alanda hizmet veriyor. Her birinin
+                arkasında aynı anlayış var: Sadece öneri sunmak değil, sonucu
+                birlikte üretmek.
             </p>
-
-
-            <h1>Referanslar</h1>
-
-            <h2>ING Bank Türkiye</h2>
-            <ul>
-                <li>
-                    <strong>SDLC</strong> (<em>Software Development Life Cycle</em>) süreçlerine yönelik 
-                    YZ ajanları ile agent iş akışları ve orkestrasyonu projesi.
-                </li>
-                <li>
-                    Analiz, geliştirme, test ve yazılım teslimi (<em>delivery</em>) adımlarında 
-                    YZ destekli otomasyon ve karar destek mekanizmaları.
-                </li>
-            </ul>
-            
-            <h2>BinBin</h2>
-            <ul>
-                <li>Teknoloji ekibinin yeniden yapılandırılması</li>
-                <li>Mühendislik verimliliği ve teslimat mükemmelliği</li>
-                <li>YZ destekli operasyonel otomasyonlar</li>
-                <li>BI alt yapıları</li>
-                <li>Data Warehouse kurulumu</li>
-                <li>
-                    Git (<em>revizyon kontrol</em>) ve Jira (<em>proje yönetimi</em>)
-                    tabanlı mühendislik ve yazılım verimlilik ölçümü
-                </li>
-                <li>D.O.R.A Metrics ve analiz</li>
-            </ul>
         </div>
+
+        <div class="not-prose mx-auto p-5 2xl:p-0 2xl:mb-16">
+            <div class="bg-bilus-100/20 border border-bilus-100 rounded-2xl p-8 lg:p-10 max-w-2xl">
+                <h2 class="text-xl font-extrabold mb-4 lg:text-2xl">Nasıl başlıyoruz?</h2>
+                <p class="mb-6 text-lg leading-relaxed">
+                    Her proje, ücretsiz bir keşif fazıyla başlıyor. Amacımız birbirimizi
+                    tanımak ve gerçekten değer üretip üretemeyeceğimizi birlikte anlamak.
+                </p>
+                <p class="flex flex-wrap gap-x-2 text-lg">
+                    <span><strong>Keşif fazı:</strong> 2&ndash;3 hafta</span>
+                    <span>&middot;</span>
+                    <span><strong>Taahhüt:</strong> Yok</span>
+                    <span>&middot;</span>
+                    <span><strong>İletişim:</strong> <% _, iletisim_link = get_page_title_and_link 'iletisim' %><a class="text-bilus-500 hover-underline" href="<%= iletisim_link %>">Bize yazın</a></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mx-auto grid grid-cols-1 p-5 gap-4 lg:grid-cols-2 2xl:p-0 2xl:gap-8 2xl:max-w-7xl 2xl:grid-cols-3">
+            <%= partial 'partials/services_list' %>
+        </div>
+
     </div>
 </section>

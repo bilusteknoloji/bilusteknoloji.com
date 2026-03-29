@@ -16,12 +16,17 @@
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 -translate-y-2"
          class="absolute top-full left-0 w-full bg-white shadow-md py-4 px-4 space-y-4">
-         
+
          <% data.items.mobile_menu[lang].each do |item| %>
          <% title, url = get_resource_title_and_url_by_path(item) %>
          <a class="block nav-links hover-underline" href="<%= url %>"><%= title %></a>
          <% end %>
+         <% if lang == :tr %>
+         <a class="block nav-links hover-underline" href="/en/">English</a>
+         <% else %>
+         <a class="block nav-links hover-underline" href="/">Türkçe</a>
          <a class="block nav-links hover-underline" href="https://maps.app.goo.gl/yEMBMhjsX3bqnkBQ7" target="_blank" rel="noopener noreferrer">Google Maps</a>
+         <% end %>
 
      </div>
 </div>
@@ -31,16 +36,18 @@
         <nav>
             <ul class="flex justify-start items-center gap-x-12">
                 <li>
-                    <a class="nav-links hover-underline flex items-center gap-x-2" href="/">
+                    <a class="nav-links hover-underline flex items-center gap-x-2" href="<%= lang == :en ? '/en/' : '/' %>">
                         <%= image_tag "bilus-logo.png", alt: t('bilus_logo_alt'), class: "size-4" %>
 
                         Bilus Teknoloji
                     </a>
                 </li>
-                
+
+                <% if config[:proxy_map][lang].key?(:services) %>
                 <li class="relative group">
                     <%
-                    title, link = get_page_title_and_link 'services'
+                    services_page = lang == :en ? 'services' : 'servisler'
+                    title, link = get_page_title_and_link services_page
                     %>
                     <a title="<%= I18n.t('click_to_view', title: title) %>" class="inline-flex items-center gap-1 nav-links" href="<%= link %>">
                         <%= title %>
@@ -50,9 +57,10 @@
                     </a>
 
                     <ul class="absolute left-0 top-full mt-2 w-80 first:*:pt-4 last:*:pb-4 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-40">
-                    <% 
+                    <%
+                    sfn = config[:services_folder_name][lang]
                     config[:proxy_map][lang][:services].each do |folder_name|
-                        sitemap_obj = sitemap.find_resource_by_path("#{lang}/services/#{folder_name}/index.html")
+                        sitemap_obj = sitemap.find_resource_by_path("#{lang}/#{sfn}/#{folder_name}/index.html")
                         %>
                         <li class="px-4 pt-4"><a title="<%= I18n.t('click_to_view', title: sitemap_obj.metadata[:page][:title]) %>" href="<%= sitemap_obj.url %>" class="submenu-links"><%= sitemap_obj.metadata[:page][:title] %></a></li>
                         <%
@@ -60,7 +68,9 @@
                     %>
                     </ul>
                 </li>
-                
+                <% end %>
+
+                <% if lang == :en %>
                 <% title, link = get_page_title_and_link 'blog' %>
                 <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
 
@@ -71,9 +81,17 @@
 
                 <% title, link = get_page_title_and_link 'contact' %>
                 <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
-                
+
                 <% title, link = get_page_title_and_link 'careers' %>
                 <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+                <% else %>
+                <% title, link = get_page_title_and_link 'hakkinda' %>
+                <li><a class="nav-links hover-underline" href="<%= link %>"><%= title %></a></li>
+
+                <li class="flex-grow"></li>
+
+                <li><a class="nav-links hover-underline" href="/en/">English</a></li>
+                <% end %>
 
             </ul>
         </nav>
