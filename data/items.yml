@@ -400,7 +400,9 @@ footer:
       - 'index.html'
       - 'tr/hakkinda/index.html'
       - 'tr/servisler/index.html'
+      - 'tr/urunler/index.html'
     side2:
+      - 'tr/iletisim/index.html'
       - 'tr/sss/index.html'
       - 'tr/gizlilik-politikasi/index.html'
       - 'tr/kullanim-sartlari/index.html'
@@ -421,6 +423,7 @@ mobile_menu:
     - 'index.html'
     - 'tr/hakkinda/index.html'
     - 'tr/servisler/index.html'
+    - 'tr/urunler/index.html'
     - 'tr/sss/index.html'
   en:
     - 'en/index.html'

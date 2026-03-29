@@ -86,7 +86,7 @@ proxy_map = {
     ]
   },
   tr: {
-    pages: ['servisler', 'hakkinda', 'sss', 'gizlilik-politikasi', 'kullanim-sartlari', 'iletisim'],
+    pages: ['servisler', 'hakkinda', 'sss', 'gizlilik-politikasi', 'kullanim-sartlari', 'iletisim', 'urunler'],
     services: [
       'teknik-danismanlik',
       'teknik-degerlendirme-ve-risk-analizi',
