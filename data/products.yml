@@ -302,3 +302,59 @@ products:
         - OpenAI
         - PostgreSQL
       screenshot: products/dealflow.png
+    - slug: sipay-ai-assistant
+      display_order: 11
+      name: Sipay Yapay Zeka Asistanı
+      category: Sesli YZ Asistanı
+      model: Kurumsal Çözüm
+      tagline: "Burcu Serin — Sipay'ın Sesli YZ Asistanı"
+      summary: |
+        Telefon gibi arayın, **konuşarak** Sipay hakkında bilgi alın. POS satın
+        alma sürecinde **onboarding** rehberliği, ürün bilgisi ve fintech
+        hizmetleri hakkında **7/24** sesli destek.
+      features:
+        - Doğal dilde sesli iletişim
+        - Sipay ürün ve hizmet bilgilendirmesi
+        - POS satın alma onboarding rehberliği
+        - Fintech hizmetleri hakkında anlık yanıt
+        - 7/24 kesintisiz erişim
+      stats:
+        - value: "7/24"
+          label: Erişim
+        - value: "Sesli"
+          label: YZ Asistanı
+      tech:
+        - Python
+        - FastAPI
+        - OpenAI
+        - Twilio
+      screenshot: products/sipay-ai-assistant.png
+    - slug: bilus-dorametrics
+      display_order: 12
+      name: Bilus Dorametrics
+      category: Mühendislik Analitiği
+      model: Kurumsal Çözüm
+      tagline: GitHub Entegreli Mühendislik Veri Ambarı ve Dashboard Platformu
+      summary: |
+        GitHub'ın tüm event'leri ile entegre **veri ambarı** projesi. Gerçek
+        zamanlı dashboard'lar, **veri analitiği** ve tamamen özelleştirilebilir
+        metrikler. **100+** hazır metrik dashboard.
+      features:
+        - GitHub event entegrasyonu (tüm event tipleri)
+        - Gerçek zamanlı veri ambarı (data warehouse)
+        - 100+ hazır metrik dashboard
+        - Tamamen özelleştirilebilir dashboard ve raporlar
+        - DORA metrikleri ve mühendislik performansı
+        - Kuruma özel veri analitiği
+      stats:
+        - value: "100+"
+          label: Metrik dashboard
+        - value: "Gerçek zamanlı"
+          label: Veri işleme
+      tech:
+        - Go
+        - Python
+        - PostgreSQL
+        - Kafka
+        - Grafana
+      screenshot: products/bilus-dorametrics.png
