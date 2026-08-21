@@ -5,8 +5,8 @@ gem 'middleman-autoprefixer', '~> 3.0'
 gem 'middleman-livereload', '~> 3.5'
 gem 'middleman-blog', '~> 4.2'
 gem 'terser', '~> 1.2'
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
-gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
+gem 'tzinfo-data', platforms: [:windows, :jruby]
+gem 'wdm', '~> 0.1', platforms: [:windows]
 gem 'bigdecimal'
 gem 'mutex_m', require: 'mutex_m'
 gem 'base64'
