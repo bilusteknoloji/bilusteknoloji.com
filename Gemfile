@@ -9,6 +9,7 @@ gem 'tzinfo-data', platforms: [:windows, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:windows]
 gem 'bigdecimal'
 gem 'mutex_m', require: 'mutex_m'
+gem 'ostruct'
 gem 'base64'
 gem 'csv'
 gem 'rexml', '>= 3.3.6'
@@ -20,4 +21,3 @@ gem 'nokogiri', '~> 1.19'
 gem 'sanitize', '~> 7.0'
 gem 'middleman-syntax', '~> 3.5'
 gem 'rack', '>= 3.1.16'
-
